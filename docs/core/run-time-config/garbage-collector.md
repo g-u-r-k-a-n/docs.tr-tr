@@ -3,12 +3,12 @@ title: Çöp toplayıcı yapılandırma ayarları
 description: Çöp toplayıcının .NET Core uygulamaları için belleği nasıl yönettiğini yapılandırmak üzere çalışma zamanı ayarları hakkında bilgi edinin.
 ms.date: 07/10/2020
 ms.topic: reference
-ms.openlocfilehash: 1bae00d2fc6e80811986bbb111f38582720f8487
-ms.sourcegitcommit: 872ca41d1c26f39d0aef57cc365d09503bac780d
+ms.openlocfilehash: 17df3ec8473750edfca4999972c56be1e8a5feec
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/03/2021
-ms.locfileid: "106288088"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106496663"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>Çöp toplama için çalışma zamanı yapılandırma seçenekleri
 
@@ -377,7 +377,7 @@ Yüksek bellek yükü eşiği, `COMPlus_GCHighMemPercent` ortam değişkeni veya
 | | Ayar adı | Değerler | Sunulan sürüm |
 | - | - | - | - |
 | **Üzerinderuntimeconfig.js** | `System.GC.HighMemoryPercent` | *ondalık değer* | .NET 5.0 |
-| **Ortam değişkeni** | `COMPlus_GCHighMemPercent` | *onaltılık değer* | |
+| **Ortam değişkeni** | `COMPlus_GCHighMemPercent` | *onaltılık değer* | .NET Core 3.0<br/> .NET Framework 4.7.2 |
 
 > [!TIP]
 > *Üzerinderuntimeconfig.js* seçeneğini ayarlıyorsanız, bir ondalık değer belirtin. Seçeneği bir ortam değişkeni olarak ayarlıyorsanız, onaltılık bir değer belirtin. Örneğin, yüksek bellek eşiğini %75 olarak ayarlamak için, değerler JSON dosyası için 75 ve ortam değişkeni için 0x4B veya 4B olacaktır.

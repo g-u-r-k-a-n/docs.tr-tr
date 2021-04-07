@@ -1,17 +1,16 @@
 ---
 title: 'Son değişiklik: Blazor: statik Web varlıkları için doğrulama mantığı güncelleştirildi'
 description: "Blazor başlıklı ASP.NET Core 5,0 ' deki Son değişiklik hakkında bilgi edinin: statik Web varlıkları için güncelleştirilmiş doğrulama mantığı"
-author: scottaddie
 ms.author: scaddie
 ms.date: 10/01/2020
-ms.openlocfilehash: f201818c0130739e8da4f42e7b1f3a1987f70d1c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b6fb8e9a10157a97119fa07a95fb3dbb8b207214
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761477"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106498158"
 ---
-# <a name="blazor-updated-validation-logic-for-static-web-assets"></a>Blazor: statik Web varlıkları için doğrulama mantığı güncelleştirildi
+# <a name="blazor-updated-validation-logic-for-static-web-assets"></a>Blazor: Statik web varlıkları için doğrulama mantığı güncelleştirildi
 
 ASP.NET Core 3,1 ve Blazor WebAssembly 3,2 ' de statik Web varlıkları için çakışma doğrulamasında bir sorun oluştu. Sorun:
 

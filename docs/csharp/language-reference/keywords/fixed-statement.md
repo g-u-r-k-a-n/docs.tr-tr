@@ -7,16 +7,16 @@ f1_keywords:
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.openlocfilehash: 05505916ab3837d2c433ec420d7928a8ee883fa8
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 2af9c4311e8326d6df933ec5d4c38354fe021e5c
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89139729"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106497573"
 ---
 # <a name="fixed-statement-c-reference"></a>fixed Deyimi (C# Başvurusu)
 
-`fixed`İfade, çöp toplayıcısının taşınabilir bir değişkenin yerini değiştirmesini engeller. `fixed`Deyime yalnızca [güvenli olmayan](unsafe.md) bir bağlamda izin verilir. `fixed` [Sabit boyutlu arabellekler](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)oluşturmak için anahtar sözcüğünü de kullanabilirsiniz.
+`fixed`İfade, çöp toplayıcısının taşınabilir bir değişkenin yerini değiştirmesini engeller. `fixed`Deyime yalnızca [güvenli olmayan](unsafe.md) bir bağlamda izin verilir. `fixed` [Sabit boyutlu arabellekler](../unsafe-code.md#fixed-size-buffers)oluşturmak için anahtar sözcüğünü de kullanabilirsiniz.
 
 `fixed`İfade, yönetilen bir değişkene bir işaretçi ayarlar ve deyimin yürütülmesi sırasında bu değişkene "PIN" koyar. Taşınabilir olarak yönetilen değişkenlere yönelik işaretçiler yalnızca bir bağlamda yararlıdır `fixed` . Bağlam olmadan `fixed` çöp toplama, değişkenleri tahmin edilmemiş şekilde yeniden konumlandırmaya yönelik olabilir. C# derleyicisi yalnızca bir ifadede yönetilen değişkene bir işaretçi atamanızı sağlar `fixed` .
 
@@ -75,5 +75,5 @@ Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# anahtar sözcükleri](index.md)
 - [olmayabilecek](unsafe.md)
-- [İşaretçi türleri](../../programming-guide/unsafe-code-pointers/pointer-types.md)
-- [Sabit boyutlu arabellekler](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)
+- [İşaretçi türleri](../unsafe-code.md#pointer-types)
+- [Sabit boyutlu arabellekler](../unsafe-code.md#fixed-size-buffers)

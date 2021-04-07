@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - unsafe keyword [C#]
 ms.assetid: 7e818009-1c6e-4b9e-b769-3728a01586a0
-ms.openlocfilehash: 5be895621966dd10b2b1b0f53ebf0f3c688f1ef0
-ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
+ms.openlocfilehash: e7ee7e3c721a4141160b907076533effa2848085
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103480659"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106498444"
 ---
 # <a name="unsafe-c-reference"></a>unsafe (C# Başvurusu)
 
-`unsafe`Anahtar sözcüğü, işaretçileri içeren tüm işlemler için gerekli olan güvenli olmayan bir bağlamı gösterir. Daha fazla bilgi için bkz. [güvenli olmayan kod ve işaretçiler](../../programming-guide/unsafe-code-pointers/index.md).
+`unsafe`Anahtar sözcüğü, işaretçileri içeren tüm işlemler için gerekli olan güvenli olmayan bir bağlamı gösterir. Daha fazla bilgi için bkz. [güvenli olmayan kod ve işaretçiler](../unsafe-code.md).
 
 `unsafe`Değiştirici bir tür veya üye bildiriminde kullanabilirsiniz. Türün veya üyenin metinsel kapsamı, bu nedenle güvenli olmayan bir bağlam olarak değerlendirilir. Örneğin, değiştirici ile belirtilen bir yöntemi aşağıda verilmiştir `unsafe` :
 
@@ -59,5 +59,5 @@ Daha fazla bilgi için bkz. [C# dil belirtiminde](/dotnet/csharp/language-refere
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# anahtar sözcükleri](index.md)
 - [fixed Deyimi](fixed-statement.md)
-- [Güvenli Olmayan Kod ve İşaretçiler](../../programming-guide/unsafe-code-pointers/index.md)
-- [Sabit boyutlu arabellekler](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)
+- [Güvenli Olmayan Kod ve İşaretçiler](../unsafe-code.md)
+- [Sabit boyutlu arabellekler](../unsafe-code.md#fixed-size-buffers)

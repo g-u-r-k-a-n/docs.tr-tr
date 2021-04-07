@@ -5,12 +5,12 @@ author: IEvangelist
 ms.author: dapine
 ms.date: 10/28/2020
 ms.topic: overview
-ms.openlocfilehash: cc030e32846690b6544b99030800b50055a3113e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 0b5526f24f3ac658123acd030c3adf32c346422a
+ms.sourcegitcommit: 109507b6c16704ed041efe9598c70cd3438a9fbc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818830"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106079524"
 ---
 # <a name="dependency-injection-in-net"></a>.NET 'e bağımlılık ekleme
 
@@ -173,7 +173,7 @@ Web uygulamaları için kapsamlı bir yaşam süresi, hizmetlerin istemci isteğ
 Entity Framework Core kullanılırken, <xref:Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.AddDbContext%2A> genişletme yöntemi, `DbContext` Varsayılan olarak kapsamlı yaşam süresine sahip türleri kaydeder.
 
 > [!NOTE]
-> Tek bir kapsamdaki hizmeti bir tekil hizmetten çözümleyin ve örneğin geçici bir hizmet aracılığıyla dolaylı olarak değil, bunun gibi bir **şekilde değil.** Bu, sonraki istekleri işlerken hizmetin yanlış duruma gelmesine neden olabilir. Şunları yapabilirsiniz:
+> Kapsamlı bir hizmeti tek bir ***hizmetten çözmeyin*** ve örneğin geçici bir hizmet aracılığıyla dolaylı olarak geçmemeye dikkat edin. Bu, sonraki istekleri işlerken hizmetin yanlış duruma gelmesine neden olabilir. Şunları yapabilirsiniz:
 >
 > - Tek bir hizmeti kapsamlı veya geçici bir hizmetten çözümleyin.
 > - Kapsamlı bir hizmeti başka bir kapsamlı veya geçici hizmetten çözün.
@@ -193,9 +193,6 @@ Bağımlılık ekleme kapsayıcısından gelen hizmet uygulamasının sonraki t�
 
 İstekleri işleyen uygulamalarda, uygulama kapatılırken bırakıldığında tek hizmetler silinir <xref:Microsoft.Extensions.DependencyInjection.ServiceProvider> . Uygulama kapatılıncaya kadar bellek yayımlanmadığı için, tek bir hizmetle bellek kullanımını göz önünde bulundurun.
 
-> [!WARNING]
-> Kapsamlı bir hizmeti tek bir _*_sunucudan çözümleyin._*_ Bu, sonraki istekleri işlerken hizmetin yanlış duruma gelmesine neden olabilir. Tek bir hizmeti kapsamlı veya geçici bir hizmetten çözümlemek çok iyidir.
-
 ## <a name="service-registration-methods"></a>Hizmet kayıt yöntemleri
 
 Framework, belirli senaryolarda yararlı olan hizmet kayıt uzantısı yöntemleri sağlar:
@@ -210,7 +207,7 @@ Framework, belirli senaryolarda yararlı olan hizmet kayıt uzantısı yöntemle
 
 Tür çıkarma hakkında daha fazla bilgi için [Hizmetler 'In aktiften çıkarılması](dependency-injection-guidelines.md#disposal-of-services) bölümüne bakın.
 
-Hizmeti yalnızca bir uygulama türüyle kaydetmek, bu hizmeti aynı uygulama ve hizmet türüyle kaydetmeye eşdeğerdir. Bu, bir hizmetin birden çok uygulamasının açık bir hizmet türü kullanmayan yöntemler kullanılarak kaydedilamamasının nedenleridir. Bu yöntemler bir hizmetin birden çok _instances * kaydını yapabilir, ancak hepsi aynı *uygulama* türüne sahip olur.
+Hizmeti yalnızca bir uygulama türüyle kaydetmek, bu hizmeti aynı uygulama ve hizmet türüyle kaydetmeye eşdeğerdir. Bu, bir hizmetin birden çok uygulamasının açık bir hizmet türü kullanmayan yöntemler kullanılarak kaydedilamamasının nedenleridir. Bu yöntemler bir hizmetin birden fazla *örneğini* kaydedebilir, ancak hepsi aynı *uygulama* türüne sahip olur.
 
 Yukarıdaki hizmet kayıt yöntemlerinden herhangi biri aynı hizmet türünün birden çok hizmet örneğini kaydetmek için kullanılabilir. Aşağıdaki örnekte, `AddSingleton` hizmet türü olarak ile iki kez çağırılır `IMessageWriter` . İçin ikinci çağrı, `AddSingleton` olarak çözümlendikten önceki bir öncekini geçersiz kılar `IMessageWriter` ve aracılığıyla birden çok hizmet çözümlendiğinde bir öncekini ekler `IEnumerable<IMessageWriter>` . Hizmetler, ile çözümlendiklerinde kaydedildikleri sırada görüntülenir `IEnumerable<{SERVICE}>` .
 
@@ -246,7 +243,7 @@ public class ExampleService
 }
 ```
 
-Daha fazla bilgi için bkz:
+Daha fazla bilgi için bkz.
 
 - <xref:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAdd%2A>
 - <xref:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddTransient%2A>

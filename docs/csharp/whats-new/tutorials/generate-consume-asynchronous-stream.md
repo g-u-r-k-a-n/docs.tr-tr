@@ -4,12 +4,12 @@ description: Bu gelişmiş öğreticide, zaman uyumsuz akışlar oluşturma ve k
 ms.date: 02/10/2019
 ms.technology: csharp-async
 ms.custom: mvc
-ms.openlocfilehash: 9218e11a066d1d6107e501d4c20079a642f927a3
-ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.openlocfilehash: 4e2264e88b0df9fe8c4e1ebf9bd154dddb390e4e
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104879055"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106497430"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>Öğretici: C# 8,0 ve .NET Core 3,0 kullanarak zaman uyumsuz akışlar oluşturma ve kullanma
 
@@ -42,7 +42,7 @@ Bu öğreticide, Visual Studio veya .NET Core CLI dahil olmak üzere C# ve .NET 
 
 ## <a name="run-the-starter-application"></a>Başlangıç uygulamasını çalıştırma
 
-Bu öğreticide kullanılan başlangıç uygulamasının kodunu [CSharp/öğreticiler/AsyncStreams](https://github.com/dotnet/docs/tree/main/docs/csharp/tutorials/snippets/generate-consume-asynchronous-streams/start) klasöründeki [DotNet/docs](https://github.com/dotnet/docs) deposundan alabilirsiniz.
+Bu öğreticide kullanılan başlangıç uygulamasının kodunu [CSharp/yenilikleri-New/öğreticiler](https://github.com/dotnet/docs/tree/main/docs/csharp/whats-new/tutorials/snippets/generate-consume-asynchronous-streams/start) klasöründeki [DotNet/docs](https://github.com/dotnet/docs) deposundan alabilirsiniz.
 
 Başlangıç uygulaması, [DotNet/docs](https://github.com/dotnet/docs) deposunda yazılan son sorunları almak Için [GitHub graphql](https://developer.github.com/v4/) arabirimini kullanan bir konsol uygulamasıdır. Başlangıç uygulaması yöntemi için aşağıdaki koda bakarak başlayın `Main` :
 
@@ -144,7 +144,7 @@ Zaman uyumsuz akışlar, diğer yöntemlerle aynı protokolü kullanarak iptali 
 
 :::code language="csharp" source="snippets/generate-consume-asynchronous-streams/finished/Program.cs" id="SnippetEnumerateWithCancellation" :::
 
-Tamamlanan öğreticinin kodunu [CSharp/öğreticiler/AsyncStreams](https://github.com/dotnet/docs/tree/main/docs/csharp/tutorials/snippets/generate-consume-asynchronous-streams/finished) klasöründeki [DotNet/docs](https://github.com/dotnet/docs) deposundan alabilirsiniz.
+[CSharp/yenilikleri-New/öğreticiler](https://github.com/dotnet/docs/tree/main/docs/csharp/whats-new/tutorials/snippets/generate-consume-asynchronous-streams/finished) klasöründeki [DotNet/docs](https://github.com/dotnet/docs) deposundan tamamlanan öğreticinin kodunu alabilirsiniz.
 
 ## <a name="run-the-finished-application"></a>Tamamlanmış uygulamayı çalıştırma
 

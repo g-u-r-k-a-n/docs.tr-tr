@@ -2,12 +2,12 @@
 title: "Son değişiklik: bazı API 'Ler bağımsız değişkenler NullException oluşturur"
 description: .NET 6 ' daki Son değişiklik hakkında bilgi edinmek için bazı API 'Lerin bağımsız değişkenleri doğruladığını ve şimdi bir ArgumentNullException oluşturacağı
 ms.date: 01/29/2021
-ms.openlocfilehash: dd0ee33ca7335bfd6e4ddfefca0e56ab719178eb
-ms.sourcegitcommit: 109507b6c16704ed041efe9598c70cd3438a9fbc
+ms.openlocfilehash: 1c7b41bf5e367dca394130da66360e660173ba14
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "106079576"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106496858"
 ---
 # <a name="some-apis-throw-argumentnullexception"></a>Bazı API 'Ler bağımsız değişkenler NullException oluşturur
 
@@ -39,6 +39,7 @@ Aşağıdaki tabloda etkilenen API 'Ler ve belirli parametreler listelenmektedir
 | Metot/Özellik | Parametre adı | Sürüm değişti |
 |-|-|-|
 | <xref:System.Windows.Forms.TreeNodeCollection.Item(System.Int32)?displayProperty=fullName> | `index` | Önizleme 1 |
+| <xref:System.Windows.Forms.DrawTreeNodeEventArgs.%23ctor(System.Drawing.Graphics,System.Windows.Forms.TreeNode,System.Drawing.Rectangle,System.Windows.Forms.TreeNodeStates)> | `graphics` | Preview 3 |
 | <xref:System.Windows.Forms.DataGridViewRowStateChangedEventArgs.%23ctor(System.Windows.Forms.DataGridViewRow,System.Windows.Forms.DataGridViewElementStates)> | `dataGridViewRow` | Preview 4 |
 
 ## <a name="see-also"></a>Ayrıca bkz.
@@ -50,6 +51,7 @@ Aşağıdaki tabloda etkilenen API 'Ler ve belirli parametreler listelenmektedir
 ### Affected APIs
 
 - `P:System.Windows.Forms.TreeNodeCollection.Item(System.Int32)`
+- `M:System.Windows.Forms.DrawTreeNodeEventArgs.#ctor(System.Drawing.Graphics,System.Windows.Forms.TreeNode,System.Drawing.Rectangle,System.Windows.Forms.TreeNodeStates)`
 - `M:System.Windows.Forms.DataGridViewRowStateChangedEventArgs.#ctor(System.Windows.Forms.DataGridViewRow,System.Windows.Forms.DataGridViewElementStates)`
 
 ### Category

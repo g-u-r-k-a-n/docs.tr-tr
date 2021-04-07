@@ -3,12 +3,12 @@ title: .NET 'teki iyi bilinen EventCounters
 description: .NET çalışma zamanı ve kitaplıkları tarafından yayınlanan EventCounters 'i gözden geçirin.
 ms.topic: reference
 ms.date: 12/17/2020
-ms.openlocfilehash: aad4fa8b33ebf0dcb7803c77b11fb99a6b6d7b83
-ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.openlocfilehash: fc07ace22f1580d547c33b897bcd1bb9a1de15c3
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104872840"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106496728"
 ---
 # <a name="well-known-eventcounters-in-net"></a>.NET 'teki iyi bilinen EventCounters
 
@@ -43,6 +43,7 @@ Aşağıdaki sayaçlar .NET çalışma zamanının (CoreCLR) bir parçası olara
 | :::no-loc text="Working Set"::: (`working-set`) | Zaman tabanında bir noktada işlem bağlamına eşlenen fiziksel bellek miktarı <xref:System.Environment.WorkingSet?displayProperty=nameWithType> |
 | :::no-loc text="IL Bytes Jitted"::: (`il-bytes-jitted`) | JıT olarak derlenen ve bayt cinsinden (.NET 5 ve sonraki sürümlerde kullanılabilir) Toplam ILS boyutu |
 | :::no-loc text="Method Jitted Count"::: (`method-jitted-count`) | JıT olarak derlenen yöntemlerin sayısı (.NET 5 ve sonraki sürümlerinde kullanılabilir) |
+| :::no-loc text="GC Committed Bytes"::: (`gc-committed-bytes`) | GC tarafından kaydedilen bayt sayısı (.NET 6 ve sonraki sürümlerinde kullanılabilir) |
 
 ## <a name="microsoftaspnetcorehosting-counters"></a>"Microsoft. AspNetCore. Hosting" sayaçları
 

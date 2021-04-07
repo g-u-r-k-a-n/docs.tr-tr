@@ -1,15 +1,14 @@
 ---
 title: 'Son değişiklik: null yapılabilir başvuru türü ek açıklamaları değişti'
 description: ASP.NET Core 6,0 ' deki, null yapılabilir başvuru türü ek açıklamaları değiştirilen Son değişiklik hakkında bilgi edinin
-author: scottaddie
 ms.author: scaddie
 ms.date: 02/24/2021
-ms.openlocfilehash: d6a43b4885a7b11669fc0eeb469c740b60d0cd4c
-ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.openlocfilehash: 6d71d76d82ff7084626cbf3ae5803aa3c189b8bf
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104874348"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106497005"
 ---
 # <a name="nullable-reference-type-annotations-changed"></a>Null yapılabilir başvuru türü ek açıklamaları değişti
 

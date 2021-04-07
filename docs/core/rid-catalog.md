@@ -2,12 +2,12 @@
 title: .NET çalışma zamanı tanımlayıcısı (RID) kataloğu
 description: Çalışma zamanı tanımlayıcısı (RID) ve RID 'Lerin .NET 'te nasıl kullanıldığını öğrenin.
 ms.date: 01/28/2021
-ms.openlocfilehash: 15a2be8d3c2a903011e298d99c838baef731b9c2
-ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.openlocfilehash: 87fbad990fce5431769fa1631be7e079c2eb27a5
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104875102"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106496676"
 ---
 # <a name="net-rid-catalog"></a>.NET RID kataloğu
 
@@ -39,7 +39,7 @@ Somut işletim sistemlerini temsil eden RID 'Ler genellikle şu düzene uyar: `[
 
 ## <a name="rid-graph"></a>RID grafiği
 
-RID Graf veya çalışma zamanı geri dönüş grafiği, birbirleriyle uyumlu RID 'lerin bir listesidir. RID 'Ler, [Microsoft. NETCore. Platform](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/) paketinde tanımlanır. Desteklenen RID 'lerin listesini, depoda bulunan dosyada [*runtime.js*](https://github.com/dotnet/runtime/blob/main/src/libraries/Microsoft.NETCore.Platforms/pkg/runtime.json) , RID grafiğinin listesini görebilirsiniz `dotnet/runtime` . Bu dosyada, temel öğe hariç tüm RID 'lerin bir ekstre içerdiğini görebilirsiniz `"#import"` . Bu deyimler, uyumlu RID 'Ler gösterir.
+RID Graf veya çalışma zamanı geri dönüş grafiği, birbirleriyle uyumlu RID 'lerin bir listesidir. RID 'Ler, [Microsoft. NETCore. Platform](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/) paketinde tanımlanır. Desteklenen RID 'lerin listesini, depoda bulunan dosyada [*runtime.js*](https://github.com/dotnet/runtime/blob/main/src/libraries/Microsoft.NETCore.Platforms/src/runtime.json) , RID grafiğinin listesini görebilirsiniz `dotnet/runtime` . Bu dosyada, temel öğe hariç tüm RID 'lerin bir ekstre içerdiğini görebilirsiniz `"#import"` . Bu deyimler, uyumlu RID 'Ler gösterir.
 
 NuGet paketleri geri yüklediğinde, belirtilen çalışma zamanı için tam bir eşleşme bulmaya çalışır.
 Tam eşleşme bulunamazsa NuGet, RID grafiğine göre en yakın uyumlu sistemi bulana kadar grafiği geri yönlendirir.
@@ -80,7 +80,7 @@ RID 'Ler hakkında, bunlarla çalışırken göz önünde bulundurmanız gereken
 ## <a name="using-rids"></a>RID 'leri kullanma
 
 RID 'leri kullanabilmeniz için hangi RID 'Lerin mevcut olduğunu bilmeniz gerekir. Yeni değerler platforma düzenli olarak eklenir.
-En son ve tüm sürüm için depodaki [runtime.js](https://github.com/dotnet/runtime/blob/main/src/libraries/Microsoft.NETCore.Platforms/pkg/runtime.json) dosyasına bakın `dotnet/runtime` .
+En son ve tüm sürüm için depodaki [runtime.js](https://github.com/dotnet/runtime/blob/main/src/libraries/Microsoft.NETCore.Platforms/src/runtime.json) dosyasına bakın `dotnet/runtime` .
 
 Taşınabilir RID 'Ler, belirli bir sürüme veya işletim sistemi dağıtımına bağlı olmayan RID grafiğine eklenen değerlerdir. Çoğu dağıtım merkezi taşınabilir RID 'lerle eşlendiğinden, özellikle birden çok Linux ile ilgilenirken tercih edilen seçenektir.
 
@@ -88,7 +88,7 @@ Aşağıdaki liste, her bir işletim sistemi için kullanılan en yaygın RID 'l
 
 ## <a name="windows-rids"></a>Windows RID 'leri
 
-Yalnızca ortak değerler listelenir. En son ve tüm sürüm için depodaki [runtime.js](https://github.com/dotnet/runtime/blob/main/src/libraries/Microsoft.NETCore.Platforms/pkg/runtime.json) dosyasına bakın `dotnet/runtime` .
+Yalnızca ortak değerler listelenir. En son ve tüm sürüm için depodaki [runtime.js](https://github.com/dotnet/runtime/blob/main/src/libraries/Microsoft.NETCore.Platforms/src/runtime.json) dosyasına bakın `dotnet/runtime` .
 
 - In
   - `win-x64`
@@ -112,7 +112,7 @@ Daha fazla bilgi için bkz. [.net bağımlılıkları ve gereksinimleri](./insta
 
 ## <a name="linux-rids"></a>Linux RID 'leri
 
-Yalnızca ortak değerler listelenir. En son ve tüm sürüm için depodaki [runtime.js](https://github.com/dotnet/runtime/blob/main/src/libraries/Microsoft.NETCore.Platforms/pkg/runtime.json) dosyasına bakın `dotnet/runtime` . Aşağıda listelenmeyen bir dağıtımı çalıştıran cihazlar taşınabilir RID 'Ler ile çalışabilir. Örneğin, listelenmemiş bir Linux dağıtımını çalıştıran Raspberry PI cihazları ile hedeflenebilir `linux-arm` .
+Yalnızca ortak değerler listelenir. En son ve tüm sürüm için depodaki [runtime.js](https://github.com/dotnet/runtime/blob/main/src/libraries/Microsoft.NETCore.Platforms/src/runtime.json) dosyasına bakın `dotnet/runtime` . Aşağıda listelenmeyen bir dağıtımı çalıştıran cihazlar taşınabilir RID 'Ler ile çalışabilir. Örneğin, listelenmemiş bir Linux dağıtımını çalıştıran Raspberry PI cihazları ile hedeflenebilir `linux-arm` .
 
 - In
   - `linux-x64` (CentOS, deler, Fedora, Ubuntu ve türetmeler gibi masaüstü dağıtımlarını en iyi şekilde)
@@ -131,7 +131,7 @@ Daha fazla bilgi için bkz. [.net bağımlılıkları ve gereksinimleri](./insta
 
 ## <a name="macos-rids"></a>macOS RIDs
 
-macOS 'Ler eski "OSX" markasını kullanır. Yalnızca ortak değerler listelenir. En son ve tüm sürüm için depodaki [runtime.js](https://github.com/dotnet/runtime/blob/main/src/libraries/Microsoft.NETCore.Platforms/pkg/runtime.json) dosyasına bakın `dotnet/runtime` .
+macOS 'Ler eski "OSX" markasını kullanır. Yalnızca ortak değerler listelenir. En son ve tüm sürüm için depodaki [runtime.js](https://github.com/dotnet/runtime/blob/main/src/libraries/Microsoft.NETCore.Platforms/src/runtime.json) dosyasına bakın `dotnet/runtime` .
 
 - In
   - `osx-x64` (En düşük işletim sistemi sürümü macOS 10,12 Sierra)

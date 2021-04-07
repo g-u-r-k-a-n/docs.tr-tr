@@ -1,15 +1,14 @@
 ---
 title: 'Son değişiklik: ara yazılım: özel durum Işleyici ara yazılımı, işleyici bulunmazsa özgün özel durum oluşturur'
 description: "ASP.NET Core 5,0 ' deki Son değişiklik hakkında bilgi edinin: özel durum Işleyici ara yazılımı, işleyici bulunmazsa özgün özel durum oluşturur"
-author: scottaddie
 ms.author: scaddie
 ms.date: 10/01/2020
-ms.openlocfilehash: 8801d3e6950d66fd9f24e051fd8729c50eb0b282
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c28e09e544ac01c04a23fb7d2e73f3fdc242e9cd
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761657"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106497950"
 ---
 # <a name="middleware-exception-handler-middleware-throws-original-exception-if-handler-not-found"></a>Ara yazılım: özel durum Işleyicisi ara yazılımı, işleyici bulunmazsa özgün özel durum oluşturur
 

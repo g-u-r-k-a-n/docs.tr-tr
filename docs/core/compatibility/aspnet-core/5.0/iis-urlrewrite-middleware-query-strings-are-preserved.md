@@ -1,17 +1,16 @@
 ---
 title: 'Son değişiklik: IIS: URL yeniden yazma ara yazılımı sorgu dizeleri korunur'
 description: "IIS başlıklı ASP.NET Core 5,0 ' deki Son değişiklik hakkında bilgi edinin: Urlyeniden yazma ara yazılımı sorgu dizeleri korunur"
-author: scottaddie
 ms.author: scaddie
 ms.date: 10/01/2020
-ms.openlocfilehash: e4d1ecba62f9e43e7377aba1138968f15f8895d5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3439844f04c89059a027c1264401efc46cd0d57e
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761349"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106497676"
 ---
-# <a name="iis-urlrewrite-middleware-query-strings-are-preserved"></a>IIS: URL yeniden yazma ara yazılımı sorgu dizeleri korunur
+# <a name="iis-urlrewrite-middleware-query-strings-are-preserved"></a>IIS: UrlRewrite ara yazılım sorgu dizeleri korunur
 
 Bir IIS Urlyeniden yazma ara yazılım hatası sorgu dizesinin yeniden yazma kurallarında korunması engelledi. Bu hata, IIS Urlyeniden yazma modülünün davranışıyla tutarlılığı sağlamak için düzeltildi.
 

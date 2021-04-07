@@ -1,15 +1,14 @@
 ---
 title: 'Son değişiklik: Blazor: RenderTreeFrame ReadOnly ortak alanları özellikler haline geldi'
 description: "Blazor başlıklı ASP.NET Core 5,0 ' deki Son değişiklik hakkında bilgi edinin: RenderTreeFrame ReadOnly ortak alanları özellikler haline geldi"
-author: scottaddie
 ms.author: scaddie
 ms.date: 10/01/2020
-ms.openlocfilehash: e9da9c538cc0a8ed4f138ef64ece0c7d144f28d3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c4d70279b4280b079570099b82b056299405508b
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761354"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106498171"
 ---
 # <a name="blazor-rendertreeframe-readonly-public-fields-have-become-properties"></a>Blazor: RenderTreeFrame ReadOnly ortak alanları özellikler haline geldi
 
@@ -29,11 +28,11 @@ Tartışma için bkz. GitHub sorunu [DotNet/aspnetcore # 25727](https://github.c
 
 ## <a name="old-behavior"></a>Eski davranış
 
-Ortak Üyeler `RenderTreeFrame` alan olarak tanımlanır. Örneğin, `renderTreeFrame.Sequence` ve `renderTreeFrame.ElementName`.
+Ortak Üyeler `RenderTreeFrame` alan olarak tanımlanır. Örneğin `renderTreeFrame.Sequence` ve `renderTreeFrame.ElementName`.
 
 ## <a name="new-behavior"></a>Yeni davranış
 
-Ortak Üyeler `RenderTreeFrame` , önceki ile aynı adlara sahip özellikler olarak tanımlanmıştır. Örneğin, `renderTreeFrame.Sequence` ve `renderTreeFrame.ElementName`.
+Ortak Üyeler `RenderTreeFrame` , önceki ile aynı adlara sahip özellikler olarak tanımlanmıştır. Örneğin `renderTreeFrame.Sequence` ve `renderTreeFrame.ElementName`.
 
 Daha önceden derlenmiş kod bu değişiklikten bu yana yeniden derlenmemişse, MissingFieldException şuna benzer bir özel durum oluşturabilir: *alan bulunamadı: ' Microsoft. AspNetCore. components. RenderTree. RenderTreeFrame. FrameType '*.
 

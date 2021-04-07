@@ -2,12 +2,12 @@
 title: Azure’da kapsayıcıları dağıtma
 description: Azure Container Registry, Azure Kubernetes hizmeti ve Azure Dev Spaces Azure 'da kapsayıcı dağıtma.
 ms.date: 04/13/2020
-ms.openlocfilehash: d848a146a2bdb5d8d02543f57f19d6a39c9699e6
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f8b029f31ba493b3a777e12ca72854145ef312c4
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91160781"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106497417"
 ---
 # <a name="deploying-containers-in-azure"></a>Azure’da kapsayıcıları dağıtma
 
@@ -19,7 +19,7 @@ Bu bölümde ve Bölüm 1 ' de kapsayıcılar tartışıyoruz. Kapsayıcıların
 
 ## <a name="azure-container-registry"></a>Azure Container Registry
 
-Bir mikro hizmeti kapsayıcıında ilk olarak bir derleme kapsayıcısına "Image" olursunuz. Görüntü, hizmet kodu, bağımlılıklar ve çalışma zamanının ikili bir gösterimidir. Docker API 'sindeki komutunu kullanarak el ile bir görüntü oluşturmanıza karşın `Docker Build` , otomatik derleme sürecinin bir parçası olarak daha iyi bir yaklaşım oluşturmanız daha iyidir.
+Bir mikro hizmeti kapsayıcıında, önce bir kapsayıcı "görüntüsü" oluşturursunuz. Görüntü, hizmet kodu, bağımlılıklar ve çalışma zamanının ikili bir gösterimidir. Docker API 'sindeki komutunu kullanarak el ile bir görüntü oluşturmanıza karşın `Docker Build` , otomatik derleme sürecinin bir parçası olarak daha iyi bir yaklaşım oluşturmanız daha iyidir.
 
 Oluşturulduktan sonra kapsayıcı görüntüleri kapsayıcı kayıt defterlerine depolanır. Kapsayıcı görüntülerini oluşturmanıza, depolamanıza ve yönetmenize olanak sağlar. Hem ortak hem de özel çok sayıda kayıt defterleri mevcuttur. Azure Container Registry (ACR), Azure bulutundaki tam olarak yönetilen bir kapsayıcı kayıt defteri hizmetidir. Azure ağ içindeki görüntülerinizi devam ettirir ve bunları Azure Container konaklarına dağıtma süresini azaltır. Ayrıca, diğer Azure kaynakları için kullandığınız güvenlik ve kimlik yordamlarını kullanarak bunları da güvenli hale getirebilirsiniz.
 
@@ -82,7 +82,7 @@ Azure 'daki kaynakların çoğunda olduğu gibi portal, komut satırı veya Helm
 - Azure aboneliği
 - Kaynak grubu
 - Kubernetes küme adı
-- Region
+- Bölge
 - Kubernetes sürümü
 - DNS adı ön eki
 - Düğüm boyutu

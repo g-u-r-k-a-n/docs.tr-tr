@@ -1,15 +1,14 @@
 ---
 title: 'Son değişiklik: Blazor: NuGet paketlerinin hedef çerçevesi değiştirildi'
 description: "Blazor başlıklı ASP.NET Core 5,0 ' deki Son değişiklik hakkında bilgi edinin: NuGet paketlerinin hedef çerçevesi değişti"
-author: scottaddie
 ms.author: scaddie
 ms.date: 10/01/2020
-ms.openlocfilehash: 5515edc66ff9786f0d8f7e24e5fc28c71502567b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 02945c223410860c9336b6046afe54cacce878dd
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761481"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106498197"
 ---
 # <a name="blazor-target-framework-of-nuget-packages-changed"></a>Blazor: NuGet paketlerinin hedef çerçevesi değiştirildi
 

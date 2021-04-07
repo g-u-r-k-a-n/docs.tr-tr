@@ -1,17 +1,16 @@
 ---
 title: 'Son değişiklik: HttpSys: Istemci sertifikası yeniden anlaşması varsayılan olarak devre dışıdır'
 description: "HttpSys başlıklı ASP.NET Core 5,0 ' deki Son değişiklik hakkında bilgi edinin: Istemci sertifikası yeniden anlaşması varsayılan olarak devre dışıdır"
-author: scottaddie
 ms.author: scaddie
 ms.date: 10/01/2020
-ms.openlocfilehash: 796989e1a21e3cb206d081e4fe8f79630121dc84
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 41c421417125061fa9879f14a1307aa1463ca033
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761350"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106498132"
 ---
-# <a name="httpsys-client-certificate-renegotiation-disabled-by-default"></a>HttpSys: Istemci sertifikası yeniden anlaşması varsayılan olarak devre dışıdır
+# <a name="httpsys-client-certificate-renegotiation-disabled-by-default"></a>HttpSys: İstemci sertifikası yeniden anlaşması varsayılan olarak devre dışıdır
 
 Bir bağlantıyı yeniden oluşturma ve istemci sertifikası isteme seçeneği varsayılan olarak devre dışı bırakılmıştır. Tartışma için bkz. sorun [DotNet/aspnetcore # 23181](https://github.com/dotnet/aspnetcore/issues/23181).
 

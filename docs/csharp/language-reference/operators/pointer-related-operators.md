@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 2d522e9357fb6da7b8d66a663e99e8858c9dd521
-ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
+ms.openlocfilehash: 22cd87a62c92dbfacd0b8ebbdd5cbafb92da73ca
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103480386"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106497365"
 ---
 # <a name="pointer-related-operators-c-reference"></a>İşaretçi ile ilgili işleçler (C# Başvurusu)
 
@@ -37,7 +37,7 @@ ms.locfileid: "103480386"
 - Aritmetik işleçler [ `+` , `-` ,, `++` ve `--` ](#pointer-arithmetic-operators)
 - Karşılaştırma işleçleri,,,, [ `==` `!=` `<` `>` `<=` ve `>=` ](#pointer-comparison-operators)
 
-İşaretçi türleri hakkında bilgi için bkz. [işaretçi türleri](../../programming-guide/unsafe-code-pointers/pointer-types.md).
+İşaretçi türleri hakkında bilgi için bkz. [işaretçi türleri](../unsafe-code.md#pointer-types).
 
 > [!NOTE]
 > İşaretçilerle herhangi bir işlem [güvenli olmayan](../keywords/unsafe.md) bir bağlam gerektirir. Güvenli olmayan bloklar içeren kodun [**AllowUnsafeBlocks**](../compiler-options/language.md#allowunsafeblocks) derleyici seçeneğiyle derlenmesi gerekir.
@@ -189,7 +189,7 @@ Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md)
 
 - [C# başvurusu](../index.md)
 - [C# işleçleri ve ifadeleri](index.md)
-- [İşaretçi türleri](../../programming-guide/unsafe-code-pointers/pointer-types.md)
+- [İşaretçi türleri](../unsafe-code.md#pointer-types)
 - [güvenli olmayan anahtar sözcük](../keywords/unsafe.md)
 - [Fixed anahtar sözcüğü](../keywords/fixed-statement.md)
 - [stackalloc](stackalloc.md)

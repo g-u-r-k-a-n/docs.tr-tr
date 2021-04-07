@@ -1,15 +1,14 @@
 ---
 title: 'Son değişiklik: Uzantılar: bazı NuGet paketlerini etkileyen paket başvuru değişiklikleri'
 description: "ASP.NET Core 5,0 ' deki Son değişiklik hakkında bilgi edinin: bazı NuGet paketlerini etkileyen paket başvuru değişiklikleri"
-author: scottaddie
 ms.author: scaddie
 ms.date: 10/01/2020
-ms.openlocfilehash: 4a525d9f7aad4409fd507fcf80c00968ff4b63d4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 82ee5129d6422d0a5ea4a0f14632a42e779f6ded
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761474"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106497742"
 ---
 # <a name="extensions-package-reference-changes-affecting-some-nuget-packages"></a>Uzantılar: bazı NuGet paketlerini etkileyen paket başvuru değişiklikleri
 

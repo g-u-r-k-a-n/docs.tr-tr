@@ -1,15 +1,14 @@
 ---
 title: 'Son değişiklik: güvenlik: IdentityModel NuGet paket sürümleri güncelleştirildi'
 description: "ASP.NET Core 5,0 ' deki önemli değişiklik hakkında bilgi edinin ve güvenlik: IdentityModel NuGet paket sürümleri güncelleştirildi"
-author: scottaddie
 ms.author: scaddie
 ms.date: 10/01/2020
-ms.openlocfilehash: e2545d90f0024c9f2f5e1b80dce69e17f11baedc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 13f143699f7118aa739bce70bd99df3b7f9ea281
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761690"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106497586"
 ---
 # <a name="security-identitymodel-nuget-package-versions-updated"></a>Güvenlik: IdentityModel NuGet paket sürümleri güncelleştirildi
 

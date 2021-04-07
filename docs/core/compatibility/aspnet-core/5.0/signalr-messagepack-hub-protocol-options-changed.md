@@ -1,17 +1,16 @@
 ---
 title: 'Son değişiklik: SignalR: MessagePack hub protokol seçenekleri türü değişti'
 description: "ASP.NET Core 5,0 ' deki, SignalR: MessagePack hub protokol seçenekleri türü değiştirilen Son değişiklik hakkında bilgi edinin"
-author: scottaddie
 ms.author: scaddie
 ms.date: 10/01/2020
-ms.openlocfilehash: b75dbec834699472f18b3058052274476bd9751d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5a1a3728e4f842074c80f5063dcfe47ad8858674
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761689"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106497924"
 ---
-# <a name="signalr-messagepack-hub-protocol-options-type-changed"></a>SignalR: MessagePack hub protokol seçenekleri türü değişti
+# <a name="signalr-messagepack-hub-protocol-options-type-changed"></a>SignalR: MessagePack Hub Protokolü seçenekleri türü değiştirildi
 
 ASP.NET Core SignalR MessagePack hub protokol seçenekleri türü, öğesinden `IList<MessagePack.IFormatterResolver>` [MessagePack](https://www.nuget.org/packages/MessagePack) kitaplığının `MessagePackSerializerOptions` türüne değişmiştir.
 

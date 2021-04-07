@@ -1,17 +1,16 @@
 ---
 title: 'Son değişiklik: ara yazılım: veritabanı hatası sayfası eski olarak işaretlendi'
 description: "ASP.NET Core 5,0 ' daki Son değişiklik hakkında bilgi edinin ara yazılım: eski olarak işaretlenen veritabanı hatası sayfası"
-author: scottaddie
 ms.author: scaddie
 ms.date: 10/01/2020
-ms.openlocfilehash: f828b5e20c2a9a709d675e435caa99727aebd5b6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8bc8852d7fb54b0d558342ee3c69085117512a1a
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761602"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106497625"
 ---
-# <a name="middleware-database-error-page-marked-as-obsolete"></a>Ara yazılım: veritabanı hatası sayfası eski olarak işaretlendi
+# <a name="middleware-database-error-page-marked-as-obsolete"></a>Ara yazılım: Veritabanı hatası sayfası kullanımdan kaldırıldı olarak işaretlendi
 
 [Databaseerrorpageara yazılımı](/dotnet/api/microsoft.aspnetcore.diagnostics.entityframeworkcore.databaseerrorpagemiddleware?view=aspnetcore-3.0) ve ilişkili uzantı yöntemleri ASP.NET Core 5,0 ' de kullanılmıyor olarak işaretlendi. Ara yazılım ve uzantı yöntemleri ASP.NET Core 6,0 ' de kaldırılır. Bu işlevsellik, `DatabaseDeveloperPageExceptionFilter` ve uzantı yöntemleri tarafından sağlanacak.
 

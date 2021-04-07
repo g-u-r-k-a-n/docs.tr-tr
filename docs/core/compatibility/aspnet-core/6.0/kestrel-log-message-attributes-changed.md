@@ -1,15 +1,14 @@
 ---
 title: 'Son değişiklik: Kestrel: günlük iletisi öznitelikleri değiştirildi'
 description: "Kestrel başlıklı ASP.NET Core 6,0 ' deki Son değişiklik hakkında bilgi edinin: günlük iletisi öznitelikleri değiştirildi"
-author: scottaddie
 ms.author: scaddie
 ms.date: 02/01/2021
-ms.openlocfilehash: 30b03c22a6c85623fec7db14b58b169f887395a0
-ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
+ms.openlocfilehash: 09b0bc71b6c9935b9e7e4170f24869f4d45c97f6
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "99551568"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106496884"
 ---
 # <a name="kestrel-log-message-attributes-changed"></a>Kestrel: günlük iletisi öznitelikleri değiştirildi
 

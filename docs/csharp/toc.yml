@@ -767,22 +767,6 @@ items:
             href: programming-guide/namespaces/using-namespaces.md
           - name: My ad alanını kullanma
             href: programming-guide/namespaces/how-to-use-the-my-namespace.md
-      - name: Güvenli Olmayan Kod ve İşaretçiler
-        items:
-          - name: Genel bakış ve kısıtlamalar
-            displayName: unsafe code pointers
-            href: programming-guide/unsafe-code-pointers/index.md
-          - name: Sabit Boyutlu Arabellekler
-            href: programming-guide/unsafe-code-pointers/fixed-size-buffers.md
-          - name: İşaretçi türleri
-            items:
-              - name: Genel Bakış
-                displayName: pointer types
-                href: programming-guide/unsafe-code-pointers/pointer-types.md
-              - name: İşaretçi Dönüştürmeler
-                href: programming-guide/unsafe-code-pointers/pointer-conversions.md
-              - name: Bayt dizisine kopyalamak için işaretçileri kullanma
-                href: programming-guide/unsafe-code-pointers/how-to-use-pointers-to-copy-an-array-of-bytes.md
       - name: XML belgeleri yorumları
         items:
           - name: Genel Bakış
@@ -1225,6 +1209,9 @@ items:
           - name: Lambda ifadeleri
             href: language-reference/operators/lambda-expressions.md
             displayName: anonymous functions
+          - name: Desenler
+            href: language-reference/operators/patterns.md
+            displayName: 'pattern matching, and keyword, or keyword, not keyword, pattern reference'
           - name: + and += işleçleri
             href: language-reference/operators/addition-operator.md
             displayName: 'string concatenation, delegate combination, event subscription'
@@ -1299,6 +1286,9 @@ items:
           - name: Çeşitli
             displayName: 'Conditional, Obsolete, AttributeUsage, ModuleInitializer, SkipLocalsInit'
             href: language-reference/attributes/general.md
+      - name: Güvenli olmayan kod ve işaretçiler
+        displayName: 'unsafe code, pointers, fixed buffer, function pointer'
+        href: language-reference/unsafe-code.md
       - name: Ön işlemci yönergeleri
         href: language-reference/preprocessor-directives.md
         displayName: '\#if, \#else, \#elif, \#endif, \#define, \#undef, \#warning, \#error, \#line, \#nullable, \#region, \#endregion, \#pragma, warning, checksum'

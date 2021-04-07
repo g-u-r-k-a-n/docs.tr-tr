@@ -1,17 +1,16 @@
 ---
 title: 'Son değişiklik: Blazor : WebEventDescriptor. EventArgsType özelliği değişti'
 description: WebEventDescriptor. EventArgsType özelliğinin, EventName özelliği ile değiştirildiği ASP.NET Core 6,0 ' deki Son değişiklik hakkında bilgi edinin.
-author: scottaddie
 ms.author: scaddie
 ms.date: 02/24/2021
 no-loc:
 - Blazor
-ms.openlocfilehash: 6df086ed234c0071ede83e9fe9d1710f011a2039
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: c9e866813707114f912ffe83309b0f95c2c9a0f2
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102260070"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106497014"
 ---
 # <a name="blazor-no-loc-textwebeventdescriptoreventargstype-property-replaced"></a>Blazor: :::no-loc text="WebEventDescriptor.EventArgsType"::: özellik değişti
 

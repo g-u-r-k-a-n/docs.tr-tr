@@ -1,19 +1,18 @@
 ---
 title: 'Son değişiklik: Blazor : güncelleştirilmiş tarayıcı desteği'
 description: "ASP.NET Core 5,0 ' deki Son değişiklik hakkında bilgi edinin Blazor : güncelleştirilmiş tarayıcı desteği"
-author: scottaddie
 ms.author: scaddie
 ms.date: 10/01/2020
 no-loc:
 - Blazor
 - Blazor WebAssembly
 - Blazor Server
-ms.openlocfilehash: a14ab8d1afd4b662f61e30136d23e28ffbe2d496
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 25566a4b30aaa8484ec4bcf26ab1e8fde6af1279
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100431483"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106497872"
 ---
 # <a name="blazor-updated-browser-support"></a>Blazor: Tarayıcı desteği güncelleştirildi
 

@@ -3,12 +3,12 @@ title: Yönetilen kod nedir?
 description: Yönetilen kodun, yürütmesi, ortak dil çalışma zamanı (CLR) olan bir çalışma zamanı tarafından yönetilen kod olduğunu öğrenin.
 ms.date: 06/20/2016
 ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
-ms.openlocfilehash: 3e2a6576f84890afd35d74b2f0f5fb352a90236a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 10036ab92718aa56a068c7515dec4302a5c3ac9c
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825903"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106498534"
 ---
 # <a name="what-is-managed-code"></a>“Yönetilen kod” nedir?
 
@@ -24,7 +24,7 @@ Yönetilen kod, C#, Visual Basic, F # ve diğerleri gibi .NET üzerinde çalış
 
 "Ara dil" (veya kısa için Il) nedir? Bu, üst düzey .NET dillerde yazılmış kodların derlenmesi ürünüdür. Bu dillerden birinde yazılan kodunuzu derledikten sonra Il 'den çıkan bir ikiliye sahip olursunuz. Il 'nin çalışma zamanının üzerinde çalışan herhangi bir dilden bağımsız olduğunu unutmamak önemlidir; Bu durumda, daha fazla saysanız okuyabilmeniz için ayrı bir belirtim de vardır.
 
-Üst düzey kodınızdan Il 'yi oluşturduktan sonra büyük olasılıkla çalıştırmak istersiniz. Bu, CLR 'nin **tam zamanında** derleme işlemini nereden aldığını ve başlattığı veya bir CPU üzerinde gerçekten ÇALıŞTıRıLABILECEK şekilde Il 'den makine koduna kodlalama işleminin bulunduğu yerdir. **JIT-ing** Bu şekilde, CLR kodunuzun ne yaptığını tam olarak bilir ve onu etkili bir şekilde _yönetebilir_ .
+Üst düzey kodınızdan Il 'yi oluşturduktan sonra büyük olasılıkla çalıştırmak istersiniz. Bu, CLR 'nin **tam zamanında** derleme işlemini nereden aldığını ve başlattığı veya bir CPU üzerinde gerçekten ÇALıŞTıRıLABILECEK şekilde Il 'den makine koduna kodlalama işleminin bulunduğu yerdir.  Bu şekilde, CLR kodunuzun ne yaptığını tam olarak bilir ve onu etkili bir şekilde _yönetebilir_ .
 
 Ara dil bazen ortak ara dil (CıL) veya Microsoft ara dili (MSIL) olarak da adlandırılır.
 
@@ -37,5 +37,5 @@ Buna benzer şekilde C#, yürütmenin CLR tarafından yönetilmediği bir kod pa
 ## <a name="more-resources"></a>Diğer kaynaklar
 
 * [.NET Framework’e Genel Bakış](../framework/get-started/overview.md)
-* [Güvenli Olmayan Kod ve İşaretçiler](../csharp/programming-guide/unsafe-code-pointers/index.md)
+* [Güvenli Olmayan Kod ve İşaretçiler](../csharp/language-reference/unsafe-code.md)
 * [Native ile birlikte çalışma](./native-interop/index.md)

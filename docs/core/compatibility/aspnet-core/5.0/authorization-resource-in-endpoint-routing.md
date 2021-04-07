@@ -1,15 +1,14 @@
 ---
 title: 'Son değişiklik: yetkilendirme: uç nokta yönlendirmede kaynak HttpContext'
 description: "ASP.NET Core 5,0 ' deki Son değişiklik hakkında bilgi edinin: Endpoint Routing Resource, HttpContext"
-author: scottaddie
 ms.author: scaddie
 ms.date: 10/01/2020
-ms.openlocfilehash: 7c5a77cb8999c60a7780b9b4f7ad2a1c79fd8310
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 90f15bcbc1fb05e67b1c6d7494938eebac7718fd
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761677"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106497897"
 ---
 # <a name="authorization-resource-in-endpoint-routing-is-httpcontext"></a>Yetkilendirme: uç nokta yönlendirmesinde kaynak HttpContext 'dir
 

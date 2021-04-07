@@ -1,15 +1,14 @@
 ---
 title: 'Son değişiklik: SignalR: MessagePack hub Protokolü MessagePack 2. x paketine taşındı'
 description: "ASP.NET Core 5,0 ' deki, SignalR: MessagePack hub protokolünü MessagePack 2. x paketine taşınan Son değişiklik hakkında bilgi edinin"
-author: scottaddie
 ms.author: scaddie
 ms.date: 10/01/2020
-ms.openlocfilehash: 1e666c40d7046233c9fb06af819b901fd1251b06
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6851c4fdbaab61e7655dd71ba3c21b8835b2b855
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761686"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106497118"
 ---
 # <a name="signalr-messagepack-hub-protocol-moved-to-messagepack-2x-package"></a>SignalR: MessagePack 2. x paketine taşınan MessagePack hub Protokolü
 

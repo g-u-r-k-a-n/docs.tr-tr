@@ -4,12 +4,12 @@ description: Birçok tür uygulama oluşturmaya yönelik ücretsiz, açık kayna
 author: tdykstra
 ms.date: 11/16/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 78713ee08fadd7a947ee26997b8abe6373ab98d8
-ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.openlocfilehash: 7aa84abdf4653960503699ea7cb239279d748c4e
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104875141"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106496702"
 ---
 # <a name="introduction-to-net"></a>.NET’e giriş
 
@@ -385,7 +385,7 @@ Daha fazla bilgi için bkz. [yerel birlikte çalışabilirlik](../standard/nativ
 
 Dil desteğine bağlı olarak, CLR yerel belleğe erişmenizi ve kod aracılığıyla işaretçi aritmetiği yapmanızı sağlar `unsafe` . Bu işlemler, bazı algoritmalar ve sistem birlikte çalışabilirliği için gereklidir. Güçlü, güvenli olmayan kod kullanımı, sistem API 'Leri ile birlikte çalışmak veya en verimli algoritmayı uygulamak gerekmedikçe önerilmez. Güvenli olmayan kod farklı ortamlarda aynı şekilde yürütülemeyebilir ve ayrıca çöp toplayıcı ve tür güvenliği avantajlarından de yararlanmaya başlayabilir. Güvenli olmayan kodu sınırlamak ve merkezileştirmek ve kodu tamamen test etmeniz önerilir.
 
-Daha fazla bilgi için bkz. [güvenli olmayan kod ve işaretçiler](../csharp/programming-guide/unsafe-code-pointers/index.md).
+Daha fazla bilgi için bkz. [güvenli olmayan kod ve işaretçiler](../csharp/language-reference/unsafe-code.md).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

@@ -5,12 +5,12 @@ description: .NET geliştiricileri için kullanılabilen geliştirme ve tanılam
 ms.author: dapine
 ms.date: 10/21/2020
 ms.topic: overview
-ms.openlocfilehash: 07c1a161a0bb429403db6852fe77749d83c19ec0
-ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
+ms.openlocfilehash: 85d64c0d5857d8603316175d18f8c2f7eab3cc93
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/30/2021
-ms.locfileid: "96589853"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106498535"
 ---
 # <a name="tools-and-diagnostics-in-net"></a>.NET 'teki araçlar ve Tanılamalar
 
@@ -26,7 +26,7 @@ Bu makalede, .NET geliştiricileri için kullanılabilen çeşitli araçlar hakk
 
 ## <a name="ides"></a>IDE
 
-.NET uygulamalarını [Visual Studio Code](https://code.visualstudio.com/docs), [Visual Studio](/visualstudio/windows)veya [Mac için Visual Studio](/visualstudio/mac)yazabilirsiniz. Bulut destekli geliştirme ortamları hakkında bilgi için bkz. [Visual Studio Codespaces](/visualstudio/codespaces/overview/what-is-vsonline).
+.NET uygulamalarını [Visual Studio Code](https://code.visualstudio.com/docs), [Visual Studio](/visualstudio/windows)veya [Mac için Visual Studio](/visualstudio/mac)yazabilirsiniz.
 
 ## <a name="additional-tools"></a>Ek araçlar
 

@@ -1,15 +1,14 @@
 ---
 title: 'Son değişiklik: HTTP: Kestrel ve IIS BadHttpRequestException türleri artık kullanılmıyor ve değiştirilmiş olarak işaretlendi'
 description: "ASP.NET Core 5,0 ' de, HTTP: Kestrel ve IIS Rozhttprequestexception türlerini Kullanımdan kaldırılmış ve değiştirilmiş olarak işaretlenen Son değişiklik hakkında bilgi edinin"
-author: scottaddie
 ms.author: scaddie
 ms.date: 10/01/2020
-ms.openlocfilehash: c51b1dd9d708c04bc1bbcfb65ea2e9daea5330b4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5837018def634b732b4f273f1a794267f4d17972
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761473"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106498145"
 ---
 # <a name="http-kestrel-and-iis-badhttprequestexception-types-marked-obsolete-and-replaced"></a>HTTP: Kestrel ve IIS BadHttpRequestException türleri artık kullanılmıyor ve değiştirilmiş olarak işaretlendi
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DefineConstants compiler option [C#]
 - LangVersion compiler option [C#]
 - Nullable compiler option [C#]
-ms.openlocfilehash: fe3b7b8c06aa86e406757feb7635a5e9ca1032e9
-ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
+ms.openlocfilehash: a7767d548e41e054006fb53cad47e8ab1f14b21b
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2021
-ms.locfileid: "105637032"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106496715"
 ---
 # <a name="c-compiler-options-for-language-feature-rules"></a>Dil özelliği kuralları için C# derleyici seçenekleri
 
@@ -45,7 +45,7 @@ Or anahtar sözcüğünün kapsamındaki tamsayı aritmetik bir ifade, `checked`
 <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 ```
 
-Güvenli olmayan kod hakkında daha fazla bilgi için bkz. [güvenli olmayan kod ve işaretçiler](../../programming-guide/unsafe-code-pointers/index.md).
+Güvenli olmayan kod hakkında daha fazla bilgi için bkz. [güvenli olmayan kod ve işaretçiler](../unsafe-code.md).
 
 ## <a name="defineconstants"></a>Definesabitleri
 
@@ -88,10 +88,10 @@ Bu derleyici seçeneğini program aracılığıyla ayarlama hakkında daha fazla
 
 ### <a name="c-language-specification"></a>C# dili belirtimi
 
-| Sürüm          | Bağlantı                       | Description                                                             |
+| Sürüm          | Bağlantı                       | Açıklama                                                             |
 |------------------|----------------------------|-------------------------------------------------------------------------|
 | C# 7,0 ve üzeri |                            | Şu anda kullanılamıyor                                                 |
-| C# 6,0           | [Bağlantı][csharp-6]           | C# dil belirtimi sürüm 6-resmi olmayan taslak: .NET Foundation |
+| C# 6,0           | [Bağlantısının][csharp-6]           | C# dil belirtimi sürüm 6-resmi olmayan taslak: .NET Foundation |
 | C# 5,0           | [PDF’yi İndir][csharp-5]   | Standart ECMA-334 5 sürümü                                           |
 | C# 3,0           | [BELGEYI indir][csharp-3]   | C# dil belirtimi sürüm 3,0: Microsoft Corporation            |
 | C# 2,0           | [PDF’yi İndir][csharp-2]   | Standart ECMA-334 4 sürümü                                           |

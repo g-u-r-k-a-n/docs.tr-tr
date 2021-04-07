@@ -8,16 +8,16 @@ dev_langs:
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-ms.openlocfilehash: c42b6ef7b72cec1846517c700ab6ed34046ed7de
-ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
+ms.openlocfilehash: e261674a38f250f667df5298fc1a80b75596c4c5
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98025426"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106498509"
 ---
 # <a name="chaining-tasks-using-continuation-tasks"></a>Devamlılık görevlerini kullanarak görevleri zincirleme
 
-Zaman uyumsuz programlamada, tamamlandığında bir zaman uyumsuz işlem, ikinci bir işlemi çağırmak için ortaktır. Devamlılıklar, kendi işlemlerinin ilk işlemin sonuçlarını kullanmasına izin verir. Geleneksel olarak, devamlılıklar geri çağırma yöntemleri kullanılarak yapılır. Görev paralel kitaplığında, aynı işlevler _devamlılık görevleri_ tarafından sağlanır. Bir devamlılık görevi (sadece devamlılık olarak da bilinir _), öncül_ olarak bilinen başka bir görev tarafından çağrılan zaman uyumsuz bir görevdir.
+Zaman uyumsuz programlamada, tamamlandığında bir zaman uyumsuz işlem, ikinci bir işlemi çağırmak için ortaktır. Devamlılıklar, alt işlemlerin ilk işlemin sonuçlarını kullanmasına izin verir. Geleneksel olarak, devamlılıklar geri çağırma yöntemleri kullanılarak yapılır. Görev paralel kitaplığında, aynı işlevler _devamlılık görevleri_ tarafından sağlanır. Bir devamlılık görevi (sadece devamlılık olarak da bilinir _), öncül_ olarak bilinen başka bir görev tarafından çağrılan zaman uyumsuz bir görevdir.
 
 Devamlılıkların kullanımı nispeten kolaydır, ancak bu, güçlü ve esnektir. Örneğin, şunları yapabilirsiniz:
 

@@ -1,15 +1,14 @@
 ---
 title: 'Son değişiklik: SignalR: UseSignalR ve UseConnections yöntemleri kaldırıldı'
 description: ASP.NET Core 5,0 ' deki ve SignalR başlıklı UseSignalR ve UseConnections yöntemlerinin kaldırıldığı Son değişiklik hakkında bilgi edinin
-author: scottaddie
 ms.author: scaddie
 ms.date: 10/01/2020
-ms.openlocfilehash: 1b1fce04518e69927cdc1650cc1e19107cc81e3b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3b6e301ee8414a503f7b3697d3b1a01174a1cefb
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761405"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106497106"
 ---
 # <a name="signalr-usesignalr-and-useconnections-methods-removed"></a>SignalR: UseSignalR ve UseConnections yöntemleri kaldırıldı
 

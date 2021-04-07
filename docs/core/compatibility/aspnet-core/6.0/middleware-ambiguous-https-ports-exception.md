@@ -1,15 +1,14 @@
 ---
 title: 'Son değişiklik: ara yazılım: HTTPS yeniden yönlendirme ara yazılımı belirsiz HTTPS bağlantı noktalarında özel durum oluşturur'
 description: "ASP.NET Core 6,0 ' deki Son değişiklik hakkında bilgi edinin: HTTPS yeniden yönlendirme ara yazılımı, belirsiz HTTPS bağlantı noktalarında özel durum oluşturur"
-author: scottaddie
 ms.author: scaddie
 ms.date: 02/04/2021
-ms.openlocfilehash: 1f49e0df7eaa2eecd83643c9596e745109a340b7
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 5c41251fac29f7c2dc2bdc3eb5610bb571f438c9
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100488350"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106497027"
 ---
 # <a name="middleware-https-redirection-middleware-throws-exception-on-ambiguous-https-ports"></a>Ara yazılım: HTTPS yeniden yönlendirme ara yazılımı belirsiz HTTPS bağlantı noktalarında özel durum oluşturur
 
@@ -46,7 +45,7 @@ Bu değişiklik, HTTPS 'nin kullanılabilir olduğu bilindiğinde gizli verileri
 
 Sunucuda birden çok farklı HTTPS bağlantı noktası olduğunda HTTPS yeniden yönlendirmeyi etkinleştirmek için, yapılandırmada bir bağlantı noktası belirtmeniz gerekir. Daha fazla bilgi için bkz. [bağlantı noktası yapılandırması](/aspnet/core/security/enforcing-ssl?view=aspnetcore-5.0&preserve-view=true#port-configuration).
 
-Uygulamanızda HTTPS yeniden yönlendirme ara yazılımı gerekmiyorsa, `UseHttpsRedirection` *Startup.cs* adresinden kaldırın.
+Uygulamanızda HTTPS yeniden yönlendirme ara yazılımı gerekmiyorsa, `UseHttpsRedirection` *Başlangıç. cs*' den kaldırın.
 
 Doğru HTTPS bağlantı noktasını dinamik olarak seçmeniz gerekiyorsa, GitHub sorunu [DotNet/aspnetcore # 21291](https://github.com/dotnet/aspnetcore/issues/21291)içinde geri bildirim sağlayın.
 

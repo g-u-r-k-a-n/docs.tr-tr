@@ -6,12 +6,12 @@ f1_keywords:
 - stackalloc_CSharpKeyword
 helpviewer_keywords:
 - stackalloc expression [C#]
-ms.openlocfilehash: 72d91cf9aa67957ed8e1cad5b2c4a1f3b6382c1f
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 42867ff1b5acffaf62639a31a5bdd3b4055e252a
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89136856"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106497469"
 ---
 # <a name="stackalloc-expression-c-reference"></a>stackalloc ifadesi (C# Başvurusu)
 
@@ -36,7 +36,7 @@ Bir `stackalloc` ifadenin sonucunu aşağıdaki türlerden birinin değişkenine
   > [!NOTE]
   > <xref:System.Span%601> <xref:System.ReadOnlySpan%601> Mümkün olduğunda yığın tarafından ayrılan bellekle çalışmak için veya türlerini kullanmanızı öneririz.
 
-- Aşağıdaki örnekte gösterildiği gibi bir [işaretçi türü](../../programming-guide/unsafe-code-pointers/pointer-types.md):
+- Aşağıdaki örnekte gösterildiği gibi bir [işaretçi türü](../unsafe-code.md#pointer-types):
 
   [!code-csharp[stackalloc pointer](snippets/shared/StackallocOperator.cs#AssignToPointer)]
 
@@ -75,6 +75,6 @@ Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md)
 - [C# başvurusu](../index.md)
 - [C# işleçleri ve ifadeleri](index.md)
 - [İşaretçi bağlantılı işleçler](pointer-related-operators.md)
-- [İşaretçi türleri](../../programming-guide/unsafe-code-pointers/pointer-types.md)
+- [İşaretçi türleri](../unsafe-code.md#pointer-types)
 - [Bellek ve aralıkla ilgili türler](../../../standard/memory-and-spans/index.md)
 - [Stackalloc 'un DOS ve yapılmaması](https://vcsjones.dev/2020/02/24/stackalloc/)

@@ -1,17 +1,16 @@
 ---
 title: 'Son değişiklik: Kestrel: desteklenen varsayılan TLS protokol sürümleri değiştirildi'
 description: "Kestrel başlıklı ASP.NET Core 5,0 ' deki Son değişiklik hakkında bilgi edinin: varsayılan desteklenen TLS protokol sürümleri değişti"
-author: scottaddie
 ms.author: scaddie
 ms.date: 10/01/2020
-ms.openlocfilehash: d7018be7cc778560b7b9c65472d42d7e0fbf623d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1e3ebd700e5bb603f95a8b20ebdbd61379f1e508
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761341"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106497651"
 ---
-# <a name="kestrel-default-supported-tls-protocol-versions-changed"></a>Kestrel: desteklenen varsayılan TLS protokol sürümleri değiştirildi
+# <a name="kestrel-default-supported-tls-protocol-versions-changed"></a>Kestrel: Varsayılan olarak desteklenen TLS protokol sürümleri değiştirildi
 
 Kestrel artık, daha önce olduğu gibi TLS 1,1 ve TLS 1,2 protokollerinin bağlantılarını kısıtlamak yerine sistem varsayılan TLS protokolü sürümlerini kullanır.
 

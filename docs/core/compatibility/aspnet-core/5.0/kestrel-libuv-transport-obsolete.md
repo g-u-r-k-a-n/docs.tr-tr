@@ -1,17 +1,16 @@
 ---
 title: 'Son değişiklik: Kestrel: libuv taşıması eski olarak işaretlendi'
 description: "Kestrel adlı ASP.NET Core 5,0 ' deki Son değişiklik hakkında bilgi edinin: libuv taşıması eski olarak işaretlendi"
-author: scottaddie
 ms.author: scaddie
 ms.date: 10/01/2020
-ms.openlocfilehash: f66b9b646671e07957e6d30a95333d392eb29617
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7edec666df729edbffe60b6017a2b8ee5f46ae67
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761521"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106497638"
 ---
-# <a name="kestrel-libuv-transport-marked-as-obsolete"></a>Kestrel: libuv taşıması eski olarak işaretlendi
+# <a name="kestrel-libuv-transport-marked-as-obsolete"></a>Kestrel: Libuv taşıması kullanımdan kaldırıldı olarak işaretlendi
 
 Önceki ASP.NET Core sürümleri, zaman uyumsuz giriş ve çıktının nasıl gerçekleştirildiği hakkında bir uygulama ayrıntısı olarak libuv kullandı. ASP.NET Core 2,0 ' de, alternatif bir <xref:System.Net.Sockets.Socket> tabanlı Aktarım geliştirdik. ASP.NET Core 2,1 ' de, Kestrel `Socket` Varsayılan olarak tabanlı aktarımı kullanmaya geçti. Uyumluluk nedenleriyle libuv desteği korunmıştı.
 

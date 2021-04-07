@@ -1,17 +1,16 @@
 ---
 title: 'Son değişiklik: Blazor: Blazor uygulamalarında yönlendirme mantığındaki değişiklikler'
 description: "Blazor başlıklı ASP.NET Core 5,0 ' deki Son değişiklik hakkında bilgi edinin: Blazor uygulamalarında yönlendirme mantığındaki değişiklikler"
-author: scottaddie
 ms.author: scaddie
 ms.date: 12/14/2020
-ms.openlocfilehash: 4ab8289565c88b17eb204a11724bb12a09b033c2
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: cec05b26319fc8302261e41cc868dd73b46c8af0
+ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97513525"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106497833"
 ---
-# <a name="blazor-route-precedence-logic-changed-in-blazor-apps"></a>Blazor: Blazor uygulamalarında yol önceliği mantığı değişti
+# <a name="blazor-route-precedence-logic-changed-in-blazor-apps"></a>Blazor: Blazor uygulamalarında rota önceliği mantığı değişti
 
 Blazor yönlendirme uygulamasındaki bir hata, yolların önceliğin nasıl belirlendiğine göre etkilendi. Bu hata, Blazor uygulamanızda isteğe bağlı parametrelerle tüm yolları veya yolları etkiler.
 
@@ -43,7 +42,7 @@ Geçerli davranış ASP.NET Core uygulamalarda tanımlanan yönlendirme davranı
 
 ## <a name="affected-apis"></a>Etkilenen API’ler
 
-Hiçbiri
+Yok
 
 <!--
 
