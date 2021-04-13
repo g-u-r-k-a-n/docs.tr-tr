@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 28f2b78de2533c659ea0fcf9d4990694dbfd411c
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: 9a57319dc1d744bfc06cc7360ffcb59b24fe3646
+ms.sourcegitcommit: fdfa01f6cd3aa4c36b6e8a1830693ff22d35aeea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100584870"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107292268"
 ---
 # <a name="json-serialization-and-deserialization-marshalling-and-unmarshalling-in-net---overview"></a>.NET 'te JSON serileştirme ve seri durumundan çıkarma (sıralama ve kaldırma)-genel bakış
 
@@ -35,6 +35,10 @@ Kitaplığın Visual Basic koddan kullanabileceğiniz bölümlerine ilişkin baz
   * .NET Standard 2,0 ve sonraki sürümler
   * .NET Framework 4.7.2 ve sonraki sürümler
   * .NET Core 2,0, 2,1 ve 2,2
+
+## <a name="security-information"></a>Güvenlik bilgileri
+
+Tasarlarken kabul edilen güvenlik tehditleri <xref:System.Text.Json.JsonSerializer> ve nasıl hafiflebilecekleri hakkında bilgi için bkz. [ `System.Text.Json` Threat model](https://github.com/dotnet/runtime/blob/main/src/libraries/System.Text.Json/docs/ThreatModel.md).
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 

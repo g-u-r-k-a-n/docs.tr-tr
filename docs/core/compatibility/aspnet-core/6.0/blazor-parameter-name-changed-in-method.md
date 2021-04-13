@@ -1,16 +1,18 @@
 ---
-title: 'Son değişiklik: Blazor: parametre adı, talep Estimagefileasync yönteminde değiştirildi'
-description: "Blazor başlıklı ASP.NET Core 6,0 ' deki Son değişiklik hakkında bilgi edinin: parametre adı, karşılandığından Estimagefileasync yönteminde değiştirildi"
+title: 'Son değişiklik: Blazor : parametre adı, talep Estimagefileasync yönteminde değiştirildi'
+description: "ASP.NET Core 6,0 ' deki Son değişiklik hakkında bilgi edinin Blazor : talep tahmini Gefileasync yönteminde parametre adı değiştirildi"
+no-loc:
+- Blazor
 ms.author: scaddie
 ms.date: 02/09/2021
-ms.openlocfilehash: 645b53e341507ffd9f369eea1b940232b7c14770
-ms.sourcegitcommit: e7e0921d0a10f85e9cb12f8b87cc1639a6c8d3fe
+ms.openlocfilehash: 06fe2b0cff17630e09da3f80c506684f1b26e9d4
+ms.sourcegitcommit: fdfa01f6cd3aa4c36b6e8a1830693ff22d35aeea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "107255187"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107292281"
 ---
-# <a name="blazor-parameter-name-changed-in-requestimagefileasync-method"></a>Blazor: parametre adı, talep Estimagefileasync yönteminde değiştirildi
+# <a name="blazor-parameter-name-changed-in-requestimagefileasync-method"></a>Blazor: Parametre adı, karşılandığından Estimagefileasync yönteminde değiştirildi
 
 `RequestImageFileAsync`Yöntemin `maxWith` parametresi olarak yeniden adlandırıldı `maxWith` `maxWidth` .
 
