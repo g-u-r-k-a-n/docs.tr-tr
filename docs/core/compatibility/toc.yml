@@ -37,6 +37,8 @@ items:
                     href: aspnet-core/6.0/blazor-eventargstype-property-replaced.md
                   - name: 'Kestrel: günlük iletisi öznitelikleri değiştirildi'
                     href: aspnet-core/6.0/kestrel-log-message-attributes-changed.md
+                  - name: 'MessagePack: kitaplık değiştirildi @microsoft/signalr-protocol-msgpack'
+                    href: aspnet-core/6.0/messagepack-library-change.md
                   - name: 'Ara yazılım: HTTPS yeniden yönlendirme ara yazılımı belirsiz HTTPS bağlantı noktalarında özel durum oluşturur'
                     href: aspnet-core/6.0/middleware-ambiguous-https-ports-exception.md
                   - name: 'Razor: RazorEngine API ''Leri kullanılmıyor olarak işaretlendi'
@@ -345,6 +347,8 @@ items:
                     href: aspnet-core/6.0/blazor-eventargstype-property-replaced.md
                   - name: 'Kestrel: günlük iletisi öznitelikleri değiştirildi'
                     href: aspnet-core/6.0/kestrel-log-message-attributes-changed.md
+                  - name: 'MessagePack: kitaplık değiştirildi @microsoft/signalr-protocol-msgpack'
+                    href: aspnet-core/6.0/messagepack-library-change.md
                   - name: 'Ara yazılım: HTTPS yeniden yönlendirme ara yazılımı belirsiz HTTPS bağlantı noktalarında özel durum oluşturur'
                     href: aspnet-core/6.0/middleware-ambiguous-https-ports-exception.md
                   - name: 'Razor: RazorEngine API ''Leri kullanılmıyor olarak işaretlendi'
