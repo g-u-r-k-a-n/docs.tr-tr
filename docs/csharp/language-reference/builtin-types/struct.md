@@ -9,12 +9,12 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 2ceac94c04dd8deb169e836f09928dfd9a38ac35
-ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
+ms.openlocfilehash: 3aaba057da6214992864cf8e907b0c06ec93264c
+ms.sourcegitcommit: e7e0921d0a10f85e9cb12f8b87cc1639a6c8d3fe
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98025439"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107255096"
 ---
 # <a name="structure-types-c-reference"></a>Yapı türleri (C# Başvurusu)
 
@@ -33,7 +33,7 @@ Yapı türlerinde değer semantiklerine sahip olduğundan, *değişmez* yapı t�
 C# 7,2 ' den başlayarak, `readonly` bir yapı türünün sabit olduğunu bildirmek için değiştiricisini kullanın. Bir yapının tüm veri üyeleri `readonly` aşağıdaki şekilde salt okunabilir olmalıdır:
 
 - Herhangi bir alan bildirimi [ `readonly` değiştiriciye](../keywords/readonly.md) sahip olmalıdır
-- Otomatik olarak uygulanan özellikler dahil olmak üzere herhangi bir özellik salt okunabilir olmalıdır. C# 9,0 ve üzeri sürümlerde bir özelliğin [ `init` erişimcisi](../../whats-new/csharp-9.md#init-only-setters)olabilir.
+- Otomatik olarak uygulanan özellikler dahil olmak üzere herhangi bir özellik salt okunabilir olmalıdır. C# 9,0 ve üzeri sürümlerde bir özelliğin [ `init` erişimcisi](../keywords/init.md)olabilir.
 
 Bu, yapının hiçbir üyesinin `readonly` yapının durumunu değiştirdiğine garanti eder. C# 8,0 ve üzeri sürümlerde, oluşturucular hariç diğer örnek üyelerinin örtülü olarak olduğu anlamına gelir [`readonly`](#readonly-instance-members) .
 

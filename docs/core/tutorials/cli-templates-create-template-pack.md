@@ -2,15 +2,15 @@
 title: DotNet New için bir şablon paketi oluşturma
 description: DotNet yeni komut için bir şablon paketi oluşturacak bir csproj dosyası oluşturmayı öğrenin.
 author: adegeo
-ms.date: 12/11/2020
+ms.date: 03/26/2021
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 2aea143f1e41d580de41a9cc9e924d70b55695db
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.openlocfilehash: 343104f9609c59e7da24f857de6a7fc29803e2df
+ms.sourcegitcommit: e7e0921d0a10f85e9cb12f8b87cc1639a6c8d3fe
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633604"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107255395"
 ---
 # <a name="tutorial-create-a-template-pack"></a>Öğretici: şablon paketi oluşturma
 
@@ -103,19 +103,27 @@ Son ayar, şablon paketi projelerine uygulanan bir uyarı iletisini bastırır.
 
 ## <a name="build-and-install"></a>Oluşturma ve yüklemeyi
 
-Bu dosyayı kaydedin ve ardından paket komutunu çalıştırın
-
-```dotnetcli
-dotnet pack
-```
-
-Bu komut, projenizi derler ve bu, bir NuGet paketi oluşturmak için _Working\bin\debug_ klasörü olmalıdır.
-
-```dotnetcli
-dotnet pack
-```
+Proje dosyasını kaydedin. Şablon paketini oluşturmadan önce, klasör yapınızı doğru olduğundan emin olun. Paketetmek istediğiniz herhangi bir şablon, kendi klasöründe _Şablonlar_ klasörüne yerleştirilmelidir. Klasör yapısı şuna benzer görünmelidir:
 
 ```console
+working
+│   templatepack.csproj
+└───templates
+    ├───extensions
+    │   └───.template.config
+    │           template.json
+    └───consoleasync
+        └───.template.config
+                template.json
+```
+
+_Şablonlar_ klasörü iki klasöre sahiptir: _Uzantılar_ ve _consoleasync_.
+
+Terminalinizde, _çalışma_ klasöründen `dotnet pack` komutunu çalıştırın. Bu komut, projenizi oluşturur ve aşağıdaki çıktıda gösterildiği gibi _Working\bin\debug_ klasöründe bir NuGet paketi oluşturur:
+
+```console
+C:\working> dotnet pack
+
 Microsoft (R) Build Engine version 16.8.0+126527ff1 for .NET
 Copyright (C) Microsoft Corporation. All rights reserved.
 
@@ -152,10 +160,8 @@ NuGet paketini bir NuGet akışına yüklediyseniz, `dotnet new -i PACKAGEID` `P
 Şablon paketini, _. nupkg_ dosyasıyla doğrudan veya NuGet akışı ile nasıl yükletiğinize bakılmaksızın, bir şablon paketinin kaldırılması aynı olur. Kaldırmak istediğiniz `<PackageId>` şablonun öğesini kullanın. Komutunu çalıştırarak yüklenen şablonların bir listesini alabilirsiniz `dotnet new -u` .
 
 ```dotnetcli
-dotnet new -u
-```
+C:\working> dotnet new -u
 
-```console
 Template Instantiation Commands for .NET Core CLI
 
 Currently installed items:

@@ -3,12 +3,12 @@ title: "Son değişiklik: Razor: RazorEngine API 'Leri kullanılmıyor olarak i�
 description: "ASP.NET Core 6,0 başlıklı Razor: RazorEngine API 'Lerini yok olarak işaretlenen Son değişiklik hakkında bilgi edinin"
 ms.author: scaddie
 ms.date: 02/09/2021
-ms.openlocfilehash: 08026cf32eec5ee391fab3d2ccdd9f22c4a3967b
-ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
+ms.openlocfilehash: a312fb2fda6245e529d59d82b72ffe64ae6d6ff5
+ms.sourcegitcommit: e7e0921d0a10f85e9cb12f8b87cc1639a6c8d3fe
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "106497040"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107255109"
 ---
 # <a name="razor-razorengine-apis-marked-obsolete"></a>Razor: RazorEngine API 'Leri kullanılmıyor olarak işaretlendi
 
@@ -16,7 +16,7 @@ ms.locfileid: "106497040"
 
 ## <a name="version-introduced"></a>Sunulan sürüm
 
-6,0 Preview 1
+ASP.NET Core 6,0 Preview 1
 
 ## <a name="old-behavior"></a>Eski davranış
 

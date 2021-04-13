@@ -3,12 +3,12 @@ title: C# 7,0 ' deki yenilikler-C# Kılavuzu
 description: C# dilinin sürüm 7,0 ' deki yeni özelliklere genel bakış alın.
 ms.date: 10/02/2020
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 973491044808d7abc58920381ffed57549ee58d3
-ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.openlocfilehash: 0c57a030497d13b783960152612de27d5fc73c3c
+ms.sourcegitcommit: e7e0921d0a10f85e9cb12f8b87cc1639a6c8d3fe
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104876064"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107255031"
 ---
 # <a name="whats-new-in-c-70-through-c-73"></a>C# 7,3 ile c# 7,0 yenilikleri
 
@@ -166,10 +166,10 @@ public static int SumPositiveNumbers(IEnumerable<object> sequence)
 }
 ```
 
-- `case 0:` tanıdık sabit bir örüntü.
-- `case IEnumerable<int> childSequence:` bir tür deseninin.
-- `case int n when n > 0:` , ek bir koşula sahip bir tür düzendir `when` .
-- `case null:` null desenli bir değer.
+- `case 0:` sabit bir [örüntü](../language-reference/operators/patterns.md#constant-pattern).
+- `case IEnumerable<int> childSequence:` bir [bildirim deseninin](../language-reference/operators/patterns.md#declaration-and-type-patterns).
+- `case int n when n > 0:` , ek bir koşula sahip bir bildirim modelidir `when` .
+- `case null:` sabit bir modeldir `null` .
 - `default:` tanıdık varsayılan durumdur.
 
 C# 7,1 ile başlayarak, `is` ve `switch` tür deseninin model ifadesi bir genel tür parametresinin türüne sahip olabilir. Bu, ya da türünde olabilecek türler denetlenirken `struct` `class` ve kutulamayı önlemek istediğiniz durumlarda yararlı olabilir.

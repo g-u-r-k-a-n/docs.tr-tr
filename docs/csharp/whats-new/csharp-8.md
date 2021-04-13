@@ -2,12 +2,12 @@
 title: C# 8,0 ' deki yenilikler-C# Kılavuzu
 description: C# 8,0 ' de bulunan yeni özelliklere genel bakış alın.
 ms.date: 04/07/2020
-ms.openlocfilehash: 7e2e484b4eacf8fdbef61a600409fa561dd34cb3
-ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.openlocfilehash: fa31276175733211c74ac54affc8ec222896c87f
+ms.sourcegitcommit: e7e0921d0a10f85e9cb12f8b87cc1639a6c8d3fe
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104876077"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107255356"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 sürümündeki yenilikler
 
@@ -104,7 +104,7 @@ Varsayılan arabirim yöntemleri birçok senaryoyu ve dil öğelerini etkiler. �
 
 C# 8,0, kodunuzda daha fazla yerde daha fazla model ifadesi kullanabilmeniz için bu sözlüğü genişletir. Verileriniz ve işlevselliklerinizin ayrı olması durumunda bu özellikleri göz önünde bulundurun. Algoritmalarınız nesnenin çalışma zamanı türü dışında bir olgusuna bağımlıysa, model eşleştirmeyi düşünün. Bu teknikler, hızlı tasarımlar için başka bir yol sağlar.
 
-Yeni yerlerdeki yeni desenlere ek olarak C# 8,0 **özyinelemeli desenler** ekler. Herhangi bir model ifadesinin sonucu bir ifadedir. Özyinelemeli bir model, sadece başka bir model ifadesinin çıktısına uygulanan bir model ifadesi olur.
+Yeni yerlerdeki yeni desenlere ek olarak C# 8,0 **özyinelemeli desenler** ekler. Özyinelemeli desenler, diğer desenleri içerebilen desenlerdir.
 
 ### <a name="switch-expressions"></a>Anahtar ifadeleri
 
@@ -174,6 +174,8 @@ public static RGBColor FromRainbowClassic(Rainbow colorBand)
 }
 ```
 
+Daha fazla bilgi için bkz. [ `switch` ifadesi](../language-reference/operators/switch-expression.md).
+
 ### <a name="property-patterns"></a>Özellik desenleri
 
 **Özellik deseninin** incelenen nesnenin özellikleriyle eşleştirmenize olanak sağlar. Alıcının adresine göre satış vergisini hesaplamak zorunda olan bir eCommerce sitesini düşünün. Bu hesaplama, bir sınıfın temel sorumluluğu değildir `Address` . Büyük olasılıkla, adres biçimi değişikliklerinden daha fazla sıklıkta değişecektir. Satış vergisi miktarı `State` adresin özelliğine bağlıdır. Aşağıdaki yöntem, adresten ve fiyattan satış vergisini hesaplamak için özellik modelini kullanır:
@@ -192,9 +194,11 @@ public static decimal ComputeSalesTax(Address location, decimal salePrice) =>
 
 Model eşleştirme, bu algoritmayı ifade etmek için kısa bir sözdizimi oluşturur.
 
+Daha fazla bilgi için, [desenler](../language-reference/operators/patterns.md) makalesinin [özellik düzeni](../language-reference/operators/patterns.md#property-pattern) bölümüne bakın.
+
 ### <a name="tuple-patterns"></a>Demet desenleri
 
-Bazı algoritmalar birden fazla girişe bağımlıdır. **Demet desenleri** , [kayıt düzeni](../language-reference/builtin-types/value-tuples.md)olarak ifade edilen birden çok değere göre geçiş yapmanıza olanak sağlar.  Aşağıdaki kod, oyun *rock, Paper, makas* için bir switch ifadesi gösterir:
+Bazı algoritmalar birden fazla girişe bağımlıdır. **Demet desenleri** , [kayıt düzeni](../language-reference/builtin-types/value-tuples.md)olarak ifade edilen birden çok değere göre geçiş yapmanıza olanak sağlar. Aşağıdaki kod, oyun *rock, Paper, makas* için bir switch ifadesi gösterir:
 
 ```csharp
 public static string RockPaperScissors(string first, string second)
@@ -261,7 +265,7 @@ static Quadrant GetQuadrant(Point point) => point switch
 
 Önceki anahtardaki atma deseninin ya da 0 olduğunda eşleşir `x` `y` ancak ikisi birden değildir. Switch ifadesinin bir değer üretmesi veya bir özel durum oluşturması gerekir. Durumlardan hiçbiri eşleşmezse, switch ifadesi bir özel durum oluşturur. Anahtar ifadenizde olası tüm durumları kapsamıyorsanız, derleyici sizin için bir uyarı oluşturur.
 
-Bu [Gelişmiş öğreticide, model eşleştirme](../tutorials/pattern-matching.md)tekniklerini inceleyebilirsiniz.
+Bu [Gelişmiş öğreticide, model eşleştirme](../tutorials/pattern-matching.md)tekniklerini inceleyebilirsiniz. Konumsal bir desen hakkında daha fazla bilgi için, [desenler](../language-reference/operators/patterns.md) makalesinin [konumsal düzen](../language-reference/operators/patterns.md#positional-pattern) bölümüne bakın.
 
 ## <a name="using-declarations"></a>Bildirimleri kullanma
 

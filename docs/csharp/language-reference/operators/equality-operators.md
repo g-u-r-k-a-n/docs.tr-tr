@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 39461157c33fea0effb5c8808ded1c9981900e17
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: ee45869dff19712d8e4ef30f2fc01c2d4633acf1
+ms.sourcegitcommit: e7e0921d0a10f85e9cb12f8b87cc1639a6c8d3fe
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063221"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107255460"
 ---
 # <a name="equality-operators-c-reference"></a>Eşitlik işleçleri (C# Başvurusu)
 
@@ -55,7 +55,7 @@ Varsayılan olarak, kayıt olmayan iki başvuru türü işleneni aynı nesneye b
 
 ### <a name="record-types-equality"></a>Kayıt türleri eşitliği
 
-C# 9,0 ve üzeri sürümlerde bulunan [kayıt türleri](../../whats-new/csharp-9.md#record-types) , `==` `!=` Varsayılan olarak değer eşitlik semantiğini sağlayan ve işleçlerini destekler. Diğer bir deyişle, iki kayıt işleneni her ikisi de `null` ya da tüm alanların karşılık gelen değerleri eşitse ve otomatik uygulanan özellikler eşitse eşittir.
+C# 9,0 ve üzeri sürümlerde bulunan [kayıt türleri](../builtin-types/record.md) , `==` `!=` Varsayılan olarak değer eşitlik semantiğini sağlayan ve işleçlerini destekler. Diğer bir deyişle, iki kayıt işleneni her ikisi de `null` ya da tüm alanların karşılık gelen değerleri eşitse ve otomatik uygulanan özellikler eşitse eşittir.
 
 :::code language="csharp" source="snippets/shared/EqualityOperators.cs" id="RecordTypesEquality":::
 

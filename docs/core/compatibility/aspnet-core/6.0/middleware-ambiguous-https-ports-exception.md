@@ -3,12 +3,12 @@ title: 'Son değişiklik: ara yazılım: HTTPS yeniden yönlendirme ara yazılı
 description: "ASP.NET Core 6,0 ' deki Son değişiklik hakkında bilgi edinin: HTTPS yeniden yönlendirme ara yazılımı, belirsiz HTTPS bağlantı noktalarında özel durum oluşturur"
 ms.author: scaddie
 ms.date: 02/04/2021
-ms.openlocfilehash: 5c41251fac29f7c2dc2bdc3eb5610bb571f438c9
-ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
+ms.openlocfilehash: e299fc7d2be295d723f5389a2b4cd6896078a752
+ms.sourcegitcommit: e7e0921d0a10f85e9cb12f8b87cc1639a6c8d3fe
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "106497027"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107255083"
 ---
 # <a name="middleware-https-redirection-middleware-throws-exception-on-ambiguous-https-ports"></a>Ara yazılım: HTTPS yeniden yönlendirme ara yazılımı belirsiz HTTPS bağlantı noktalarında özel durum oluşturur
 
@@ -18,7 +18,7 @@ Tartışma için bkz. GitHub sorunu [DotNet/aspnetcore # 29222](https://github.c
 
 ## <a name="version-introduced"></a>Sunulan sürüm
 
-6.0
+ASP.NET Core 6,0
 
 ## <a name="old-behavior"></a>Eski davranış
 

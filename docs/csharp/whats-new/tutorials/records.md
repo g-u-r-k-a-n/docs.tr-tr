@@ -2,12 +2,12 @@
 title: Kayıt türlerini kullanma-C# öğreticisi
 description: Kayıt türlerini kullanma, kayıt hiyerarşileri oluşturma ve sınıflar üzerinde kayıt seçme hakkında bilgi edinin.
 ms.date: 11/12/2020
-ms.openlocfilehash: 9c90368bc25225fa2bf1dc4dff75d995e0a53268
-ms.sourcegitcommit: 872ca41d1c26f39d0aef57cc365d09503bac780d
+ms.openlocfilehash: c8a1922fdf113d046dc087ec289accce4312c4ae
+ms.sourcegitcommit: 4b7f6b348c986556ef805cb6baacfd5b9ec18ed0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/03/2021
-ms.locfileid: "106288087"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "107075543"
 ---
 # <a name="create-record-types"></a>Kayıt türleri oluşturma
 
@@ -159,4 +159,4 @@ Bu öğretici kayıtların çeşitli yönlerini gösterdi. Kayıtlar, temel kull
 
 Kayıtlar, türleri tanımlamaya yönelik başka bir yol ekler. `class`Nesnelerin sorumluluklarına ve davranışına odaklanarak nesne odaklı hiyerarşiler oluşturmak için tanımları kullanırsınız. `struct`Verileri depolayan ve kopyalamaya yetecek kadar az olan veri yapıları için türler oluşturursunuz. `record`Değer tabanlı eşitlik ve karşılaştırma istediğinizde, değerleri kopyalamak istemezsiniz ve başvuru değişkenlerini kullanmak istiyorsanız türler oluşturabilirsiniz.
 
-Kayıt [türü Için C# dil başvurusu makalesini](../../language-reference/builtin-types/record.md) ve [Önerilen kayıt türü belirtimini](~/_csharplang/proposals/csharp-9.0/records.md)okuyarak kayıtların tüm açıklamasını öğrenebilirsiniz.
+Kayıt türü ve [Önerilen kayıt türü belirtimi](~/_csharplang/proposals/csharp-9.0/records.md) [için C# dil başvurusu makalesini](../../language-reference/builtin-types/record.md) okuyarak kayıtların tüm açıklamasını öğrenebilirsiniz.

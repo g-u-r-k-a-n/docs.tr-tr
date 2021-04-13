@@ -3,12 +3,12 @@ title: 'Son değişiklik: Blazor: parametre adı, talep Estimagefileasync yönte
 description: "Blazor başlıklı ASP.NET Core 6,0 ' deki Son değişiklik hakkında bilgi edinin: parametre adı, karşılandığından Estimagefileasync yönteminde değiştirildi"
 ms.author: scaddie
 ms.date: 02/09/2021
-ms.openlocfilehash: 61518ba246c1d390861261ecb5a9f18a5695c1fd
-ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
+ms.openlocfilehash: 645b53e341507ffd9f369eea1b940232b7c14770
+ms.sourcegitcommit: e7e0921d0a10f85e9cb12f8b87cc1639a6c8d3fe
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "106496989"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107255187"
 ---
 # <a name="blazor-parameter-name-changed-in-requestimagefileasync-method"></a>Blazor: parametre adı, talep Estimagefileasync yönteminde değiştirildi
 
@@ -16,7 +16,7 @@ ms.locfileid: "106496989"
 
 ## <a name="version-introduced"></a>Sunulan sürüm
 
-6,0 Preview 1
+ASP.NET Core 6,0 Preview 1
 
 ## <a name="old-behavior"></a>Eski davranış
 

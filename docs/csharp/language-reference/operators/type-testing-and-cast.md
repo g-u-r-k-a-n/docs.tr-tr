@@ -20,12 +20,12 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: 0bf0c3b1cea667456780ff56deb43467fd3bbffd
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: f47074fda20c1bc2eda75184dd26c9de1c0e3701
+ms.sourcegitcommit: 4b7f6b348c986556ef805cb6baacfd5b9ec18ed0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916651"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "107075322"
 ---
 # <a name="type-testing-operators-and-cast-expression-c-reference"></a>Tür testi işleçleri ve Cast ifadesi (C# Başvurusu)
 
@@ -46,7 +46,7 @@ Type-Testing işlecine sahip ifade `is` aşağıdaki biçimdedir
 E is T
 ```
 
-`E`, bir değer döndüren ve `T` bir tür ya da tür parametresinin adı olan bir ifadedir. `E`anonim bir yöntem veya lambda ifadesi olamaz.
+`E`, bir değer döndüren ve `T` bir tür ya da tür parametresinin adı olan bir ifadedir. `E` anonim bir yöntem veya lambda ifadesi olamaz.
 
 `E is T`İfadesi, `true` sonucu `E` null olmayan ve `T` bir başvuru dönüştürmesi, paketleme dönüştürmesi ya da bir kutudan çıkarma dönüştürmesi tarafından türe dönüştürülebileceğinden, öğesini döndürür; Aksi takdirde, döndürür `false` . `is`İşleci Kullanıcı tanımlı dönüştürmeleri dikkate almaz.
 
@@ -62,19 +62,11 @@ C# dönüştürmeleri hakkında daha fazla bilgi için [C# dil belirtiminin](~/_
 
 ### <a name="type-testing-with-pattern-matching"></a>Model eşleştirme ile test türü
 
-C# 7,0 ile başlayarak, `is` işleci bir ifade sonucunu bir düzene göre de sınar. Özellikle, aşağıdaki biçimde tür düzenlerini destekler:
+C# 7,0 ile başlayarak, `is` işleci bir ifade sonucunu bir düzene göre de sınar. Aşağıdaki örnek, bir ifadenin çalışma zamanı türünü denetlemek için bir [bildirim deseninin](patterns.md#declaration-and-type-patterns) nasıl kullanılacağını gösterir:
 
-```csharp
-E is T v
-```
+[!code-csharp-interactive[is with declaration pattern](snippets/shared/TypeTestingAndConversionOperators.cs#IsDeclarationPattern)]
 
-, bir `E` değer döndüren bir ifade, `T` bir tür veya tür parametresinin adıdır ve `v` Yeni bir yerel değişken türünde `T` . Sonucu `E` null olmayan ve `T` bir başvuru, paketleme veya kutudan çıkarma dönüştürmesi tarafından ' e dönüştürülebiliyorsanız, `E is T v` ifade döner `true` ve sonucun dönüştürülen değeri `E` değişkenine atanır `v` .
-
-Aşağıdaki örnek, `is` işleç kullanımını tür düzeniyle birlikte gösterir:
-
-[!code-csharp-interactive[is with type pattern](snippets/shared/TypeTestingAndConversionOperators.cs#IsTypePattern)]
-
-Tür deseni ve diğer desteklenen desenler hakkında daha fazla bilgi için, bkz. [deseniyle eşleme](../keywords/is.md#pattern-matching-with-is).
+Desteklenen desenler hakkında daha fazla bilgi için bkz. [desenler](patterns.md).
 
 ## <a name="as-operator"></a>as işleci
 
@@ -133,7 +125,7 @@ Diğer parantez kullanımı, bir ifadede işlemlerin değerlendirileceği sıray
 
 ### <a name="type-testing-with-the-typeof-operator"></a>İşleci ile test türü `typeof`
 
-`typeof`İfade sonucunun çalışma zamanı türünün verilen bir türle tam olarak eşleşip eşleşmediğini denetlemek için işlecini kullanın. Aşağıdaki örnek, işleç ve işleç işleci ile gerçekleştirilen tür denetimi arasındaki farkı gösterir `typeof` : [is operator](#is-operator)
+`typeof`İfade sonucunun çalışma zamanı türünün verilen bir türle tam olarak eşleşip eşleşmediğini denetlemek için işlecini kullanın. Aşağıdaki örnek, işleç ve işleç işleci ile gerçekleştirilen tür denetimi arasındaki farkı gösterir `typeof` : [](#is-operator)
 
 [!code-csharp[typeof vs is](snippets/shared/TypeTestingAndConversionOperators.cs#TypeCheckWithTypeOf)]
 

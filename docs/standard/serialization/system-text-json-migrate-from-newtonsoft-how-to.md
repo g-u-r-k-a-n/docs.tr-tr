@@ -13,12 +13,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 217e45f0479f432d0cc3fb919fed752b497ce7a6
-ms.sourcegitcommit: b27645cb378d4e8137a267e5467ff31409acf6c0
+ms.openlocfilehash: 97c16d773805a0fce61fe224b6a23f1f876c2ac2
+ms.sourcegitcommit: 4b7f6b348c986556ef805cb6baacfd5b9ec18ed0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "103231452"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "107075388"
 ---
 # <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>' Den ' a geçiş Newtonsoft.JsonSystem.Text.Json
 
@@ -550,7 +550,11 @@ Gerekli özellikler Dönüştürücüsü, [[Jsonıgnore]](xref:System.Text.Json.
 * `DateTimeZoneHandling`Ayar, tüm `DateTime` değerleri UTC tarihleri olarak seri hale getirmek için kullanılabilir.
 * `DateFormatString`Ayar ve `DateTime` dönüştürücüler, tarih dizelerinin biçimini özelleştirmek için kullanılabilir.
 
-<xref:System.Text.Json> , RFC 3339 profili de dahil olmak üzere ISO 8601-1:2019 ' u destekler. Bu biçim yaygın olarak benimsenmiştir, net bir şekilde gerçekleştirilir ve gidiş dönüşlerin kesin bir şekilde Başka bir biçim kullanmak için özel bir dönüştürücü oluşturun. Daha fazla bilgi için, bkz. [' de System.Text.Json DateTime ve DateTimeOffset desteği ](../datetime/system-text-json-support.md).
+<xref:System.Text.Json> , RFC 3339 profili de dahil olmak üzere ISO 8601-1:2019 ' u destekler. Bu biçim yaygın olarak benimsenmiştir, net bir şekilde gerçekleştirilir ve gidiş dönüşlerin kesin bir şekilde Başka bir biçim kullanmak için özel bir dönüştürücü oluşturun. Örneğin, aşağıdaki dönüştürücü, saat dilimi biçimiyle UNIX dönemi kullanan JSON 'u serileştirir ve seri hale getirir (gibi değerler `/Date(1590863400000-0700)/` ):
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/CustomConverterUnixEpochDate.cs" id="ConverterOnly":::
+
+Daha fazla bilgi için, bkz. [' de System.Text.Json DateTime ve DateTimeOffset desteği ](../datetime/system-text-json-support.md).
 
 ### <a name="callbacks"></a>Geri Çağırmalar
 
@@ -760,8 +764,8 @@ public bool ReadAsBoolean(bool defaultValue)
 
 `Newtonsoft.Json`Belirli hedef çerçeveler için kullanmaya devam etmeniz gerekiyorsa, çoklu hedefleyebilir ve iki uygulamanız vardır. Ancak, bu önemsiz değildir ve bazı `#ifdefs` ve kaynak yinelemesi gerektirir. Mümkün olduğunca çok kodu paylaşmanın bir yolu, `ref struct` ve etrafında bir sarmalayıcı oluşturmaktır `Utf8JsonReader` `Newtonsoft.Json` `JsonTextReader` . Bu sarmalayıcı, davranış farklarını yalıtma sırasında genel yüzey alanını birleştirecektir. Bu, değişiklikleri öncelikle tür oluşturma ile birlikte ayırmanızı sağlar ve yeni türü başvuruya göre geçirerek. Bu, [Microsoft. Extensions. DependencyModel](https://www.nuget.org/packages/Microsoft.Extensions.DependencyModel/3.1.0/) kitaplığı 'nın izlediği düzendir:
 
-* [UnifiedJsonReader.JsonTextReader.cs](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/installer/managed/Microsoft.Extensions.DependencyModel/UnifiedJsonReader.JsonTextReader.cs)
-* [UnifiedJsonReader.Utf8JsonReader.cs](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/installer/managed/Microsoft.Extensions.DependencyModel/UnifiedJsonReader.Utf8JsonReader.cs)
+* [UnifiedJsonReader.JsonTextReader. cs](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/installer/managed/Microsoft.Extensions.DependencyModel/UnifiedJsonReader.JsonTextReader.cs)
+* [UnifiedJsonReader. Utf8JsonReader. cs](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/installer/managed/Microsoft.Extensions.DependencyModel/UnifiedJsonReader.Utf8JsonReader.cs)
 
 ## <a name="utf8jsonwriter-compared-to-jsontextwriter"></a>Utf8JsonWriter, JsonTextWriter ile karşılaştırılır
 
@@ -816,8 +820,8 @@ Dize özelliği için, dize null ise ve <xref:System.Text.Json.Utf8JsonWriter.Wr
 
 `Newtonsoft.Json`Belirli hedef çerçeveler için kullanmaya devam etmeniz gerekiyorsa, çoklu hedefleyebilir ve iki uygulamanız vardır. Ancak, bu önemsiz değildir ve bazı `#ifdefs` ve kaynak yinelemesi gerektirir. Mümkün olduğunca çok kodu paylaşmanın bir yolu, ve etrafında bir sarmalayıcı oluşturmaktır `Utf8JsonWriter` `Newtonsoft` `JsonTextWriter` . Bu sarmalayıcı, davranış farklarını yalıtma sırasında genel yüzey alanını birleştirecektir. Bu, değişiklikleri genellikle türün yapılacağı şekilde yalıtmanızı sağlar. [Microsoft. Extensions. DependencyModel](https://www.nuget.org/packages/Microsoft.Extensions.DependencyModel/3.1.0/) kitaplığı aşağıdaki gibidir:
 
-* [UnifiedJsonWriter.JsonTextWriter.cs](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/installer/managed/Microsoft.Extensions.DependencyModel/UnifiedJsonWriter.JsonTextWriter.cs)
-* [UnifiedJsonWriter.Utf8JsonWriter.cs](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/installer/managed/Microsoft.Extensions.DependencyModel/UnifiedJsonWriter.Utf8JsonWriter.cs)
+* [ OnTextWriter. csUnifiedJsonWriter.Js](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/installer/managed/Microsoft.Extensions.DependencyModel/UnifiedJsonWriter.JsonTextWriter.cs)
+* [UnifiedJsonWriter. Utf8JsonWriter. cs](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/installer/managed/Microsoft.Extensions.DependencyModel/UnifiedJsonWriter.Utf8JsonWriter.cs)
 
 ## <a name="typenamehandlingall-not-supported"></a>TypeNameHandling. All desteklenmiyor
 

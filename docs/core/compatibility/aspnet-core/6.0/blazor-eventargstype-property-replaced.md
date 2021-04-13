@@ -5,12 +5,12 @@ ms.author: scaddie
 ms.date: 02/24/2021
 no-loc:
 - Blazor
-ms.openlocfilehash: c9e866813707114f912ffe83309b0f95c2c9a0f2
-ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
+ms.openlocfilehash: fb82e27d7ab55b78293f40debe917da2d99239a7
+ms.sourcegitcommit: e7e0921d0a10f85e9cb12f8b87cc1639a6c8d3fe
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "106497014"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107255218"
 ---
 # <a name="blazor-no-loc-textwebeventdescriptoreventargstype-property-replaced"></a>Blazor: :::no-loc text="WebEventDescriptor.EventArgsType"::: özellik değişti
 
@@ -20,7 +20,7 @@ ASP.NET Core 6,0 ' den başlayarak, <xref:Microsoft.AspNetCore.Components.Render
 
 ## <a name="version-introduced"></a>Sunulan sürüm
 
-6.0
+ASP.NET Core 6,0
 
 ## <a name="old-behavior"></a>Eski davranış
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - JSON Serializer, JSON Reader, JSON Writer
 - Converter, JSON Converter, DateTime Converter
 - ISO, ISO 8601, ISO 8601-1:2019
-ms.openlocfilehash: 3f8161c40f21428a4a22bef09582754069f3a2b6
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 6b4e79e6c666731e313ed41e25f601df4158b8d4
+ms.sourcegitcommit: 4b7f6b348c986556ef805cb6baacfd5b9ec18ed0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94817542"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "107075426"
 ---
 # <a name="datetime-and-datetimeoffset-support-in-systemtextjson"></a>System.Text.Json üzerinde DateTime ve DateTimeOffset desteği
 
@@ -101,6 +101,12 @@ Genellikle giriş <xref:System.DateTime> veya <xref:System.DateTimeOffset> VERIL
 Bu örnekte, kullanarak bir metin temsilini ayrıştırmaya başarısız olduktan sonra <xref:System.DateTime> <xref:System.Text.Json.Utf8JsonReader.TryGetDateTime(System.DateTime@)> dönüştürücünün verileri başarıyla ayrıştırır <xref:System.DateTime.Parse(System.String)> .
 
 [!code-csharp[example-showing-datetime-parse-as-fallback](~/samples/snippets/standard/datetime/json/csharp/datetime-converter-examples/example3/Program.cs)]
+
+#### <a name="using-unix-epoch-date-format"></a>UNIX dönemi tarih biçimini kullanma
+
+Aşağıdaki dönüştürücü, saat dilimi biçimiyle UNIX dönemi işler (gibi değerler `/Date(1590863400000-0700)/` ):
+
+:::code language="csharp" source="../serialization/snippets/system-text-json-how-to-5-0/csharp/CustomConverterUnixEpochDate.cs" id="ConverterOnly":::
 
 ### <a name="when-writing-with-xrefsystemtextjsonutf8jsonwriter"></a>İle yazarken <xref:System.Text.Json.Utf8JsonWriter>
 

@@ -1,7 +1,7 @@
 ---
 title: Dispose metodu uygulama
 description: Bu makalede, .NET 'teki kodunuzun kullandığı yönetilmeyen kaynakları serbest bırakarak Dispose yöntemini uygulamayı öğrenin.
-ms.date: 09/08/2020
+ms.date: 04/07/2021
 dev_langs:
 - csharp
 - vb
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: ec731ff4c1020100c2b7ff5041d42291141a5209
-ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
+ms.openlocfilehash: f14c4979024209fb7e5e6364f0627f4e796799c5
+ms.sourcegitcommit: e7e0921d0a10f85e9cb12f8b87cc1639a6c8d3fe
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94982413"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107260533"
 ---
 # <a name="implement-a-dispose-method"></a>Dispose metodu uygulama
 
@@ -25,6 +25,8 @@ Yöntemi uygulamak, <xref:System.IDisposable.Dispose%2A> öncelikle yönetilmeye
 Kaynakların her zaman uygun şekilde temizlendiğinden emin olmak için bir <xref:System.IDisposable.Dispose%2A> Yöntem, özel durum oluşturmadan birden çok kez çağrılabilir şekilde ıdempotent olmalıdır. Ayrıca, sonraki çağırmaları <xref:System.IDisposable.Dispose%2A> hiçbir şey yapmaz.
 
 Yöntemi için belirtilen kod örneği, <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> çöp toplamanın bir sonlandırıcının çalışmasına nasıl neden olabileceği, nesneye veya üyelerine yönetilmeyen bir başvuru hala kullanımda olduğunda gösterir. <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType>Nesneyi, geçerli yordamın başından bu yöntemin çağrıldığı noktaya kadar çöp toplama için uygun hale getirmek için kullanılması anlamlı olabilir.
+
+[!INCLUDE [disposables-and-dependency-injection](includes/disposables-and-dependency-injection.md)]
 
 ## <a name="safe-handles"></a>Güvenli işleyiciler
 
@@ -150,6 +152,7 @@ Aşağıdaki örnek, `DisposableStreamResource2` `DisposableStreamResource` Önc
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
+- [Hizmetlerin elden çıkarılması](../../core/extensions/dependency-injection-guidelines.md#disposal-of-services)
 - <xref:System.GC.SuppressFinalize%2A>
 - <xref:System.IDisposable>
 - <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>

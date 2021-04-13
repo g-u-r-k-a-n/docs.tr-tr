@@ -3,12 +3,12 @@ title: "Son değişiklik: Kullanımdan kaldırılmış ve kaldırılan API 'Ler"
 description: Kullanım dışı bırakılmış ve kaldırılmış API 'Ler başlıklı ASP.NET Core 6,0 ' deki Son değişiklik hakkında bilgi edinin
 ms.author: scaddie
 ms.date: 02/16/2021
-ms.openlocfilehash: c994625cb9f5b43fb3cc874345a05b6978d2d736
-ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
+ms.openlocfilehash: b5524a6ca42972ef630f8db60cbfd67051daf9e4
+ms.sourcegitcommit: e7e0921d0a10f85e9cb12f8b87cc1639a6c8d3fe
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "106496871"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107255044"
 ---
 # <a name="obsoleted-and-removed-apis"></a>Kullanımdan kaldırılmış ve kaldırılan API 'Ler
 
@@ -16,7 +16,7 @@ ASP.NET Core 6,0 Preview 1 ' de, bazı API 'Ler kaldırıldı veya kullanılmıy
 
 ## <a name="version-introduced"></a>Sunulan sürüm
 
-6,0 Preview 1
+ASP.NET Core 6,0 Preview 1
 
 ## <a name="old-behavior"></a>Eski davranış
 

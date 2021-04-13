@@ -1,7 +1,7 @@
 ---
 title: Standart sayısal biçim dizeleri
 description: Bu makalede, standart sayısal biçim dizelerini .NET 'teki metin temsillerine biçimlendirmek için standart sayısal biçim dizeleri kullanmayı öğrenin.
-ms.date: 02/26/2021
+ms.date: 04/08/2021
 ms.topic: reference
 dev_langs:
 - csharp
@@ -17,12 +17,12 @@ helpviewer_keywords:
 - standard numeric format strings
 - formatting numbers [.NET]
 - format specifiers, standard numeric format strings
-ms.openlocfilehash: dbe646ccd0d3aea1f3dcc16ea079c5547f99d8b6
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 4e9299842da13283b439fbadf84b969ca27f9654
+ms.sourcegitcommit: e7e0921d0a10f85e9cb12f8b87cc1639a6c8d3fe
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102106442"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107255421"
 ---
 # <a name="standard-numeric-format-strings"></a>Standart sayısal biçim dizeleri
 
@@ -55,6 +55,8 @@ Standart sayısal biçim dizeleri şunları destekler:
 ## <a name="standard-format-specifiers"></a>Standart biçim belirticileri
 
 Aşağıdaki tabloda standart sayısal biçim belirticileri açıklanmakta ve her biçim belirticisi tarafından üretilen örnek çıktı görüntülenir. Standart sayısal biçim dizelerini kullanma hakkında ek bilgi için [Notlar](#notes) bölümüne ve kullanımlarının kapsamlı bir gösterimi için [kod örnek](#code-example) bölümüne bakın.
+
+> Belirli bir kültür için biçimlendirilen bir dizenin sonucu aşağıdaki örneklerden farklı olabilirler. İşletim sistemi ayarları, Kullanıcı ayarları, ortam değişkenleri ve kullandığınız .NET sürümü biçimi etkileyebilir. Örneğin, .NET 5 ' den itibaren .NET, kültürel biçimlerini platformlar arasında birleştirmenize çalışır. Daha fazla bilgi için bkz. [.NET Genelleştirme ve ıCU](../globalization-localization/globalization-icu.md).
 
 |Biçim belirteci|Ad|Açıklama|Örnekler|
 |----------------------|----------|-----------------|--------------|
@@ -107,7 +109,7 @@ Biçimlendirilecek değer, belirtilen veya varsayılan ondalık basamak sayısı
 
 Sonuç dizesi geçerli nesnenin biçimlendirme bilgileri tarafından etkilenir <xref:System.Globalization.NumberFormatInfo> . Aşağıdaki tabloda <xref:System.Globalization.NumberFormatInfo> döndürülen dizenin biçimlendirmesini denetleyen özellikler listelenmiştir.
 
-|NumberFormatInfo özellikleri|Açıklama|
+|NumberFormatInfo özellikleri|Description|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.CurrencyPositivePattern%2A>|Pozitif değerler için para birimi sembolünün yerleşimini tanımlar.|
 |<xref:System.Globalization.NumberFormatInfo.CurrencyNegativePattern%2A>|Negatif değerler için para birimi sembolünün yerleşimini tanımlar ve eksi işaretinin parantezle mi yoksa özelliği ile mi temsil edileceğini belirtir <xref:System.Globalization.NumberFormatInfo.NegativeSign%2A> .|
@@ -134,7 +136,7 @@ Duyarlık belirtici, sonuç dizesindeki istenen minimum basamak sayısını gös
 
 Sonuç dizesi geçerli nesnenin biçimlendirme bilgileri tarafından etkilenir <xref:System.Globalization.NumberFormatInfo> . Aşağıdaki tabloda gösterildiği gibi tek bir özellik, sonuç dizesinin biçimlendirmesini etkiler.
 
-|NumberFormatInfo özellikleri|Açıklama|
+|NumberFormatInfo özellikleri|Description|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Bir sayının negatif olduğunu belirten dizeyi tanımlar.|
 
@@ -156,7 +158,7 @@ Biçim belirticisinin durumu üsse "E" veya "e" önekinin getirilip getirilmeyec
 
 Sonuç dizesi geçerli nesnenin biçimlendirme bilgileri tarafından etkilenir <xref:System.Globalization.NumberFormatInfo> . Aşağıdaki tabloda <xref:System.Globalization.NumberFormatInfo> döndürülen dizenin biçimlendirmesini denetleyen özellikler listelenmiştir.
 
-|NumberFormatInfo özellikleri|Açıklama|
+|NumberFormatInfo özellikleri|Description|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Bir sayının hem katsayı hem de üs için negatif olduğunu belirten dizeyi tanımlar.|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Tamsayı basamağını, katsayıdaki ondalık basamaklardan ayıran dizeyi tanımlar.|
@@ -178,7 +180,7 @@ Duyarlık belirtici, istenen ondalık basamak sayısını gösterir. Duyarlık b
 
 Sonuç dizesi geçerli nesnenin biçimlendirme bilgileri tarafından etkilenir <xref:System.Globalization.NumberFormatInfo> . Aşağıdaki tabloda, <xref:System.Globalization.NumberFormatInfo> sonuç dizesinin biçimlendirmesini denetleyen nesnenin özellikleri listelenmektedir.
 
-|NumberFormatInfo özellikleri|Açıklama|
+|NumberFormatInfo özellikleri|Description|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Bir sayının negatif olduğunu belirten dizeyi tanımlar.|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Tamsayı basamaklarını ondalık basamaklardan ayıran dizeyi tanımlar.|
@@ -223,7 +225,7 @@ Bir <xref:System.Single> değerle kullanıldığında, "G9" Biçim belirleyicisi
 
 Sonuç dizesi geçerli nesnenin biçimlendirme bilgileri tarafından etkilenir <xref:System.Globalization.NumberFormatInfo> . Aşağıdaki tabloda, <xref:System.Globalization.NumberFormatInfo> sonuç dizesinin biçimlendirmesini denetleyen özellikler listelenmiştir.
 
-|NumberFormatInfo özellikleri|Açıklama|
+|NumberFormatInfo özellikleri|Description|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Bir sayının negatif olduğunu belirten dizeyi tanımlar.|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Tamsayı basamaklarını ondalık basamaklardan ayıran dizeyi tanımlar.|
@@ -243,7 +245,7 @@ Sayısal ("N") biçim belirteci bir sayıyı "-d,ddd,ddd.ddd…" biçiminde bir 
 
 Sonuç dizesi geçerli nesnenin biçimlendirme bilgileri tarafından etkilenir <xref:System.Globalization.NumberFormatInfo> . Aşağıdaki tabloda, <xref:System.Globalization.NumberFormatInfo> sonuç dizesinin biçimlendirmesini denetleyen özellikler listelenmiştir.
 
-|NumberFormatInfo özellikleri|Açıklama|
+|NumberFormatInfo özellikleri|Description|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Bir sayının negatif olduğunu belirten dizeyi tanımlar.|
 |<xref:System.Globalization.NumberFormatInfo.NumberNegativePattern%2A>|Negatif değerlerin biçimini tanımlar ve eksi işaretinin parantezle mi yoksa özelliği ile mi temsil edileceğini belirtir <xref:System.Globalization.NumberFormatInfo.NegativeSign%2A> .|
@@ -266,7 +268,7 @@ Yüzde ("P") biçim belirticisi sayıyı 100 ile çarpar ve yüzde temsil eden b
 
 Aşağıdaki tabloda <xref:System.Globalization.NumberFormatInfo> döndürülen dizenin biçimlendirmesini denetleyen özellikler listelenmiştir.
 
-|NumberFormatInfo özellikleri|Açıklama|
+|NumberFormatInfo özellikleri|Description|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.PercentPositivePattern%2A>|Pozitif değerler için yüzde sembolünün yerleşimini tanımlar.|
 |<xref:System.Globalization.NumberFormatInfo.PercentNegativePattern%2A>|Negatif değerler için yüzde sembolünün ve eksi sembolünün yerleşimini tanımlar.|
@@ -296,7 +298,7 @@ Bir <xref:System.Numerics.BigInteger> değer bu tanımlayıcı kullanılarak bi�
 Bir duyarlık belirtici ekleyebilirsiniz, ancak bu yoksayılır. Bu belirleyici kullanırken gidiş dönüşlere duyarlılık üzerinde öncelik verilir.
 Sonuç dizesi geçerli nesnenin biçimlendirme bilgileri tarafından etkilenir <xref:System.Globalization.NumberFormatInfo> . Aşağıdaki tabloda, <xref:System.Globalization.NumberFormatInfo> sonuç dizesinin biçimlendirmesini denetleyen özellikler listelenmiştir.
 
-|NumberFormatInfo özellikleri|Açıklama|
+|NumberFormatInfo özellikleri|Description|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Bir sayının negatif olduğunu belirten dizeyi tanımlar.|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Tamsayı basamaklarını ondalık basamaklardan ayıran dizeyi tanımlar.|

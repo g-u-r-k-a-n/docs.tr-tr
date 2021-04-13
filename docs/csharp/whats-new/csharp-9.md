@@ -1,13 +1,13 @@
 ---
 title: C# 9,0 ' deki yenilikler-C# Kılavuzu
 description: C# 9,0 ' de bulunan yeni özelliklere genel bakış alın.
-ms.date: 09/04/2020
-ms.openlocfilehash: 49170b123f612c06f22b70e44b29ad7be5f382ea
-ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.date: 04/07/2021
+ms.openlocfilehash: c2189d2db175a40c24d6a41d20f2ae2d9384513b
+ms.sourcegitcommit: e7e0921d0a10f85e9cb12f8b87cc1639a6c8d3fe
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104876051"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107255343"
 ---
 # <a name="whats-new-in-c-90"></a>C# 9.0 sürümündeki yenilikler
 
@@ -17,18 +17,21 @@ C# 9,0, C# diline aşağıdaki özellikleri ve geliştirmeleri ekler:
 - [Yalnızca init ayarlayıcılar](#init-only-setters)
 - [Üst düzey deyimler](#top-level-statements)
 - [Desen eşleştirme geliştirmeleri](#pattern-matching-enhancements)
-- Yerel boyutlu tamsayılar
-- İşlev işaretçileri
-- Yaymayı localsinit bayrağını gösterme
-- Hedef türü belirtilmiş yeni ifadeler
-- statik anonim işlevler
-- Hedef türü belirlenmiş Koşullu ifadeler
-- Birlikte değişken dönüş türleri
-- `GetEnumerator`Döngüler için uzantı desteği `foreach`
-- Lambda atma parametreleri
-- Yerel işlevlerlerde öznitelikler
-- Modül başlatıcılar
-- Kısmi yöntemlere yönelik yeni özellikler
+- [Performans ve birlikte çalışma](#performance-and-interop)
+  - Yerel boyutlu tamsayılar
+  - İşlev işaretçileri
+  - Yaymayı localsinit bayrağını gösterme
+- [Sığdırma ve son özellikler](#fit-and-finish-features)
+  - Hedef türü belirtilmiş `new` ifadeler
+  - statik anonim işlevler
+  - Hedef türü belirlenmiş Koşullu ifadeler
+  - Birlikte değişken dönüş türleri
+  - `GetEnumerator`Döngüler için uzantı desteği `foreach`
+  - Lambda atma parametreleri
+  - Yerel işlevlerlerde öznitelikler
+- [Kod oluşturucuları için destek](#support-for-code-generators)
+  - Modül başlatıcılar
+  - Kısmi yöntemlere yönelik yeni özellikler
 
 C# 9,0, **.NET 5**' te desteklenir. Daha fazla bilgi için bkz. [C# dil sürümü oluşturma](../language-reference/configure-language-version.md).
 
@@ -36,81 +39,105 @@ C# 9,0, **.NET 5**' te desteklenir. Daha fazla bilgi için bkz. [C# dil sürüm�
 
 ## <a name="record-types"></a>Kayıt türleri
 
-C# 9,0, eşitlik için değer semantiğini sağlamak üzere birleştirilmiş Yöntemler sağlayan bir başvuru türü olan ***kayıt türlerini*** tanıtır. Kayıtlar varsayılan olarak sabittir.
+C# 9,0 ***kayıt türlerini*** tanıtır. `record`Verileri kapsüllemek için yerleşik işlevsellik sağlayan bir başvuru türü tanımlamak için anahtar sözcüğünü kullanırsınız. Konumsal parametreleri veya standart özellik sözdizimini kullanarak, değişmez özelliklerle kayıt türleri oluşturabilirsiniz:
 
-Kayıt türleri, .NET 'te değişmez başvuru türleri oluşturmayı kolaylaştırır. Geçmişte, .NET türleri büyük ölçüde başvuru türleri olarak sınıflandırılır (sınıflar ve anonim türler dahil) ve değer türleri (yapılar ve tanımlama birimleri dahil). Değişmez değer türleri önerilirken, değişebilir değer türleri genellikle hata sunmaz. Değer tür değişkenleri değerleri tutar, böylece değer türleri yöntemlere geçirildiğinde orijinal verilerin bir kopyasına değişiklikler yapılır.
+:::code language="csharp" source="../language-reference/builtin-types/snippets/shared/RecordType.cs" id="PositionalRecord":::
+:::code language="csharp" source="../language-reference/builtin-types/snippets/shared/RecordType.cs" id="ImmutableRecord":::
 
-Değişmez başvuru türleri için de birçok avantaj vardır. Bu avantajlar, paylaşılan verilerle eşzamanlı programlarda daha fazla yer sunar. Ne yazık ki C#, sabit başvuru türleri oluşturmak için size çok sayıda ek kod yazmanızı zordu. Kayıtlar, eşitlik için değer semantiğini kullanan sabit bir başvuru türü için bir tür bildirimi sağlar. Eşitlik ve karma kodları için birleştirilmiş Yöntemler, özelliklerinin hepsi eşit olduğunda iki kaydı kabul ettir. Bu tanımı göz önünde bulundurun:
+Ayrıca, değişebilir Özellikler ve alanlarla kayıt türleri de oluşturabilirsiniz:
 
-:::code language="csharp" source="snippets/whats-new-csharp9/RecordsExamples.cs" ID="RecordDefinition":::
+:::code language="csharp" source="../language-reference/builtin-types/snippets/shared/RecordType.cs" id="MutableRecord":::
 
-Kayıt tanımı `Person` iki ReadOnly özelliği içeren bir tür oluşturur: `FirstName` ve `LastName` . `Person`Tür bir başvuru türüdür. Il 'ye bakdıysanız, bu bir sınıftır. Özelliklerden hiçbirinin, oluşturulduktan sonra değiştirilemediği için bu sabittir. Bir kayıt türü tanımladığınızda, derleyici sizin için birkaç başka yöntem de birleştirir:
+Kayıtlar değişebilir olsa da, Bunlar öncelikle sabit veri modellerini desteklemeye yöneliktir. Kayıt türü aşağıdaki özellikleri sunar:
 
-- Değer tabanlı eşitlik karşılaştırmaları için Yöntemler
-- Geçersiz kıl <xref:System.Object.GetHashCode>
-- Üyeleri Kopyala ve Kopyala
-- `PrintMembers` ve <xref:System.Object.ToString>
+* [Sabit özelliklerle başvuru türü oluşturmak için kısa sözdizimi](#positional-syntax-for-property-definition)
+* Davranış, veri merkezli bir başvuru türü için yararlıdır:
+  * [Değer eşitlik](#value-equality)
+  * [Geri dönüşlü mutasyon için kısa sözdizimi](#nondestructive-mutation)
+  * [Görüntüleme için yerleşik biçimlendirme](#built-in-formatting-for-display)
+* [Devralma hiyerarşileri için destek](#inheritance)
 
-Kayıtları devralmayı destekler. Öğesinden türetilmiş yeni bir kaydı `Person` aşağıdaki gibi bildirebilirsiniz:
+Değer eşitlik ve çok az davranış sağlayan veri merkezli türler tasarlamak için [yapı türlerini](../language-reference/builtin-types/struct.md) kullanabilirsiniz. Ancak görece büyük veri modelleri için yapı türlerinin bazı dezavantajları vardır:
 
-:::code language="csharp" source="snippets/whats-new-csharp9/RecordsExamples.cs" ID="InheritedRecord":::
+* Devralma desteği yoktur.
+* Değer eşitliğini belirlemede daha az verimlidir. Değer türlerinde, <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> yöntemi tüm alanları bulmak için yansıma kullanır. Kayıtlar için derleyici `Equals` yöntemini oluşturur. Uygulamada, kayıtlardaki değer eşitlik uygulaması yaşamları daha hızlıdır.
+* Her örnek tüm verilerin tamamen bir kopyasına sahip olduğundan, bazı senaryolarda daha fazla bellek kullanırlar. Kayıt türleri [başvuru türlerdir](../language-reference/builtin-types/reference-types.md), bu nedenle bir kayıt örneği yalnızca verilerin bir başvurusunu içerir.
 
-Ayrıca, daha fazla türetmeyi engellemek için kayıtları mühürleyebilirsiniz:
+### <a name="positional-syntax-for-property-definition"></a>Özellik tanımı için Konumsal sözdizimi
 
-:::code language="csharp" source="snippets/whats-new-csharp9/RecordsExamples.cs" ID="SealedRecord":::
+Bir kaydın özelliklerini bildirmek ve bir örnek oluştururken özellik değerlerini başlatmak için Konumsal parametreleri kullanabilirsiniz:
 
-Derleyici Yukarıdaki yöntemlerin farklı sürümlerini birleştirir. Yöntem imzaları, kayıt türü korumalı ise ve doğrudan temel sınıf nesne ise öğesine bağlıdır. Kayıtlar aşağıdaki yeteneklere sahip olmalıdır:
+:::code language="csharp" source="../language-reference/builtin-types/snippets/shared/RecordType.cs" id="InstantiatePositional":::
 
-- Eşitlik değer tabanlıdır ve türlerin eşleşip eşleşeceğini bir denetim içerir. Örneğin, `Student` `Person` iki kayıt aynı adı paylaşsa bile, a 'ya eşit olamaz.
-- Kayıtlar sizin için oluşturulmuş tutarlı bir dize gösterimine sahiptir.
-- Kayıtlar kopyalama oluşturmayı destekler. Doğru kopya oluşturma, devralma hiyerarşilerini ve geliştiriciler tarafından eklenen özellikleri içermelidir.
-- Kayıtlar değiştirilmek üzere kopyalanabilir. Bu kopyalama ve değiştirme işlemleri, bozucu olmayan mutasyon 'yi destekler.
+Özellik tanımı için Konumsal sözdizimini kullandığınızda, derleyici şunları oluşturur:
 
-, Ve tanıdık aşırı yüklemelerin yanı sıra, `Equals` `operator ==` `operator !=` derleyici yeni bir özelliği birleştirir `EqualityContract` . Özelliği, `Type` kaydın türüyle eşleşen bir nesne döndürür. Temel tür ise, `object` özelliği olur `virtual` . Temel tür başka bir kayıt türü ise, özelliği bir olur `override` . Kayıt türü ise, `sealed` özelliği olur `sealed` . `GetHashCode` `GetHashCode` Sentezte, temel türde ve kayıt türünde belirtilen tüm özellikleri ve alanları kullanır. Bu birleştirilmiş Yöntemler, devralma hiyerarşisi boyunca değer tabanlı eşitlik uygular. Diğer bir deyişle `Student` , hiçbir şekilde `Person` aynı ada sahip bir ile eşit kabul edilmez. İki kaydın türleri aynı ve aynı zamanda eşit olan kayıt türleri arasında paylaşılan tüm özellikler eşleşmelidir.
+* Kayıt bildiriminde belirtilen her Konumsal parametre için genel bir init-tek otomatik uygulanan özellik. [Yalnızca bir init](../language-reference/keywords/init.md) özelliği, oluşturucuda veya bir özellik başlatıcısı kullanılarak ayarlanabilir.
+* Parametreleri, kayıt bildiriminde konumsal parametrelerle eşleşen bir birincil Oluşturucu.
+* `Deconstruct` `out` Kayıt bildiriminde belirtilen her Konumsal parametre için parametreye sahip bir yöntem.
 
-Kayıtlar Ayrıca, kopya oluşturmak için birleştirilmiş bir oluşturucuya ve bir "Clone" yöntemine sahiptir. Sentezlenmiş oluşturucunun, kayıt türünde tek bir parametresi vardır. Kaydın tüm özellikleri için aynı değerlere sahip yeni bir kayıt oluşturur. Bu Oluşturucu, kayıt mühürlense, aksi takdirde korunmuşsa özel olur. Sentezlenmiş "kopya" yöntemi, kayıt hiyerarşileri için kopyalama oluşturmayı destekler. Gerçek ad derleyici tarafından oluşturulduğundan "kopya" terimi tırnak içine alınmış. Kayıt türünde adlı bir yöntem oluşturamazsınız `Clone` . Sentezlenmiş "kopya" yöntemi, sanal dağıtım kullanılarak Kopyalanmakta olan kaydın türünü döndürür. Derleyici, "Kopyala" yöntemi için, içindeki erişim değiştiricilerine bağlı olarak farklı değiştiriciler ekler `record` :
+Daha fazla bilgi için bkz. kayıtlar hakkında C# dil başvurusu makalesindeki [konumsal sözdizimi](../language-reference/builtin-types/record.md#positional-syntax-for-property-definition) .
 
-- Kayıt türü ise `abstract` , "Clone" yöntemi de vardır `abstract` . Temel tür değilse `object` , yöntemi de olur `override` .
-- `abstract`Temel tür şu olduğunda olmayan kayıt türleri için `object` :
-  - Kayıt ise `sealed` , "kopya" yöntemine ek değiştiriciler eklenmez (anlamı yoktur `virtual` ).
-  - Kayıt değilse `sealed` , "Clone" yöntemi olur `virtual` .
-- Temel tür olmadığında olmayan kayıt türleri için `abstract` `object` :
-  - Kayıt ise `sealed` , "Clone" yöntemi de vardır `sealed` .
-  - Kayıt değilse `sealed` , "Clone" yöntemi olur `override` .
+### <a name="immutability"></a>Değiştirilemezlik
 
-Bu kuralların sonucu, eşitlik her türlü kayıt türü hiyerarşisinde tutarlı bir şekilde uygulanır. Aşağıdaki örnekte gösterildiği gibi, özellikleri eşitse iki kayıt birbirlerine eşittir ve türleri aynıdır:
+Kayıt türü sabit değildir. Özellikleri, `set` erişimciler ve olmayan alanlarla bildirebilirsiniz `readonly` . Ancak kayıtlar değişebilir, ancak değişmez veri modelleri oluşturmayı kolaylaştırır. Konumsal sözdizimi kullanarak oluşturduğunuz özellikler sabittir.
 
-:::code language="csharp" source="snippets/whats-new-csharp9/RecordsExamples.cs" ID="RecordsEquality":::
+Bir karma tabloda, veri merkezli bir türün iş parçacığı açısından güvenli olmasını veya karma kodun aynı kalmasını istediğinizde yararlı olabilir. Bir bağımsız değişkeni bir yönteme başvuruya göre geçirdiğinizde meydana gelen hataları önleyebilir ve Yöntem bağımsız değişken değerini beklenmedik şekilde değiştirir.
 
-Derleyici, yazdırılan çıktıyı destekleyen iki yöntemi birleştirir: bir <xref:System.Object.ToString> geçersiz kılma ve `PrintMembers` . , `PrintMembers` <xref:System.Text.StringBuilder?displayProperty=nameWithType> Bağımsız değişkeni olarak bir alır. Kayıt türündeki tüm özellikler için özellik adlarının ve değerlerinin virgülle ayrılmış bir listesini ekler. `PrintMembers` diğer kayıtlardan türetilmiş tüm kayıtlar için temel uygulamayı çağırır. <xref:System.Object.ToString>Geçersiz kılma tarafından üretilen `PrintMembers` , ve ile çevrili dizeyi `{` döndürür `}` . Örneğin, <xref:System.Object.ToString> için yöntemi `Student` `string` Aşağıdaki kod gibi döndürür:
+Kayıt türlerine özgü özellikler derleyici birleştirilmemiş yöntemler tarafından uygulanır ve bu yöntemlerin hiçbiri, nesne durumunu değiştirerek değişiklik imkanlarını önler.
 
-```csharp
-"Student { LastName = Wagner, FirstName = Bill, Level = 11 }"
+### <a name="value-equality"></a>Değer eşitlik
+
+Değer eşitliği, türlerin eşleşmesi ve tüm özellik ve alan değerleri eşleşiyorsa bir kayıt türünün iki değişkeninin eşit olduğu anlamına gelir. Diğer başvuru türleri için eşitlik, kimlik anlamına gelir. Diğer bir deyişle, bir başvuru türünün iki değişkeni aynı nesneye başvurduklarında eşittir.
+
+Aşağıdaki örnek, kayıt türlerinin değer eşitliğini gösterir:
+
+:::code language="csharp" source="../language-reference/builtin-types/snippets/shared/RecordType.cs" id="Equality":::
+
+Türler ' de `class` , eşitlik yöntemlerini ve işleçleri değer eşitlik elde etmek için el ile geçersiz kılabilirsiniz, ancak bu kodun geliştirilmesi ve test edilmesi zaman alabilir ve hataya açıktır. Bu işlevin yerleşik olması, özellikler veya alanlar eklendiğinde veya değiştirildiğinde özel geçersiz kılma kodunu güncelleştirmeye neden olan hataları önler.
+
+Daha fazla bilgi için bkz. kayıtlar hakkında C# dil başvurusu makalesindeki [değer eşitlik](../language-reference/builtin-types/record.md#value-equality) .
+
+### <a name="nondestructive-mutation"></a>Geri dönüşlü mutasyon
+
+Bir kayıt örneğinin sabit özelliklerini mukumanız gerekirse, geri dönüşlü bir zaman `with` elde etmek için bir ifade kullanabilirsiniz . Bir `with` ifade, belirtilen özellikler ve alanlarla değiştirilen mevcut bir kayıt örneğinin kopyası olan yeni bir kayıt örneği oluşturur. Aşağıdaki örnekte gösterildiği gibi, değiştirilecek değerleri belirtmek için [nesne Başlatıcısı](../programming-guide/classes-and-structs/object-and-collection-initializers.md) sözdizimini kullanın:
+
+:::code language="csharp" source="../language-reference/builtin-types/snippets/shared/RecordType.cs" id="WithExpressions":::
+
+Daha fazla bilgi için bkz. kayıtlar hakkında C# dil başvurusu makalesindeki geri [dönüşlü bir mutasyon](../language-reference/builtin-types/record.md#nondestructive-mutation) .
+
+### <a name="built-in-formatting-for-display"></a>Görüntüleme için yerleşik biçimlendirme
+
+Kayıt türlerinde <xref:System.Object.ToString%2A> , ortak özelliklerin ve alanların adlarını ve değerlerini görüntüleyen bir derleyici tarafından oluşturulan yöntem vardır. `ToString`Yöntemi aşağıdaki biçimde bir dize döndürür:
+
+> \<record type name> { \<property name> = \<value>, \<property name> = \<value>, ...}
+
+Başvuru türleri için, özelliğin başvurduğu nesnenin tür adı, özellik değeri yerine görüntülenir. Aşağıdaki örnekte, dizi bir başvuru türüdür, bu nedenle `System.String[]` gerçek dizi öğesi değerleri yerine görüntülenir:
+
+```
+Person { FirstName = Nancy, LastName = Davolio, ChildNames = System.String[] }
 ```
 
-Şu ana kadar gösterilen örnekler, özellikleri bildirmek için Geleneksel söz dizimini kullanır. ***Konumsal kayıtlar*** adlı daha kısa bir form vardır.  Daha önce konumsal kayıtlar olarak tanımlanan üç kayıt türü şunlardır:
+Daha fazla bilgi için bkz. kayıtlar hakkında C# dil başvurusu makalesindeki [yerleşik biçimlendirme](../language-reference/builtin-types/record.md#built-in-formatting-for-display) .
 
-:::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="PositionalRecords":::
+### <a name="inheritance"></a>Devralma
 
-Bu bildirimler, önceki sürümle aynı işlevleri oluşturur (aşağıdaki bölümde ele alınan birkaç ek özellik ile). Bu kayıtlar başka yöntemler eklemediğinden, bu bildirimler köşeli ayraç yerine noktalı virgül ile biter. Bir gövde ekleyebilir ve başka yöntemler de ekleyebilirsiniz:
+Bir kayıt, başka bir kayıttan devralınabilir. Ancak, bir kayıt bir sınıftan devralınabilir ve bir sınıf bir kayıttan devralınabilir.
 
-:::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="RecordsWithMethods":::
+Aşağıdaki örnek, konumsal Özellik söz dizimi ile devralmayı göstermektedir:
 
-Derleyici `Deconstruct` konumsal kayıtlar için bir yöntem oluşturur. `Deconstruct`Yönteminde, kayıt türündeki tüm ortak özelliklerin adlarıyla eşleşen parametreler bulunur. `Deconstruct`Yöntemi, kayıt bileşenin özelliklerine göre oluşturmak için kullanılabilir:
+:::code language="csharp" source="../language-reference/builtin-types/snippets/shared/RecordType.cs" id="PositionalInheritance":::
 
-:::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="DeconstructRecord":::
+İki kayıt değişkeninin eşit olması için, çalışma zamanı türünün eşit olması gerekir. Kapsayan değişkenlerin türleri farklı olabilir. Bu, aşağıdaki kod örneğinde gösterilmektedir:
 
-Son olarak, destek [ `with` ifadelerini](../language-reference/operators/with-expression.md)kaydeder. ***`with` İfadesi** _ derleyiciye bir kaydın kopyasını oluşturmasını söyler, ancak _with * belirtilen özellikler değiştirilmiştir:
+:::code language="csharp" source="../language-reference/builtin-types/snippets/shared/RecordType.cs" id="InheritanceEquality":::
 
-:::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="Wither":::
+Örnekte, tüm örnekler aynı özelliklere ve aynı özellik değerlerine sahiptir. `student == teacher`, Ancak `False` her iki `Person` tür değişken de döndürür. Ve `student == student2` `True` biri değişken, diğeri ise bir `Person` `Student` değişkendir.
 
-Önceki satır `Person` `LastName` , özelliğinin bir kopyası olduğu `person` ve olduğu yeni bir kayıt oluşturur `FirstName` `"Paul"` . Bir ifadede dilediğiniz sayıda özelliği ayarlayabilirsiniz `with` . Ayrıca, `with` tam bir kopya oluşturmak için ifadeleri de kullanabilirsiniz. Değiştirilecek özellikler için boş kümesi belirtirsiniz:
+Türetilmiş ve temel türlerin tüm ortak özellikleri ve alanları `ToString` , aşağıdaki örnekte gösterildiği gibi çıkışa dahil edilmiştir:
 
-:::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="WithCopy":::
+:::code language="csharp" source="../language-reference/builtin-types/snippets/shared/RecordType.cs" id="ToStringInheritance":::
 
-"Clone" yöntemi dışındaki birleştirilmiş üyelerin herhangi biri sizin tarafınızdan yazılabilir. Bir kayıt türünün herhangi bir sentezlenmiş yöntemin imzasıyla eşleşen bir yöntemi varsa, derleyici bu yöntemi birleştirmez. Önceki `Dog` kayıt örneği örnek olarak bir el kodlu <xref:System.String.ToString> yöntem içerir.
-
-Kayıt türleri hakkında daha fazla bilgi için bkz. kayıtlar öğreticisinde bu [araştırma](../whats-new/tutorials/records.md) .
+Daha fazla bilgi için bkz. kayıtlar hakkında C# dil başvurusu makalesindeki [Devralma](../language-reference/builtin-types/record.md#inheritance) .
 
 ## <a name="init-only-setters"></a>Yalnızca init ayarlayıcılar
 
@@ -124,14 +151,16 @@ Kayıt türleri hakkında daha fazla bilgi için bkz. kayıtlar öğreticisinde 
 
 :::code language="csharp" source="snippets/whats-new-csharp9/WeatherObservation.cs" ID="UseWeatherObservation":::
 
-Ancak başlatma sonrasında bir gözlemyi değiştirmek, başlatma dışında yalnızca bir init özelliğine atanarak bir hatadır:
+Başlatma sonrasında bir gözlemden sonra bir izleme değişikliği girişimi bir derleyici hatası ile sonuçlanır:
 
 ```csharp
 // Error! CS8852.
 now.TemperatureInCelsius = 18;
 ```
 
-Yalnızca Init ayarlayıcıları, türetilmiş sınıflardan temel sınıf özellikleri ayarlamak için yararlı olabilir. Ayrıca, bir temel sınıftaki yardımcılar aracılığıyla türetilmiş özellikleri de ayarlayabilir. Konumsal kayıtlar yalnızca init ayarlayıcıları kullanarak özellikleri bildirir. Bu ayarlayıcılar,-ifadelerinde kullanılır. Her türlü veya tanımladığınız için init Only ayarlayıcıları bildirebilirsiniz `class` `struct` .
+Yalnızca Init ayarlayıcıları, türetilmiş sınıflardan temel sınıf özellikleri ayarlamak için yararlı olabilir. Ayrıca, bir temel sınıftaki yardımcılar aracılığıyla türetilmiş özellikleri de ayarlayabilir. Konumsal kayıtlar yalnızca init ayarlayıcıları kullanarak özellikleri bildirir. Bu ayarlayıcılar,-ifadelerinde kullanılır. Herhangi bir `class` , veya tanımladığınız için init Only ayarlayıcıları bildirebilirsiniz `struct` `record` .
+
+Daha fazla bilgi için bkz. [init (C# Başvurusu)](../language-reference/keywords/init.md).
 
 ## <a name="top-level-statements"></a>Üst düzey deyimler
 
@@ -152,7 +181,7 @@ namespace HelloWorld
 }
 ```
 
-Her şeyi yapan tek bir kod satırı vardır. En üst düzey deyimlerle, tüm bu demirbaş `using` ve iş yapan tek satır ile değiştirebilirsiniz:
+Her şeyi yapan tek bir kod satırı vardır. En üst düzey deyimlerle, bu ortak olan tüm ortak, `using` yönergeyi ve işi yapan tek satırı değiştirebilirsiniz:
 
 :::code language="csharp" source="snippets/whats-new-csharp9/Program.cs" ID="TopLevelStatements":::
 
@@ -164,9 +193,11 @@ System.Console.WriteLine("Hello World!");
 
 Uygulamanızdaki yalnızca bir dosya en üst düzey deyimleri kullanabilir. Derleyici birden çok kaynak dosyasında en üst düzey deyimler bulursa, bu bir hatadır. En üst düzey deyimleri, genellikle bir yöntemi olan, belirtilen bir program giriş noktası yöntemiyle birleştirirseniz de bir hatadır `Main` . Bir anlamda, bir dosyanın normalde bir sınıf yönteminde olacak deyimleri içerdiğini düşünebilirsiniz `Main` `Program` .  
 
-Bu özellik için en yaygın kullanımdan biri eğitim malzemeleri oluşturuyor. Başlangıç C# geliştiricileri kurallı "Merhaba Dünya!" yazabilir kodda bir veya iki satırda. Ek sertifika gerekmez. Bununla birlikte, deneyimli geliştiriciler bu özellik için birçok kullanım de bulacaktır. En üst düzey deyimler, Jupneter Not defterlerinin sağladığı deneme için bir komut dosyası benzeri deneyim sağlar. En üst düzey deyimler, küçük konsol programları ve yardımcı programlar için harika. Azure Işlevleri, en üst düzey deyimler için ideal bir kullanım durumdur.
+Bu özellik için en yaygın kullanımdan biri eğitim malzemeleri oluşturuyor. Başlangıç C# geliştiricileri kurallı "Merhaba Dünya!" yazabilir kodda bir veya iki satırda. Ek sertifika gerekmez. Bununla birlikte, deneyimli geliştiriciler bu özellik için birçok kullanım de bulacaktır. En üst düzey deyimler, Jupneter Not defterlerinin sağladığı deneme için bir komut dosyası benzeri deneyim sağlar. En üst düzey deyimler, küçük konsol programları ve yardımcı programlar için harika. [Azure işlevleri](/azure/azure-functions/) , en üst düzey deyimler için ideal bir kullanım durumdur.
 
-En önemlisi, üst düzey deyimler uygulamanızın kapsamını veya karmaşıklığını sınırlamaz. Bu deyimler, herhangi bir .NET sınıfına erişebilir veya kullanabilir. Ayrıca, komut satırı bağımsız değişkenlerinin veya dönüş değerlerinin kullanımını sınırlamaz. Üst düzey deyimler, args adlı dizeler dizisine erişebilir. En üst düzey deyimler bir tamsayı değeri döndürirse, bu değer sentezlenmiş bir yöntemden tamsayı dönüş kodu olur `Main` . En üst düzey deyimler zaman uyumsuz ifadeler içerebilir. Bu durumda, birleştirilmiş giriş noktası bir `Task` veya döndürür `Task<int>` .
+En önemlisi, üst düzey deyimler uygulamanızın kapsamını veya karmaşıklığını sınırlamaz. Bu deyimler, herhangi bir .NET sınıfına erişebilir veya kullanabilir. Ayrıca, komut satırı bağımsız değişkenlerinin veya dönüş değerlerinin kullanımını sınırlamaz. Üst düzey deyimler, adlı bir dizeler dizisine erişebilir `args` . En üst düzey deyimler bir tamsayı değeri döndürirse, bu değer sentezlenmiş bir yöntemden tamsayı dönüş kodu olur `Main` . En üst düzey deyimler zaman uyumsuz ifadeler içerebilir. Bu durumda, birleştirilmiş giriş noktası bir `Task` veya döndürür `Task<int>` .
+
+Daha fazla bilgi için C# programlama kılavuzundaki [en üst düzey deyimler](../programming-guide/main-and-command-args/top-level-statements.md) bölümüne bakın.
 
 ## <a name="pattern-matching-enhancements"></a>Desen eşleştirme geliştirmeleri
 
@@ -183,7 +214,7 @@ Bu desenler, desenlerin sözdizimini zenginleştirin. Aşağıdaki örnekleri g�
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PatternUtilities.cs" ID="IsLetterPattern":::
 
-Alternatif olarak, `and` daha yüksek önceliğe sahip olması için isteğe bağlı parantezle `or` :
+Daha yüksek önceliğe sahip olması için isteğe bağlı parantezle `and` `or` :
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PatternUtilities.cs" ID="IsLetterOrSeparatorPattern":::
 
@@ -198,15 +229,19 @@ if (e is not null)
 
 Bu desenlerden herhangi biri desenleri izin verilen herhangi bir bağlamda kullanılabilir: `is` desen ifadeleri, `switch` ifadeler, iç içe desenler ve bir `switch` deyimin `case` etiketinin deseni.
 
+Daha fazla bilgi için bkz. [desenler (C# Başvurusu)](../language-reference/operators/patterns.md).
+
+Daha fazla bilgi için, [desenler](../language-reference/operators/patterns.md) makalesinin [Ilişkisel desenleri](../language-reference/operators/patterns.md#relational-patterns) ve [mantıksal desenler](../language-reference/operators/patterns.md#logical-patterns) bölümlerine bakın.
+
 ## <a name="performance-and-interop"></a>Performans ve birlikte çalışma
 
 Üç yeni özellik, yüksek performans gerektiren yerel birlikte çalışma ve alt düzey kitaplıklar desteğini geliştirir: yerel boyutlu tamsayılar, işlev işaretçileri ve `localsinit` bayrağı atlama.
 
-Yerel boyutlu tamsayılar `nint` ve `nuint` , tamsayı türleridir. Bunlar, temel alınan türler ve ile ifade edilir <xref:System.IntPtr?displayProperty=nameWithType> <xref:System.UIntPtr?displayProperty=nameWithType> . Derleyici, bu türler için ek dönüştürmeler ve işlemleri yerel olarak gösterir. Yerel boyutlu tamsayılar veya özelliklerini tanımlar `MaxValue` `MinValue` . Bu değerler, Hedef makinedeki bir tamsayının yerel boyutuna bağlı olduğundan, derleme zamanı sabitleri olarak ifade edilemez. Çalışma zamanında bu değerler salt okunur. `nint`[.. Aralığında için sabit değerler kullanabilirsiniz. `int.MinValue` `int.MaxValue`]. `nuint`[.. Aralığında için sabit değerler kullanabilirsiniz. `uint.MinValue` `uint.MaxValue`]. Derleyici ve türlerini kullanarak tüm birli ve ikili işleçler için sabit katlama gerçekleştirir <xref:System.Int32?displayProperty=nameWithType> <xref:System.UInt32?displayProperty=nameWithType> . Sonuç 32 bite sığmazsa, işlem çalışma zamanında yürütülür ve bir sabit kabul edilmez. Yerel boyutlu tamsayılar, tamsayı matematiğinin yaygın olarak kullanıldığı ve en yüksek performansa sahip olması gereken senaryolarda performansı artırabilir.
+Yerel boyutlu tamsayılar `nint` ve `nuint` , tamsayı türleridir. Bunlar, temel alınan türler ve ile ifade edilir <xref:System.IntPtr?displayProperty=nameWithType> <xref:System.UIntPtr?displayProperty=nameWithType> . Derleyici, bu türler için ek dönüştürmeler ve işlemleri yerel olarak gösterir. Yerel boyutlu tamsayılar veya özelliklerini tanımlar `MaxValue` `MinValue` . Bu değerler, Hedef makinedeki bir tamsayının yerel boyutuna bağlı olduğundan, derleme zamanı sabitleri olarak ifade edilemez. Çalışma zamanında bu değerler salt okunur. `nint`[.. Aralığında için sabit değerler kullanabilirsiniz. `int.MinValue` `int.MaxValue`]. `nuint`[.. Aralığında için sabit değerler kullanabilirsiniz. `uint.MinValue` `uint.MaxValue`]. Derleyici ve türlerini kullanarak tüm birli ve ikili işleçler için sabit katlama gerçekleştirir <xref:System.Int32?displayProperty=nameWithType> <xref:System.UInt32?displayProperty=nameWithType> . Sonuç 32 bite sığmazsa, işlem çalışma zamanında yürütülür ve bir sabit kabul edilmez. Yerel boyutlu tamsayılar, tamsayı matematiğinin yaygın olarak kullanıldığı ve en yüksek performansa sahip olması gereken senaryolarda performansı artırabilir. Daha fazla bilgi için bkz. [ `nint` ve `nuint` türleri](../language-reference/builtin-types/nint-nuint.md)
 
-İşlev işaretçileri, Il işlem kodları ve ' a erişmek için kolay bir sözdizimi sağlar `ldftn` `calli` . Yeni sözdizimini kullanarak işlev işaretçileri bildirebilirsiniz `delegate*` . `delegate*`Tür bir işaretçi türüdür. Yöntemi, `delegate*` yöntemini kullanan `calli` bir temsilcinin aksine, türünü çağırır `callvirt` `Invoke()` . Sözdizimi, çağırma aynıdır. İşlev işaretçisi çağrısı, `managed` çağırma kuralını kullanır. `unmanaged` `delegate*` Çağırma kuralına istediğinizi bildirmek için sözdiziminden sonra anahtar sözcüğünü eklersiniz `unmanaged` . Diğer çağırma kuralları, bildirimde öznitelikler kullanılarak belirtilebilir `delegate*` .
+İşlev işaretçileri, Il işlem kodları ve ' a erişmek için kolay bir sözdizimi sağlar `ldftn` `calli` . Yeni sözdizimini kullanarak işlev işaretçileri bildirebilirsiniz `delegate*` . `delegate*`Tür bir işaretçi türüdür. Yöntemi, `delegate*` yöntemini kullanan `calli` bir temsilcinin aksine, türünü çağırır `callvirt` `Invoke()` . Sözdizimi, çağırma aynıdır. İşlev işaretçisi çağrısı, `managed` çağırma kuralını kullanır. `unmanaged` `delegate*` Çağırma kuralına istediğinizi bildirmek için sözdiziminden sonra anahtar sözcüğünü eklersiniz `unmanaged` . Diğer çağırma kuralları, bildirimde öznitelikler kullanılarak belirtilebilir `delegate*` . Daha fazla bilgi için bkz. [güvenli olmayan kod ve işaretçi türleri](../language-reference/unsafe-code.md).
 
-Son olarak, <xref:System.Runtime.CompilerServices.SkipLocalsInitAttribute?displayProperty=nameWithType> derleyicinin bayrağı yaymamasını sağlamak için öğesini ekleyebilirsiniz `localsinit` . Bu bayrak, CLR 'ye tüm yerel değişkenleri sıfıra başlatmasını söyler. `localsinit`Bayrak, 1,0 sonrasındaki C# için varsayılan davranıştır. Ancak, ek sıfır başlatma bazı senaryolarda ölçülebilir performans etkisine sahip olabilir. Özellikle, kullandığınızda `stackalloc` . Bu gibi durumlarda, ekleyebilirsiniz <xref:System.Runtime.CompilerServices.SkipLocalsInitAttribute> . Tek bir yönteme veya özelliğe veya bir `class` ,, `struct` `interface` veya hatta bir modüle ekleyebilirsiniz. Bu öznitelik yöntemleri etkilemez `abstract` ; uygulama için oluşturulan kodu etkiler.
+Son olarak, <xref:System.Runtime.CompilerServices.SkipLocalsInitAttribute?displayProperty=nameWithType> derleyicinin bayrağı yaymamasını sağlamak için öğesini ekleyebilirsiniz `localsinit` . Bu bayrak, CLR 'ye tüm yerel değişkenleri sıfıra başlatmasını söyler. `localsinit`Bayrak, 1,0 sonrasındaki C# için varsayılan davranıştır. Ancak, ek sıfır başlatma bazı senaryolarda ölçülebilir performans etkisine sahip olabilir. Özellikle, kullandığınızda `stackalloc` . Bu gibi durumlarda, ekleyebilirsiniz <xref:System.Runtime.CompilerServices.SkipLocalsInitAttribute> . Tek bir yönteme veya özelliğe veya bir `class` ,, `struct` `interface` veya hatta bir modüle ekleyebilirsiniz. Bu öznitelik yöntemleri etkilemez `abstract` ; uygulama için oluşturulan kodu etkiler. Daha fazla bilgi için bkz. [ `SkipLocalsInit` özniteliği](../language-reference/attributes/general.md#skiplocalsinit-attribute).
 
 Bu özellikler, bazı senaryolarda performansı iyileştirebilir. Bunlar yalnızca, benimseme öncesinde ve sonrasında eklendikten sonra kullanılmalıdır. Yerel boyutlu tamsayılar içeren kodun, farklı tamsayı boyutlarına sahip birden çok hedef platformda test olması gerekir. Diğer özellikler güvenli olmayan kod gerektirir.
 
@@ -248,7 +283,7 @@ Son olarak, artık [Yerel işlevlere](../programming-guide/classes-and-structs/l
 
 Kod Oluşturucu, Roslyn Analysis API 'Lerini kullanarak öznitelikleri veya diğer kod öğelerini okur. Bu bilgilerden, derlemeye yeni kod ekler. Kaynak oluşturucuları yalnızca kod ekleyebilir; Bu kişiler, derlemede var olan herhangi bir kodu değiştirmesine izin verilmez.
 
-Kod üreticileri için eklenen iki özellik, ***kısmi Yöntem sözdizimi** _ ve _ *_Modül başlatıcıları_* * için uzantılardır. Birincisi, kısmi metotlarda yapılan değişiklikler. C# 9,0 öncesi, kısmi Yöntemler, bir `private` erişim değiştiricisi `void` belirtmemelidir, geri dönemeyebilir ve parametrelere sahip olamaz `out` . Bu kısıtlamalar, hiçbir yöntem uygulama sağlanmazsa, derleyicinin kısmi yönteme yapılan tüm çağrıları kaldırmasının anlamına gelir. C# 9,0 bu kısıtlamaları ortadan kaldırır, ancak kısmi Yöntem bildirimlerinin bir uygulamaya sahip olmasını gerektirir. Kod oluşturucuları, bu uygulamayı sağlayabilir. Yeni bir değişiklik yapmaktan kaçınmak için, derleyici eski kuralları takip etmek üzere bir erişim değiştiricisi olmadan herhangi bir kısmi yöntemi dikkate alır. Kısmi Yöntem `private` erişim değiştiricisini içeriyorsa, yeni kurallar bu kısmi yöntemi yönetir.
+Kod üreticileri için eklenen iki özellik, ***kısmi Yöntem sözdizimi** _ ve _ *_Modül başlatıcıları_* * için uzantılardır. Birincisi, kısmi metotlarda yapılan değişiklikler. C# 9,0 öncesi, kısmi Yöntemler, bir `private` erişim değiştiricisi `void` belirtmemelidir, geri dönemeyebilir ve parametrelere sahip olamaz `out` . Bu kısıtlamalar, hiçbir yöntem uygulama sağlanmazsa, derleyicinin kısmi yönteme yapılan tüm çağrıları kaldırmasının anlamına gelir. C# 9,0 bu kısıtlamaları ortadan kaldırır, ancak kısmi Yöntem bildirimlerinin bir uygulamaya sahip olmasını gerektirir. Kod oluşturucuları, bu uygulamayı sağlayabilir. Yeni bir değişiklik yapmaktan kaçınmak için, derleyici eski kuralları takip etmek üzere bir erişim değiştiricisi olmadan herhangi bir kısmi yöntemi dikkate alır. Kısmi Yöntem `private` erişim değiştiricisini içeriyorsa, yeni kurallar bu kısmi yöntemi yönetir. Daha fazla bilgi için bkz. [kısmi Yöntem (C# Başvurusu)](../language-reference/keywords/partial-method.md).
 
 Kod üreticileri için ikinci yeni özellik ***Modül başlatıcılarına*** yöneliktir. Modül başlatıcıları, <xref:System.Runtime.CompilerServices.ModuleInitializerAttribute> kendisine eklenmiş özniteliği olan yöntemlerdir. Bu yöntemler, tüm modülün içindeki başka bir alan erişimi veya yöntem çağrısından önce çalışma zamanı tarafından çağırılır. Modül başlatıcısı yöntemi:
 
@@ -259,4 +294,4 @@ Kod üreticileri için ikinci yeni özellik ***Modül başlatıcılarına*** yö
 - Genel bir sınıfta içerilmemelidir
 - Kapsayan modülden erişilebilir olmalıdır
 
-Bu son madde işareti noktası, yöntemin ve kapsayan sınıfın iç veya genel olması gerektiği anlamına gelir. Yöntem yerel bir işlev olamaz.
+Bu son madde işareti noktası, yöntemin ve kapsayan sınıfın iç veya genel olması gerektiği anlamına gelir. Yöntem yerel bir işlev olamaz. Daha fazla bilgi için bkz. [ `ModuleInitializer` özniteliği](../language-reference/attributes/general.md#moduleinitializer-attribute).

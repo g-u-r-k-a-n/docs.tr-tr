@@ -3,12 +3,12 @@ title: 'Son değişiklik: null yapılabilir başvuru türü ek açıklamaları d
 description: ASP.NET Core 6,0 ' deki, null yapılabilir başvuru türü ek açıklamaları değiştirilen Son değişiklik hakkında bilgi edinin
 ms.author: scaddie
 ms.date: 02/24/2021
-ms.openlocfilehash: 6d71d76d82ff7084626cbf3ae5803aa3c189b8bf
-ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
+ms.openlocfilehash: 5658ce359bd0d61f3e9597116fd203b89d6f0667
+ms.sourcegitcommit: e7e0921d0a10f85e9cb12f8b87cc1639a6c8d3fe
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "106497005"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107255070"
 ---
 # <a name="nullable-reference-type-annotations-changed"></a>Null yapılabilir başvuru türü ek açıklamaları değişti
 
@@ -20,7 +20,7 @@ Tartışma için bkz. GitHub sorunu [DotNet/aspnetcore # 27564](https://github.c
 
 ## <a name="version-introduced"></a>Sunulan sürüm
 
-6.0
+ASP.NET Core 6,0
 
 ## <a name="old-behavior"></a>Eski davranış
 

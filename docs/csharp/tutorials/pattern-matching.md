@@ -4,12 +4,12 @@ description: Bu gelişmiş öğreticide, ayrı olarak oluşturulan verileri ve a
 ms.date: 10/06/2020
 ms.technology: csharp-whats-new
 ms.custom: contperf-fy21q1
-ms.openlocfilehash: c081e6a75b3ea834641b050bc2450fed1e45c60c
-ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.openlocfilehash: 5d132784f591405b906068e2ed0e04347faa5e2c
+ms.sourcegitcommit: e7e0921d0a10f85e9cb12f8b87cc1639a6c8d3fe
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104874517"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107255473"
 ---
 # <a name="tutorial-use-pattern-matching-to-build-type-driven-and-data-driven-algorithms"></a>Öğretici: tür odaklı ve veri odaklı algoritmalar oluşturmak için model eşleştirmeyi kullanın
 
@@ -89,7 +89,7 @@ namespace toll_calculator
 }
 ```
 
-Yukarıdaki kod, tür modelini test eden bir **switch ifadesi** ( [`switch`](../language-reference/keywords/switch.md) deyimiyle aynı değil) kullanır.  Bir **switch ifadesi** , `vehicle` Önceki kodda, sonra anahtar sözcüğü gelen değişkenle başlar `switch` . Ardından, küme ayraçları içindeki tüm **anahtar kolları** gelir. `switch`İfade, diğer işlevselliklerindeki deyimini çevreleyen söz dizimini yapar `switch` . `case`Anahtar sözcüğü atlanır ve her bir ARM 'nin sonucu bir ifadedir. Son iki kolonun yeni bir dil özelliği gösterir. `{ }`Durum, önceki bir ARM ile eşleşmeyen null olmayan herhangi bir nesneyle eşleşir. Bu ARM, bu yönteme geçirilen hatalı türleri yakalar.  `{ }`Durum, her bir araç türü için durumları izlemelidir. Sıra tersine çevrilirse, `{ }` büyük/küçük harf durumuna geçer. Son olarak, `null` model `null` Bu yönteme ne zaman geçtiğini algılar. `null`Diğer tür desenleri doğru türdeki yalnızca null olmayan bir nesneyle eşleştiğinden, düzen en son olabilir.
+Önceki kod, [ `switch` ](../language-reference/operators/switch-expression.md) [`switch`](../language-reference/keywords/switch.md) [bildirim modelini](../language-reference/operators/patterns.md#declaration-and-type-patterns)test eden bir ifade (deyimiyle aynı değil) kullanır. Bir **switch ifadesi** , `vehicle` Önceki kodda, sonra anahtar sözcüğü gelen değişkenle başlar `switch` . Ardından, küme ayraçları içindeki tüm **anahtar kolları** gelir. `switch`İfade, diğer işlevselliklerindeki deyimini çevreleyen söz dizimini yapar `switch` . `case`Anahtar sözcüğü atlanır ve her bir ARM 'nin sonucu bir ifadedir. Son iki kolonun yeni bir dil özelliği gösterir. `{ }`Durum, önceki bir ARM ile eşleşmeyen null olmayan herhangi bir nesneyle eşleşir. Bu ARM, bu yönteme geçirilen hatalı türleri yakalar. `{ }`Durum, her bir araç türü için durumları izlemelidir. Sıra tersine çevrilirse, `{ }` büyük/küçük harf durumuna geçer. Son olarak, `null` [sabit model](../language-reference/operators/patterns.md#constant-pattern) `null` Bu yönteme ne zaman geçtiğini algılar. `null`Diğer desenler doğru türdeki yalnızca null olmayan bir nesneyle eşleştiğinden, düzen en son olabilir.
 
 Bu kodu aşağıdaki kodu kullanarak test edebilirsiniz `Program.cs` :
 
@@ -152,7 +152,7 @@ Desenlerin kodun ve verilerin ayrı olduğu algoritmalar oluşturmanıza nasıl 
 - %50 ' den küçük veri yolları, fazladan $2,00 oranında ödeyin.
 - %90 ' den fazla tam veri yolları $1,00 indirimi elde edin.
 
-Bu kurallar, aynı anahtar ifadesinde **özellik düzeniyle** kullanılarak uygulanabilir. Özellik deseninin bir `when` özellik değerini sabit bir değerle karşılaştıran bir yan tümce vardır. Özellik deseninin türü belirlendikten sonra nesnenin özellikleri incelenir. Bir için tek durum `Car` dört farklı durumda genişler:
+Bu kurallar, aynı anahtar ifadesinde bir [özellik düzeniyle](../language-reference/operators/patterns.md#property-pattern) kullanılarak uygulanabilir. Özellik deseninin bir özellik değeri bir sabit değerle karşılaştırılır. Özellik deseninin türü belirlendikten sonra nesnenin özellikleri incelenir. Bir için tek durum `Car` dört farklı durumda genişler:
 
 ```csharp
 vehicle switch
@@ -183,8 +183,6 @@ vehicle switch
     // ...
 };
 ```
-
-Önceki örnekte `when` yan tümce son durumda atlandı.
 
 Ardından, aşağıdaki örnekte gösterildiği gibi, veri yolları için durumları genişleterek sahiplik kurallarını uygulayın:
 
@@ -249,7 +247,7 @@ vehicle switch
 
 Bu anahtar kolları çoğu **özyinelemeli desenlere** örnektir. Örneğin, `Car { Passengers: 1}` bir özellik deseninin içinde sabit bir model gösterir.
 
-İç içe geçmiş anahtarlar kullanarak bu kodu daha az tekrarlı hale getirebilirsiniz. `Car`Ve `Taxi` her ikisi de önceki örneklerde dört farklı kollu bir sahiptir. Her iki durumda da, bir özellik düzeninde akışlara bir tür stili oluşturabilirsiniz. Bu teknik aşağıdaki kodda gösterilmiştir:
+İç içe geçmiş anahtarlar kullanarak bu kodu daha az tekrarlı hale getirebilirsiniz. `Car`Ve `Taxi` her ikisi de önceki örneklerde dört farklı kollu bir sahiptir. Her iki durumda da, bir sabit düzende akışlara yönelik bir bildirim stili oluşturabilirsiniz. Bu teknik aşağıdaki kodda gösterilmiştir:
 
 ```csharp
 public decimal CalculateToll(object vehicle) =>
@@ -345,7 +343,7 @@ Sonra, zaman bloklara zaman kategorize etmek için benzer bir işlev ekleyin:
 
 [!code-csharp[GetTimeBand](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#GetTimeBand)]
 
-`enum`Her zaman aralığını ayrı bir değere dönüştürmek için bir özel ekleyin. Ardından, `GetTimeBand` yöntemi, C# 9,0 ' de eklenen *ilişkisel desenleri* ve *birleşme veya desenler* kullanır. İlişkisel model,,, veya kullanarak sayısal bir değeri test etmenizi sağlar `<` `>` `<=` `>=` . Bir `or` ifadenin bir veya daha fazla desenle eşleşmesi durumunda desen test eder. Ayrıca `and` , bir ifadenin iki ayrı desenle eşleştiğinden emin olmak için bir desen ve bir `not` ifadenin bir desenle eşleşmediğini test etmek için bir desen de kullanabilirsiniz.
+`enum`Her zaman aralığını ayrı bir değere dönüştürmek için bir özel ekleyin. Ardından, `GetTimeBand` yöntemi, C# 9,0 ' de eklenen [ilişkisel desenleri](../language-reference/operators/patterns.md#relational-patterns)ve birlikte bulunan [ `or` desenleri](../language-reference/operators/patterns.md#logical-patterns)kullanır. İlişkisel bir model,,, veya kullanarak sayısal bir değeri test etmenizi sağlar `<` `>` `<=` `>=` . Bir `or` ifadenin bir veya daha fazla desenle eşleşmesi durumunda desen test eder. Ayrıca `and` , bir ifadenin iki ayrı desenle eşleştiğinden emin olmak için bir desen ve bir `not` ifadenin bir desenle eşleşmediğini test etmek için bir desen de kullanabilirsiniz.
 
 Bu yöntemleri oluşturduktan sonra, `switch` fiyatlandırma Premium 'u hesaplamak için **demet düzenine** sahip başka bir ifadeyi kullanabilirsiniz. `switch`Tüm 16 kollu bir ifade oluşturabilirsiniz:
 
@@ -391,3 +389,8 @@ Model eşleştirme bazı kod türlerini daha okunaklı hale getirir ve sınıfla
 ## <a name="next-steps"></a>Sonraki adımlar
 
 Tamamlanan kodu [DotNet/Samples](https://github.com/dotnet/samples/tree/main/csharp/tutorials/patterns/finished) GitHub deposundan indirebilirsiniz. Kendi hiyerarşinizdeki desenleri keşfedebilir ve bu tekniği düzenli kodlama etkinliklerinize ekleyin. Bu teknikleri öğrenirken, sorun yaklaşımı ve yeni işlevler oluşturmak için kullanabileceğiniz başka bir yol sunulmaktadır.
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Desenler](../language-reference/operators/patterns.md)
+- [`switch` ifadesini](../language-reference/operators/switch-expression.md)

@@ -3,14 +3,14 @@ title: .NET ' te özel bir günlüğe kaydetme sağlayıcısı uygulama
 description: .NET uygulamalarınızda özel bir günlüğe kaydetme sağlayıcısı uygulamayı öğrenin.
 author: IEvangelist
 ms.author: dapine
-ms.date: 09/25/2020
+ms.date: 04/07/2021
 ms.topic: how-to
-ms.openlocfilehash: 3a0af6296c2ade15ff1b75dce5a5f99bfe235ebf
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 56dd3aa9962d2cdaf13df85960a99aab7b050477
+ms.sourcegitcommit: e7e0921d0a10f85e9cb12f8b87cc1639a6c8d3fe
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91614734"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107255135"
 ---
 # <a name="implement-a-custom-logging-provider-in-net"></a>.NET ' te özel bir günlüğe kaydetme sağlayıcısı uygulama
 
@@ -33,7 +33,7 @@ Yukarıdaki kod, varsayılan düzeyi olarak `Information` , rengine `Green` ve, 
 Yukarıdaki kod:
 
 - Kategori adı başına bir günlükçü örneği oluşturur.
-- İade `logLevel == _config.LogLevel` eder `IsEnabled` , her birinin `logLevel` benzersiz bir günlükçü vardır. Günlükçüler aynı zamanda tüm daha yüksek günlük seviyeleri için de etkinleştirilmelidir:
+- İade `_config.LogLevels.ContainsKey(logLevel)` eder `IsEnabled` , her birinin `logLevel` benzersiz bir günlükçü vardır. Günlükçüler aynı zamanda tüm daha yüksek günlük seviyeleri için de etkinleştirilmelidir:
 
 :::code language="csharp" source="snippets/configuration/console-custom-logging/ColorConsoleLogger.cs" range="16-17":::
 
@@ -43,26 +43,27 @@ Yukarıdaki kod:
 
 :::code language="csharp" source="snippets/configuration/console-custom-logging/ColorConsoleLoggerProvider.cs":::
 
-Yukarıdaki kodda, <xref:Microsoft.Build.Logging.LoggerDescription.CreateLogger%2A> Kategori başına adının tek bir örneğini oluşturur `ColorConsoleLogger` ve içinde depolar [`ConcurrentDictionary<TKey,TValue>`](/dotnet/api/system.collections.concurrent.concurrentdictionary-2) .
+Yukarıdaki kodda, <xref:Microsoft.Build.Logging.LoggerDescription.CreateLogger%2A> Kategori başına adının tek bir örneğini oluşturur `ColorConsoleLogger` ve içinde depolar [`ConcurrentDictionary<TKey,TValue>`](/dotnet/api/system.collections.concurrent.concurrentdictionary-2) . Ayrıca, <xref:Microsoft.Extensions.Options.IOptionsMonitor%601> temel nesnede yapılan değişiklikleri güncelleştirmek için arabirimi gereklidir `ColorConsoleLoggerConfiguration` .
 
 ## <a name="usage-and-registration-of-the-custom-logger"></a>Özel günlükçü kullanımı ve kaydı
 
 Özel günlüğe kaydetme sağlayıcısını ve karşılık gelen günlükçüsü eklemek için, öğesinden bir ile öğesine ekleyin <xref:Microsoft.Extensions.Logging.ILoggerProvider> <xref:Microsoft.Extensions.Logging.ILoggingBuilder> <xref:Microsoft.Extensions.Hosting.HostingHostBuilderExtensions.ConfigureLogging(Microsoft.Extensions.Hosting.IHostBuilder,System.Action{Microsoft.Extensions.Logging.ILoggingBuilder})?displayProperty=nameWithType> :
 
-:::code language="csharp" source="snippets/configuration/console-custom-logging/Program.cs" range="23-39":::
+:::code language="csharp" source="snippets/configuration/console-custom-logging/Program.cs" range="23-33":::
 
 , `ILoggingBuilder` Bir veya daha fazla `ILogger` örnek oluşturur. `ILogger`Örnekler, bilgileri günlüğe kaydetmek için Framework tarafından kullanılır.
 
-Yukarıdaki kod için, için en az bir genişletme yöntemi sağlayın `ILoggerFactory` :
+Kurala göre, üzerindeki genişletme yöntemleri `ILoggingBuilder` özel sağlayıcıyı kaydetmek için kullanılır:
 
 :::code language="csharp" source="snippets/configuration/console-custom-logging/Extensions/ColorConsoleLoggerExtensions.cs":::
 
-Bu basit uygulamayı çalıştırmak, aşağıdaki konsol penceresine benzer şekilde işlenir:
+Bu basit uygulamayı çalıştırmak, renk çıkışını konsol penceresinde aşağıdaki görüntüye benzer şekilde işleyecek:
 
 :::image type="content" source="media/color-console-logger.png" alt-text="Renk konsolu günlükçüsü örnek çıkışı":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET oturumu açılıyor](logging.md).
-- [.Net 'Te günlüğe kaydetme sağlayıcıları](logging-providers.md).
-- [.Net ' te yüksek performanslı günlük kaydı](high-performance-logging.md).
+- [.NET oturumu açma](logging.md)
+- [.NET 'te günlüğe kaydetme sağlayıcıları](logging-providers.md)
+- [.NET 'e bağımlılık ekleme](dependency-injection.md)
+- [.NET 'te yüksek performanslı günlüğe kaydetme](high-performance-logging.md)

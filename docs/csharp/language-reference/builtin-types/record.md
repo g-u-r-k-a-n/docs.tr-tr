@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - record keyword [C#]
 - record type [C#]
-ms.openlocfilehash: 57474caf0f1106380e52da7fcb7608b62a0f23e5
-ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.openlocfilehash: 067046a66c6eb1f314c123de8bde2d023f1f374a
+ms.sourcegitcommit: e7e0921d0a10f85e9cb12f8b87cc1639a6c8d3fe
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104872658"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107255122"
 ---
 # <a name="records-c-reference"></a>Kayıtlar (C# Başvurusu)
 
@@ -48,7 +48,7 @@ Bir kaydın özelliklerini bildirmek ve bir örnek oluştururken özellik değer
 
 Özellik tanımı için Konumsal sözdizimini kullandığınızda, derleyici şunları oluşturur:
 
-* Kayıt bildiriminde belirtilen her Konumsal parametre için genel bir init-tek otomatik uygulanan özellik. [Yalnızca bir init](../../whats-new/csharp-9.md#init-only-setters) özelliği, oluşturucuda veya bir özellik başlatıcısı kullanılarak ayarlanabilir.
+* Kayıt bildiriminde belirtilen her Konumsal parametre için genel bir init-tek otomatik uygulanan özellik. [Yalnızca bir init](../keywords/init.md) özelliği, oluşturucuda veya bir özellik başlatıcısı kullanılarak ayarlanabilir.
 * Parametreleri, kayıt bildiriminde konumsal parametrelerle eşleşen bir birincil Oluşturucu.
 * `Deconstruct` `out` Kayıt bildiriminde belirtilen her Konumsal parametre için parametreye sahip bir yöntem. Bu yöntem yalnızca iki veya daha fazla Konumsal parametre varsa sağlanır. Yöntemi konumsal sözdizimi kullanılarak tanımlanan özellikleri kaldırır; Standart özellik sözdizimi kullanılarak tanımlanan özellikleri yoksayar.
 

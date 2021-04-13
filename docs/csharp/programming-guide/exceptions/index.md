@@ -7,18 +7,18 @@ helpviewer_keywords:
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-ms.openlocfilehash: 679171e6d397741ef44cb37fb770f6feba039fd9
-ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
+ms.openlocfilehash: 245299707254c7bafb4589ee8031a107921ca2a7
+ms.sourcegitcommit: e7e0921d0a10f85e9cb12f8b87cc1639a6c8d3fe
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97110630"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107255408"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Özel Durumlar ve Özel Durum İşleme (C# Programlama Kılavuzu)
 
 C# dilinin özel durum işleme özellikleri, bir program çalışırken oluşan beklenmedik veya olağanüstü durumlarla ilgilenmenize yardımcı olur. Özel durum işleme `try` , `catch` başarılı olmayan eylemleri denemek için,, ve anahtar kelimelerini kullanır, bu `finally` işlemin ne kadar uygun olduğuna karar verirken sorunları işleyebilir ve kaynakları daha sonra temizleyebiliriz. Özel durumlar ortak dil çalışma zamanı (CLR), .NET veya üçüncü taraf kitaplıkları tarafından veya uygulama kodu tarafından oluşturulabilir. Özel durumlar anahtar sözcüğü kullanılarak oluşturulur `throw` .
 
-Çoğu durumda, kodunuzun doğrudan çağırdığı bir yöntem tarafından değil, çağrı yığınında daha sonra başka bir yöntem tarafından bir özel durum atılır. Bir özel durum oluştuğunda, CLR, belirli bir özel durum türü için blok içeren bir yöntemi arayarak yığını aşağı doğru bir şekilde `catch` yürütür ve `catch` bulursa bu blok üzerinde yürütülür. `catch`Çağrı yığınında herhangi bir yerde uygun bir blok bulmaz, işlemi sonlandırır ve kullanıcıya bir ileti görüntüler.
+Çoğu durumda, kodunuzun doğrudan çağırdığı bir yöntem tarafından değil, çağrı yığınında daha sonra başka bir yöntem tarafından bir özel durum atılır. Bir özel durum oluştuğunda, CLR, belirli bir özel durum türü için blok içeren bir yöntemi arayarak yığını yeniden aşağı doğru `catch` çalıştırır ve bulduğu ilk bu `catch` blok yürütülür. `catch`Çağrı yığınında herhangi bir yerde uygun bir blok bulmaz, işlemi sonlandırır ve kullanıcıya bir ileti görüntüler.
 
 Bu örnekte, bir yöntem sıfıra bölme için test eder ve hatayı yakalar. Özel durum işleme olmadan, bu program bir **Dividebysıfırlaması özel durumu** ile sonlandırılır ve işlenmemiş bir hatadır.
 

@@ -1,16 +1,16 @@
 ---
 title: Model Oluşturucu 'da GPU desteği nasıl yüklenir
 description: Model Oluşturucu 'da GPU desteğini yüklemeyi öğrenin
-ms.date: 08/18/2020
+ms.date: 04/08/2021
 author: luisquintanilla
 ms.author: luquinta
 ms.topic: how-to
-ms.openlocfilehash: ce629efa4c12a69f87196de35ebfe4331dc0800f
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: 81f84a17429fd03506bbce30f5646941e4e80b3b
+ms.sourcegitcommit: e7e0921d0a10f85e9cb12f8b87cc1639a6c8d3fe
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608570"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107255434"
 ---
 # <a name="how-to-install-gpu-support-in-model-builder"></a>Model Oluşturucu 'da GPU desteği nasıl yüklenir
 
@@ -25,8 +25,8 @@ Model Oluşturucu ile GPU 'yu kullanarak GPU sürücülerini yüklemeyi öğreni
 
 ## <a name="install-dependencies"></a>Bağımlılıkları yükleme
 
-1. [CUDA v 10.0](https://developer.nvidia.com/cuda-10.0-download-archive)'ı yükler. Daha yeni bir sürümü değil CUDA v 10.0 ' ı yüklediğinizden emin olun. CUDA 'nin birden çok sürümü yüklü olamaz.
-1. [CUDA 10,0 Için Cudnn v 7.6.4](https://developer.nvidia.com/rdp/cudnn-download)'yi yükler. Birden fazla cuDNN sürümü yüklü olamaz. CuDNN v 7.6.4 ZIP dosyasını indirdikten ve yeniden paketten çıktıktan sonra `<CUDNN_zip_files_path>\cuda\bin\cudnn64_7.dll` öğesine kopyalayın `<YOUR_DRIVE>\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\bin` .
+1. [CUDA v 10.1](https://developer.nvidia.com/cuda-10.1-download-archive-update2)' i yükler. Daha yeni bir sürümü değil CUDA v 10.1 ' yi yüklediğinizden emin olun. CUDA 'nin birden çok sürümü yüklü olamaz.
+1. [CUDA 10,1 Için Cudnn v 7.6.4](https://developer.nvidia.com/rdp/cudnn-download)'yi yükler. Birden fazla cuDNN sürümü yüklü olamaz. CuDNN v 7.6.4 ZIP dosyasını indirdikten ve yeniden paketten çıktıktan sonra `<CUDNN_zip_files_path>\cuda\bin\cudnn64_7.dll` öğesine kopyalayın `<YOUR_DRIVE>\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\bin` .
 
 ## <a name="troubleshooting"></a>Sorun giderme
 

@@ -3,24 +3,26 @@ title: DisposeAsync metodu uygulama
 description: Zaman uyumsuz kaynak Temizleme işlemini gerçekleştirmek için DisposeAsync ve Dispomevsimsynccore yöntemlerini nasıl uygulayacağınızı öğrenin.
 author: IEvangelist
 ms.author: dapine
-ms.date: 03/17/2021
+ms.date: 04/07/2021
 dev_langs:
 - csharp
 helpviewer_keywords:
 - DisposeAsync method
 - garbage collection, DisposeAsync method
-ms.openlocfilehash: a177e80c5204a79a372cb79609f458bf6fa3bde1
-ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
+ms.openlocfilehash: 777036b83cd217418994e3cbc31958d13d5c3268
+ms.sourcegitcommit: e7e0921d0a10f85e9cb12f8b87cc1639a6c8d3fe
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104652665"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107260519"
 ---
 # <a name="implement-a-disposeasync-method"></a>DisposeAsync metodu uygulama
 
 <xref:System.IAsyncDisposable?displayProperty=nameWithType>Arabirim, C# 8,0 'nin bir parçası olarak sunulmuştur. <xref:System.IAsyncDisposable.DisposeAsync?displayProperty=nameWithType> [Bir Dispose yöntemi uygularken](implementing-dispose.md)yaptığınız gibi, kaynak temizlik gerçekleştirmeniz gerektiğinde yöntemini uygulayabilirsiniz. Ancak, bu uygulamanın zaman uyumsuz temizleme işlemlerine izin verdiği önemli farklılıklardan biridir. , <xref:System.IAsyncDisposable.DisposeAsync> <xref:System.Threading.Tasks.ValueTask> Zaman uyumsuz Dispose işlemini temsil eden bir döndürür.
 
 Sınıfların de arabirimini uyguladığı arabirim, tipik olarak kullanılır <xref:System.IAsyncDisposable> <xref:System.IDisposable> . Arabirimin iyi bir uygulama deseninin, <xref:System.IAsyncDisposable> zaman uyumlu ya da zaman uyumsuz Dispose için hazırlanmasıdır. Dispose deseninin uygulanması için tüm rehberlik, zaman uyumsuz uygulama için de geçerlidir. Bu makalede, [bir Dispose yönteminin nasıl uygulanacağını](implementing-dispose.md)bildiğiniz varsayılmaktadır.
+
+[!INCLUDE [disposables-and-dependency-injection](includes/disposables-and-dependency-injection.md)]
 
 ## <a name="disposeasync-and-disposeasynccore"></a>DisposeAsync () ve Dispodeniz synccore ()
 
@@ -134,6 +136,7 @@ Aşağıdaki kodda vurgulanan satırlarda "yığılmış kullanımlar" ne anlama
 
 Ve ' ın çift uygulama örneği `IDisposable` Için `IAsyncDisposable` <xref:System.Text.Json.Utf8JsonWriter> [GitHub 'da](https://github.com/dotnet/runtime/blob/035b729d829368c2790d825bd02db14f0c0fd2ea/src/libraries/System.Text.Json/src/System/Text/Json/Writer/Utf8JsonWriter.cs#L297-L345)kaynak koda bakın.
 
+- [Hizmetlerin elden çıkarılması](../../core/extensions/dependency-injection-guidelines.md#disposal-of-services)
 - <xref:System.IAsyncDisposable>
 - <xref:System.IAsyncDisposable.DisposeAsync?displayProperty=nameWithType>
 - <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait(System.IAsyncDisposable,System.Boolean)>

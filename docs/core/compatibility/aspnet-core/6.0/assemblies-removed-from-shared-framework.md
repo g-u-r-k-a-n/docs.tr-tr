@@ -2,12 +2,12 @@
 title: "Son değişiklik: Microsoft.AspNetCore.App Shared Framework 'ten kaldırılan derlemeler"
 description: Microsoft.AspNetCore.App paylaşılan çerçevesinden kaldırılan bazı derlemelerin ASP.NET Core 6,0 ' deki Son değişiklik hakkında bilgi edinin.
 ms.date: 04/02/2021
-ms.openlocfilehash: 0db8af4690b0558b1ceae2881b45ce78cb23782b
-ms.sourcegitcommit: 089068389671f6f9e15fd67dcbfb0145bf72f1fb
+ms.openlocfilehash: e6a0aa97dd97eae2cdc5aa8ae64e277840d6a083
+ms.sourcegitcommit: e7e0921d0a10f85e9cb12f8b87cc1639a6c8d3fe
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "106499103"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107255265"
 ---
 # <a name="assemblies-removed-from-microsoftaspnetcoreapp-shared-framework"></a>Microsoft.AspNetCore.App paylaşılan çerçevesinden kaldırılan derlemeler
 
@@ -25,7 +25,7 @@ Ayrıca, aşağıdaki derlemeler ASP.NET Core çalışma zamanı paketinden kald
 
 ## <a name="version-introduced"></a>Sunulan sürüm
 
-6.0
+ASP.NET Core 6,0
 
 ## <a name="old-behavior"></a>Eski davranış
 
@@ -34,6 +34,8 @@ Uygulamalar, [Microsoft.AspNetCore.app](/aspnet/core/fundamentals/metapackage-ap
 ## <a name="new-behavior"></a>Yeni davranış
 
 Etkilenen derlemelerden API 'Leri, proje dosyanızda [Packagereference](../../../project-sdk/msbuild-props.md#packagereference) olmadan kullanırsanız, çalışma zamanı hataları görebilirsiniz. Örneğin, pakete açık bir başvuru eklemeden bu derlemelerden birindeki API 'Lere erişmek için yansıma kullanan bir uygulama, çalışma zamanı hatalarına sahip olur. , `PackageReference` Derlemelerin uygulama çıktısının bir parçası olarak mevcut olmasını sağlar.
+
+Tartışma için bkz <https://github.com/dotnet/aspnetcore/issues/31007> ..
 
 ## <a name="reason-for-change"></a>Değişiklik nedeni
 
