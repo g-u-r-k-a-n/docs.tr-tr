@@ -41,6 +41,8 @@ items:
                     href: aspnet-core/6.0/messagepack-library-change.md
                   - name: 'Ara yazılım: HTTPS yeniden yönlendirme ara yazılımı belirsiz HTTPS bağlantı noktalarında özel durum oluşturur'
                     href: aspnet-core/6.0/middleware-ambiguous-https-ports-exception.md
+                  - name: 'Razor: derleyici tek bir derleme oluşturuyor'
+                    href: aspnet-core/6.0/razor-compiler-doesnt-produce-views-assembly.md
                   - name: 'Razor: RazorEngine API ''Leri kullanılmıyor olarak işaretlendi'
                     href: aspnet-core/6.0/razor-engine-apis-obsolete.md
               - name: Core .NET kitaplıkları
@@ -351,6 +353,8 @@ items:
                     href: aspnet-core/6.0/messagepack-library-change.md
                   - name: 'Ara yazılım: HTTPS yeniden yönlendirme ara yazılımı belirsiz HTTPS bağlantı noktalarında özel durum oluşturur'
                     href: aspnet-core/6.0/middleware-ambiguous-https-ports-exception.md
+                  - name: 'Razor: derleyici tek bir derleme oluşturuyor'
+                    href: aspnet-core/6.0/razor-compiler-doesnt-produce-views-assembly.md
                   - name: 'Razor: RazorEngine API ''Leri kullanılmıyor olarak işaretlendi'
                     href: aspnet-core/6.0/razor-engine-apis-obsolete.md
               - name: .NET 5
