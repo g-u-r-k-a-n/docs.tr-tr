@@ -10,18 +10,20 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: b6add045983619169bed0cd9f32eb27dba0a0338
-ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
+ms.openlocfilehash: 84a740f3afeca94a706b4120b8cd8f191f49a048
+ms.sourcegitcommit: bbc724b72fb6c978905ac715e4033efa291f84dc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90738885"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107369575"
 ---
 # <a name="-operator-c-reference"></a>?: işleci (C# Başvurusu)
 
-Üçlü işleç olarak da bilinen koşullu operatör, Boole ifadesi `?:` değerlendirir ve Boolean ifadesinin veya olarak değerlendirildiğine bağlı olarak iki deyimden birinin sonucunu döndürür `true` `false` .
+`?:`Üçlü işleç olarak da bilinen koşullu operatör, Boole ifadesi değerlendirir ve `true` `false` Aşağıdaki örnekte gösterildiği gibi, Boolean ifadesinin veya olarak değerlendirildiğine bağlı olarak iki ifadeden birinin sonucunu döndürür:
 
-Koşullu işlecin sözdizimi şöyledir:
+:::code language="csharp" interactive="try-dotnet-method" source="snippets/shared/ConditionalOperator.cs" id="BasicExample":::
+
+Yukarıdaki örnekte gösterildiği gibi, koşullu işlecin sözdizimi aşağıdaki gibidir:
 
 ```csharp
 condition ? consequent : alternative
@@ -55,10 +57,6 @@ a ? b : (c ? d : e)
 > ```text
 > is this condition true ? yes : no
 > ```
-
-Aşağıdaki örnek, koşullu işlecin kullanımını gösterir:
-
-[!code-csharp-interactive[non ref conditional](snippets/shared/ConditionalOperator.cs#ConditionalValue)]
 
 ## <a name="conditional-ref-expression"></a>Koşullu başvuru ifadesi
 

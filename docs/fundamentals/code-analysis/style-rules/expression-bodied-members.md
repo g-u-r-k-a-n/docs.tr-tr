@@ -8,12 +8,12 @@ ms.author: gewarren
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: efffad48dc36a58da45ea1520cff6202f6e66333
-ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
+ms.openlocfilehash: 5aae09b1ac94219b7df802981e4e4598cd949035
+ms.sourcegitcommit: bbc724b72fb6c978905ac715e4033efa291f84dc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/30/2021
-ms.locfileid: "96589894"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107369614"
 ---
 # <a name="expression-bodied-members"></a>İfade-Bodied-Members
 
@@ -27,7 +27,7 @@ Bu bölümdeki stil kuralları, mantık tek bir ifadeden oluşur [ifadesi Bodied
 - [Özellikler için ifade gövdesi kullan (IDE0025)](ide0025.md)
 - [Dizin oluşturucular için ifade gövdesi kullan (IDE0026)](ide0026.md)
 - [Erişimciler için ifade gövdesi kullan (IDE0027)](ide0027.md)
-- [Lambda exressions için ifade gövdesi kullan (IDE0053)](ide0053.md)
+- [Lambda ifadeleri için ifade gövdesi kullan (IDE0053)](ide0053.md)
 - [Yerel işlevler için ifade gövdesi kullan (IDE0061)](ide0061.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.

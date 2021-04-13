@@ -1,25 +1,30 @@
 ---
 title: .NET kitaplıkları için platformlar arası hedefleme
 description: Platformlar arası .NET kitaplıkları oluşturmaya yönelik en iyi yöntem önerileri.
-ms.date: 08/12/2019
-ms.openlocfilehash: 038a03904c4cfe49758562b5748fef06ae1afa4b
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.date: 04/12/2021
+ms.openlocfilehash: c9ea186229ac6f334d19bce7effdeb23ebd602b4
+ms.sourcegitcommit: bbc724b72fb6c978905ac715e4033efa291f84dc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93189257"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107369718"
 ---
 # <a name="cross-platform-targeting"></a>Platformlar arası hedefleme
 
 Modern .NET birden çok işletim sistemini ve cihazı destekler. .NET açık kaynaklı kitaplıkların, Azure 'da barındırılan bir ASP.NET Web sitesi mi yoksa Unity 'de bir .NET oyunu mi sundukları gibi çok sayıda geliştirici desteklemesi gerekir.
 
-## <a name="net-standard"></a>.NET Standard
+## <a name="net-and-net-standard-targets"></a>.NET ve .NET Standard hedefleri
 
-.NET Standard, bir .NET kitaplığına platformlar arası destek eklemenin en iyi yoludur. [.NET Standard](../net-standard.md) , tüm .NET uygulamalarında bulunan .NET API 'lerinin bir belirtimidir. .NET Standard hedefleme, belirli bir .NET Standard sürümünde olan API 'Leri kullanmak için kısıtlanmış kitaplıklar oluşturmanızı sağlar, yani bu .NET Standard sürümünü uygulayan tüm platformlar tarafından kullanılabilir.
+.Net ve .NET Standard hedefleri, .NET kitaplığına platformlar arası destek eklemenin en iyi yoludur.
+
+* [.NET Standard](../net-standard.md) , tüm .NET uygulamalarında bulunan .NET API 'lerinin bir belirtimidir. .NET Standard hedefleme, belirli bir .NET Standard sürümünde olan API 'Leri kullanmak için kısıtlanmış kitaplıklar oluşturmanızı sağlar, yani bu .NET Standard sürümünü uygulayan tüm platformlar tarafından kullanılabilir.
+* .NET 5, Microsoft 'un etkin bir şekilde geliştirmekte olduğu bir .NET uygulamasıdır. Bu, Windows Masaüstü uygulamaları ve platformlar arası konsol uygulamaları, bulut hizmetleri ve Web siteleri için kullanılabilen, tek bir ürün ve bir dizi özellik ve API 'yi içeren tek bir üründür.
+
+.NET 'in .NET Standard nasıl Karşılaştırıldığı hakkında daha fazla bilgi için bkz. [.NET 5 ve .NET Standard](/dotnet/standard/net-standard#net-5-and-net-standard).
 
 ![.NET Standard](./media/cross-platform-targeting/platforms-netstandard.png ".NET Standard")
 
-.NET Standard ve projenizi başarıyla derleyerek, kitaplığın tüm platformlarda başarıyla çalışacağını garanti etmez:
+.NET veya .NET Standard hedefleme ve projenizi başarıyla derlemek, kitaplığın tüm platformlarda başarıyla çalışacağını garanti etmez:
 
 1. Platforma özgü API 'Ler diğer platformlarda başarısız olur. Örneğin, <xref:Microsoft.Win32.Registry?displayProperty=nameWithType> Windows 'da başarılı olur ve <xref:System.PlatformNotSupportedException> başka HERHANGI bir işletim sisteminde kullanıldığında throw.
 2. API 'Ler farklı davranabilirler. Örneğin, bir uygulama iOS veya UWP üzerinde güncel derleme kullandığında, yansıma API 'Leri farklı performans özelliklerine sahiptir.
@@ -30,6 +35,10 @@ Modern .NET birden çok işletim sistemini ve cihazı destekler. .NET açık kay
 ✔️ bir hedef dahil ile başlayın `netstandard2.0` .
 
 > Genel amaçlı kitaplıkların çoğu .NET Standard 2,0 dışında API 'Lere ihtiyaç mamalıdır. .NET Standard 2,0 tüm modern platformlar tarafından desteklenir ve tek bir hedefle birden çok platformu desteklemek için önerilen yoldur.
+
+`net5.0`modern bir .NET ortamında yeni API 'ler varsa, bir hedef veya daha fazlasını ✔️.
+
+> .NET 5 veya üzeri uygulamalar bir hedef kullanabilir, bu `netstandard2.0` nedenle `net5.0` gerekli değildir. `net5.0`Yeni .NET API 'lerini kullanmak istediğinizde açıkça hedefleme eklenmelidir.
 
 ❌ Bir hedef dahil kullanmaktan kaçının `netstandard1.x` .
 

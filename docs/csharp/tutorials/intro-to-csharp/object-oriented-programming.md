@@ -2,21 +2,21 @@
 title: Object-Oriented programlama (C#)
 description: C#; soyutlama, kapsülleme, devralma ve çok biçimlilik dahil olmak üzere nesne odaklı programlama için tam destek sağlar.
 ms.date: 09/30/2020
-ms.openlocfilehash: 70642ef00f7ec6462c716498ff14450ab763956b
-ms.sourcegitcommit: e16315d9f1ff355f55ff8ab84a28915be0a8e42b
+ms.openlocfilehash: 75646a62722e6f2e24ef5bc1315c92164f3340fa
+ms.sourcegitcommit: bbc724b72fb6c978905ac715e4033efa291f84dc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105111367"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107369705"
 ---
 # <a name="object-oriented-programming-c"></a>Object-Oriented programlama (C#)
 
-C#, nesne yönelimli bir dildir. Nesne odaklı programlamada kullanılan temel tekniklerin dördü şunlardır:
+C#, nesne odaklı bir programlama dilidir. Nesne odaklı programlama için dört temel ilke şunlardır:
 
-- *Soyutlama* , bir grup özellikler, Yöntemler ve diğer üyelerin tek bir birim veya nesne olarak kabul edildiği anlamına gelir.
-- *Kapsülleme* , tür tüketicilerden gereksiz ayrıntıların gizlenmesi anlamına gelir.
-- *Devralma* , mevcut bir sınıfı temel alan yeni sınıflar oluşturma özelliğini açıklar.
-- Çok *biçimlilik* , her bir sınıf farklı yollarla aynı özellikleri veya yöntemleri uyguladığından bile, birbirinin yerine kullanılabilecek birden fazla sınıfa sahip olabileceği anlamına gelir.
+- *Kapsülleme* Sistemin iç karmaşıklıklarını tek nesnelere göre düzenleme özelliği.
+- *Soyutlama* Özelliklere, yöntemlere veya kapsüllenmiş bir şeyin üyelerine erişim veya erişimi kısıtlama özelliği.
+- *Devralma* Var olan soyutlamaları temel alan yeni soyutlamalar oluşturma yeteneği.
+- Çok *biçimlilik* Devralınan özellikleri veya yöntemleri birden çok soyutlamalar arasında farklı şekillerde uygulayabilme.
 
 Önceki öğreticide, hem *soyutlamayı* hem de *kapsüllemeyi* gördüğünüz [sınıflara giriş](introduction-to-classes.md) . `BankAccount`Sınıf, bir banka hesabı kavramı için bir soyutlama sağladı. Sınıfını kullanan herhangi bir kodu etkilemeden uygulamasını değiştirebilirsiniz `BankAccount` . Hem `BankAccount` hem de `Transaction` sınıfları, koddaki bu kavramları anlatmak için gereken bileşenlerin kapsüllemesini sağlar.
 

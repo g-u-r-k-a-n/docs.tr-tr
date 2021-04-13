@@ -3,13 +3,13 @@ title: .NET kitaplığı yazarları için seçenekler model Kılavuzu
 author: IEvangelist
 description: Seçenekler deseninin .NET 'teki kitaplık yazarı olarak nasıl kullanıma sunulacağınızı öğrenin.
 ms.author: dapine
-ms.date: 01/28/2021
-ms.openlocfilehash: d0da94a8f25c9e5aba6093fab07ccca6a0a7c345
-ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
+ms.date: 04/12/2021
+ms.openlocfilehash: 7e1bfeadff92f5d0d979ef2d7da11d7c1b47c58d
+ms.sourcegitcommit: bbc724b72fb6c978905ac715e4033efa291f84dc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99217217"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107369627"
 ---
 # <a name="options-pattern-guidance-for-net-library-authors"></a>.NET kitaplığı yazarları için seçenekler model Kılavuzu
 
@@ -51,13 +51,13 @@ Yukarıdaki kodda `AddMyLibraryService` :
 
 Tüketiciler için çok sayıda seçenek sunan bir kitaplık yazdığınızda bir `IConfiguration` parametre genişletme yöntemi yapmayı düşünmek isteyebilirsiniz. Beklenen `IConfiguration` örnek, işlevini kullanarak yapılandırmanın adlandırılmış bir bölümüne kapsam içermelidir <xref:Microsoft.Extensions.Configuration.IConfiguration.GetSection%2A?displayProperty=nameWithType> .
 
-:::code language="csharp" source="snippets/configuration/options-configparam/ServiceCollectionExtensions.cs" highlight="10,12-16":::
+:::code language="csharp" source="snippets/configuration/options-configparam/ServiceCollectionExtensions.cs" highlight="10,12-14":::
 
 Yukarıdaki kodda `AddMyLibraryService` :
 
 - Bir örneğini genişletir <xref:Microsoft.Extensions.DependencyInjection.IServiceCollection>
 - Bir <xref:Microsoft.Extensions.Configuration.IConfiguration> parametreyi tanımlar `namedConfigurationSection`
-- <xref:Microsoft.Extensions.Configuration.ConfigurationBinder.Bind(Microsoft.Extensions.Configuration.IConfiguration,System.Object)>Yapılandırma bağlandığı bir seçenekler örneğini geçirerek çağırır
+- <xref:Microsoft.Extensions.DependencyInjection.OptionsConfigurationServiceCollectionExtensions.Configure%60%601(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)>Öğesinin genel tür parametresini `LibraryOptions` ve `namedConfigurationSection` yapılandırılacak örneği geçen çağrılar
 
 Bu düzendeki tüketiciler, `IConfiguration` adlandırılmış bölümün kapsamlı örneğini sağlar:
 

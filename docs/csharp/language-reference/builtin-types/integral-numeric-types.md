@@ -1,7 +1,7 @@
 ---
 title: Integral sayısal türleri-C# başvurusu
 description: İntegral sayısal türlerin her biri için aralığı, depolama boyutunu ve kullanımları öğrenin.
-ms.date: 03/17/2021
+ms.date: 04/10/2021
 f1_keywords:
 - byte_CSharpKeyword
 - sbyte_CSharpKeyword
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 02b1451dc3aa22dfe27181b0e9160d198349107c
-ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
+ms.openlocfilehash: 21e6595e477fd48d0e5f39f5b4f1f7c5893a8840
+ms.sourcegitcommit: bbc724b72fb6c978905ac715e4033efa291f84dc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104760177"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107369588"
 ---
 # <a name="integral-numeric-types--c-reference"></a>Integral sayısal türleri (C# Başvurusu)
 
@@ -61,8 +61,6 @@ System.Int32 b = 123;
 
 `nint` `nuint` Tablonun son iki satırı içindeki ve türleri yerel boyutlu tamsayılardır. Bunlar, belirtilen .NET türleri tarafından dahili olarak temsil edilir, ancak her durumda anahtar sözcüğü ve .NET türü birbirini değiştirmez. Derleyici, `nint` ve için ve `nuint` işaretçi türleri için sağlamayan tamsayı türleri olarak işlemler ve dönüştürmeler sağlar `System.IntPtr` `System.UIntPtr` . Daha fazla bilgi için bkz. [ `nint` ve `nuint` türleri](nint-nuint.md).
 
-Yerel boyutlu tamsayı türleri hakkında daha fazla bilgi için bkz. [ `nint` ve `nuint` ](nint-nuint.md).
-
 Her integral türünün varsayılan değeri sıfırdır `0` . Yerel ölçekli türler hariç tüm integral türlerin her biri, `MinValue` `MaxValue` Bu türün en düşük ve en büyük değerini sağlayan sabitler içerir.
 
 <xref:System.Numerics.BigInteger?displayProperty=nameWithType>Üst veya alt sınır olmadan işaretli bir tamsayıyı temsil etmek için yapıyı kullanın.
@@ -88,6 +86,10 @@ Yukarıdaki örnek ayrıca `_` C# 7,0 ile başlayarak desteklenen bir *rakam ay�
 Bir tamsayı sabit değerinin türü, soneki tarafından aşağıdaki şekilde belirlenir:
 
 - Değişmez değerin son eki yoksa, türü, değeri gösterilebileceği aşağıdaki türlerin birincsahiptir: `int` , `uint` , `long` , `ulong` .
+
+  > [!NOTE]
+  > Değişmez değerler pozitif değer olarak yorumlanır. Örneğin, değişmez değer `0xFF_FF_FF_FF` `4294967295` türün numarası `uint` ile aynı bit gösterimine sahip olsa da, tür sayısını temsil eder `-1` `int` . Belirli türde bir değere ihtiyacınız varsa, bu türe bir sabit değer atayın. `unchecked`Bir sabit değer hedef türünde temsil edilenemez işlecini kullanın. Örneğin, `unchecked((int)0xFF_FF_FF_FF)` üretir `-1` .
+
 - Sabit değer veya tarafından sonekli ise `U` `u` , türü, değeri gösterilebileceği aşağıdaki türlerin birincsahiptir: `uint` , `ulong` .
 - Sabit değer veya tarafından sonekli ise `L` `l` , türü, değeri gösterilebileceği aşağıdaki türlerin birincsahiptir: `long` , `ulong` .
 
